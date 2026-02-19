@@ -69,7 +69,7 @@ export function Slide06Numbers() {
           className="micro-label"
           style={{ color: "#fff", fontSize: "0.75rem", letterSpacing: "0.15em", fontWeight: 500 }}
         >
-          date cumulate · 20 ediții
+          în 20 de ediții
         </span>
       </motion.div>
     </div>

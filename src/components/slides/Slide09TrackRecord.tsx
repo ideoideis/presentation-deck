@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import { slideItemVariants } from "@/components/SlideSection";
 
 const impactPoints = [
-  { label: "experiență", text: "peste 20 de ani de consecvență și dezvoltare continuă." },
-  { label: "rezultate", text: "mii de adolescenți formați, spectacole create, comunități activate." },
-  { label: "impact", text: "Alexandria devine referință pentru teatrul tânăr și artele strâns legate." },
+  { label: "adolescenți + comunități", text: "adolescenți din toată țara și comunitățile în care se întorc — voce, experiență, efect în cascadă." },
+  { label: "alexandria", text: "comunitatea locală și dezvoltarea ei culturală — orașul devine scenă și referință pentru teatrul tânăr." },
+  { label: "network artiști", text: "o rețea anuală de artiști, mentori și profesioniști activați și conectați prin festival." },
 ];
 
 export function Slide09TrackRecord() {
@@ -87,7 +87,7 @@ export function Slide09TrackRecord() {
             textTransform: "uppercase",
           }}
         >
-          festivalul tânăr pentru un oraș în creștere.
+          impact constant · în țară, în oraș, în rețea.
         </p>
       </motion.div>
     </div>

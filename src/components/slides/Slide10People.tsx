@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
 import { slideItemVariants } from "@/components/SlideSection";
 
-const portraits = [
-  { src: "/images/portraits/p1.jpg", name: "participantă", role: "teatru tânăr" },
-  { src: "/images/portraits/p2.jpg", name: "participant", role: "scenografie" },
-  { src: "/images/portraits/p3.jpg", name: "mentor", role: "regie" },
-  { src: "/images/portraits/p4.jpg", name: "trainer", role: "acting" },
-  { src: "/images/portraits/p5.jpg", name: "artistă invitată", role: "dans" },
-  { src: "/images/portraits/p6.jpg", name: "voluntar", role: "coordonare" },
+const people = [
+  { src: "/images/portraits/p1.jpg", name: "Alex Ion", role: "co-fondator" },
+  { src: "/images/portraits/p2.jpg", name: "Tudor Chirilă", role: "mentor" },
+  { src: "/images/portraits/p3.jpg", name: "Pavel Bartoș", role: "mentor" },
+  { src: "/images/portraits/p4.jpg", name: "Andreea Esca", role: "invitată masterclass" },
+  { src: "/images/portraits/p5.jpg", name: "Maia Morgenstern", role: "invitată" },
+  { src: "/images/portraits/p6.jpg", name: "Ștefan Iancu", role: "participant" },
 ];
 
 export function Slide10People() {
@@ -51,7 +51,7 @@ export function Slide10People() {
           className="md:w-2/3 grid gap-0"
           style={{ gridTemplateColumns: "repeat(3, 1fr)" }}
         >
-          {portraits.map((p, i) => (
+          {people.map((p, i) => (
             <motion.div
               key={i}
               variants={slideItemVariants}
