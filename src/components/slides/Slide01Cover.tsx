@@ -5,7 +5,7 @@ import { asset } from "@/lib/utils";
 export function Slide01Cover() {
   return (
     <div
-      className="w-full h-full flex flex-col justify-between p-10 md:p-16 relative"
+      className="w-full h-full flex flex-col justify-between p-6 md:p-16 relative"
       style={{ backgroundColor: "#E7004C" }}
     >
       {/* Main content — StickyHeader shows festival info */}
@@ -19,7 +19,8 @@ export function Slide01Cover() {
             width: "auto",
             objectFit: "contain",
             alignSelf: "flex-start",
-            marginTop: "-2rem",
+            marginTop: "-1rem",
+            marginLeft: "-2rem",
           }}
         />
 
@@ -27,7 +28,7 @@ export function Slide01Cover() {
           variants={slideItemVariants}
           style={{ display: "flex", alignItems: "center", gap: "1.5rem", marginTop: "1.5rem" }}
         >
-          {/* Red accent line */}
+          {/* Red accent line 
           <span
             style={{
               display: "block",
@@ -36,6 +37,7 @@ export function Slide01Cover() {
               backgroundColor: "rgba(255,255,255,0.5)",
             }}
           />
+          */}
           <p
             style={{
               color: "rgba(255,255,255,0.75)",

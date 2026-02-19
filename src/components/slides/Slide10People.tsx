@@ -65,6 +65,7 @@ export function Slide10People() {
             </motion.h2>
             <motion.button
               type="button"
+              className="print:hidden"
               onClick={() => {
                 setHasEverClickedPlay(true);
                 setIsVideoPlaying((v) => !v);
@@ -175,7 +176,7 @@ export function Slide10People() {
             ))}
           </motion.div>
           <motion.div
-            className="absolute inset-0"
+            className="absolute inset-0 print:hidden"
             animate={{ opacity: isVideoPlaying ? 1 : 0 }}
             transition={{ duration: 0.35 }}
             style={{

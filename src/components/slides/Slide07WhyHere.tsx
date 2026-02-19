@@ -19,19 +19,13 @@ export function Slide07WhyHere() {
         {/* Red frame */}
         <motion.div
           variants={slideItemVariants}
-          style={{
-            position: "absolute",
-            inset: "2.5rem",
-            border: "1.5px solid #E7004C",
-            pointerEvents: "none",
-          }}
+          className="absolute border-[1.5px] border-[#E7004C] pointer-events-none inset-4 md:inset-10"
         />
       </div>
 
       {/* Right: text */}
       <div
-        className="flex flex-col justify-between p-10 md:p-14"
-        style={{ minWidth: "clamp(280px, 40vw, 580px)", borderLeft: "1px solid rgba(255,255,255,0.08)" }}
+        className="flex flex-col justify-between p-6 md:p-14 md:min-w-[min(40vw,580px)] md:border-l md:border-white/10"
       >
         <div className="pt-12 md:pt-16">
           <motion.span

@@ -4,15 +4,15 @@ import { slideItemVariants } from "@/components/SlideSection";
 export function Slide03Typography() {
   return (
     <div
-      className="w-full h-full flex flex-col justify-between p-10 md:p-16"
+      className="w-full h-full flex flex-col justify-end md:justify-between gap-6 md:gap-0 p-10 md:p-16"
       style={{ backgroundColor: "#fff" }}
     >
-      <div className="pt-12 md:pt-16">
+      <div className="pt-0 md:pt-16">
         <motion.h2
           variants={slideItemVariants}
           className="lowercase font-semibold leading-none"
           style={{
-            fontSize: "clamp(5rem, 16vw, 15rem)",
+            fontSize: "clamp(3rem, 12vw, 15rem)",
             color: "#222324",
             letterSpacing: "-0.04em",
             lineHeight: 0.88,
@@ -24,7 +24,7 @@ export function Slide03Typography() {
           variants={slideItemVariants}
           className="lowercase font-semibold leading-none"
           style={{
-            fontSize: "clamp(5rem, 16vw, 15rem)",
+            fontSize: "clamp(3rem, 12vw, 15rem)",
             color: "#E7004C",
             letterSpacing: "-0.04em",
             lineHeight: 0.88,

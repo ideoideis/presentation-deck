@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Facebook, Instagram, Youtube, Linkedin } from "lucide-react";
 import { slideItemVariants } from "@/components/SlideSection";
+import { asset } from "@/lib/utils";
 
 const SOCIAL_LINKS = [
   { href: "https://www.facebook.com/ideoideis", label: "Facebook", Icon: Facebook },
@@ -78,8 +79,8 @@ export function Slide14CTA() {
               implică-te →
             </a>
             <a
-              href="/deck-ideo-ideis-2026.pdf"
-              download
+              href={asset("deck-ideo-ideis-2026.pdf")}
+              download="deck-ideo-ideis-2026.pdf"
               style={{
                 display: "inline-block",
                 backgroundColor: "transparent",
@@ -108,7 +109,7 @@ export function Slide14CTA() {
         </div>
 
         {/* Right: contact info */}
-        <div className="md:w-1/2" style={{ borderLeft: "1px solid rgba(255,255,255,0.1)", paddingLeft: "3rem" }}>
+        <div className="md:w-1/2 w-full pt-8 md:pt-0 md:border-l md:border-white/10 md:pl-12">
           <motion.p
             variants={slideItemVariants}
             className="micro-label mb-6"

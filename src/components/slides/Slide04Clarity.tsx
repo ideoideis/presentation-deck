@@ -84,17 +84,19 @@ export function Slide04Clarity() {
         padding: "var(--slide-pt) var(--slide-px) var(--slide-py)",
       }}
     >
-      {/* Stats — 5 columns with big numbers */}
+      {/* Stats — 3 cols desktop, 2 cols mobile for deck readability */}
       <div
-        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 flex-1 gap-0"
-        style={{ marginTop: "clamp(5rem, 3vh, 2rem)" }}
+        className="grid grid-cols-2 md:grid-cols-3 flex-1 gap-0"
+        style={{ marginTop: "clamp(4rem, 3vh, 2rem)" }}
       >
         {stats.map((stat, i) => (
           <div
             key={i}
-            style={{
-              borderLeft: i > 0 ? "1px solid rgba(255,255,255,0.07)" : "none",
-            }}
+            className={`${i === 4 ? "col-span-2 md:col-span-1" : ""} ${
+              i % 2 === 1 ? "border-l border-white/[0.07]" : ""
+            } ${i % 2 === 1 && i % 3 === 0 ? "md:border-l-0" : ""} ${
+              i % 3 > 0 ? "md:border-l md:border-white/[0.07]" : ""
+            } ${i >= 2 ? "border-t border-white/[0.07]" : ""}`}
           >
             <StatItem
               stat={stat}

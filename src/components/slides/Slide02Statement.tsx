@@ -79,8 +79,7 @@ export function Slide02Statement() {
 
         {/* Right — facts column */}
         <div
-          className="flex flex-col justify-end p-10 md:p-16 md:pl-8"
-          style={{ borderLeft: "1px solid rgba(255,255,255,0.1)", minWidth: "clamp(220px, 28vw, 380px)" }}
+          className="flex flex-col justify-end p-10 md:p-16 md:pl-8 md:border-l md:border-white/10 pt-8 md:pt-0 md:min-w-[clamp(220px,28vw,380px)]"
         >
           <motion.p
             variants={slideItemVariants}

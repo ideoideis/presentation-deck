@@ -34,11 +34,10 @@ export function Slide06Education() {
 
   return (
     <div
-      className="w-full h-full flex flex-col"
+      className="w-full h-full flex flex-col md:pr-[clamp(var(--slide-px),10vw,6rem)]"
       style={{
         backgroundColor: "#222324",
         padding: "var(--slide-pt) var(--slide-px) var(--slide-py)",
-        paddingRight: "clamp(4rem, 10vw, 6rem)",
       }}
     >
       {/* Title */}
@@ -90,8 +89,8 @@ export function Slide06Education() {
                 }}
               >
                 {/* Row header */}
-                <div className="flex items-center justify-between gap-4">
-                  <div className="flex items-center gap-4 md:gap-6">
+                <div className="flex items-center justify-between gap-3 md:gap-4">
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-0.5 sm:gap-4 md:gap-6 min-w-0">
                     {/* Index number */}
                     <span
                       style={{
@@ -185,12 +184,12 @@ export function Slide06Education() {
                       style={{ overflow: "hidden" }}
                     >
                       <p
+                        className="pl-8 sm:pl-[calc(1.8rem+1rem+clamp(1rem,1.5vw,1.5rem))]"
                         style={{
                           color: "rgba(255,255,255,0.55)",
                           fontSize: "clamp(0.85rem, 1.15vw, 1rem)",
                           lineHeight: 1.65,
                           paddingTop: "0.75rem",
-                          paddingLeft: "calc(1.8rem + 1rem + clamp(1rem, 1.5vw, 1.5rem))",
                           maxWidth: "55ch",
                         }}
                       >
