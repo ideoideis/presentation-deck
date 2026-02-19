@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { slideItemVariants } from "@/components/SlideSection";
+import { asset } from "@/lib/utils";
 
 export function Slide11ImpactStatement() {
   return (
@@ -10,7 +11,7 @@ export function Slide11ImpactStatement() {
       {/* Full bleed image */}
       <div className="absolute inset-0">
         <img
-          src="/images/hero-bw.jpg"
+          src={asset("/images/hero-bw.jpg")}
           alt="Adolescenți pe scenă la ideo ideis"
           className="w-full h-full object-cover"
           style={{ filter: "grayscale(100%) contrast(1.15)", opacity: 0.4 }}

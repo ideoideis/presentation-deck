@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { slideItemVariants } from "@/components/SlideSection";
+import { asset } from "@/lib/utils";
 
 const facts = [
   "20 ani",
@@ -18,7 +19,7 @@ export function Slide02Statement() {
       {/* Full-bleed BW photo */}
       <div className="absolute inset-0">
         <img
-          src="/images/workshop-bw.jpg"
+          src={asset("/images/workshop-bw.jpg")}
           alt="Adolescenți la atelier de teatru tânăr"
           className="w-full h-full object-cover"
           style={{ filter: "grayscale(100%) contrast(1.15)", opacity: 0.35 }}

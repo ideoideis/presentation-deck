@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { slideItemVariants } from "@/components/SlideSection";
+import { asset } from "@/lib/utils";
 
 export function Slide01Cover() {
   return (
@@ -10,7 +11,7 @@ export function Slide01Cover() {
       {/* Main content — StickyHeader shows festival info */}
       <div className="flex flex-col gap-4 mt-12 md:mt-16">
         <motion.img
-          src="/logo-ideo-ideis-festivalul.png"
+          src={asset("/logo-ideo-ideis-festivalul.png")}
           alt="ideo ideis festivalul"
           variants={slideItemVariants}
           style={{

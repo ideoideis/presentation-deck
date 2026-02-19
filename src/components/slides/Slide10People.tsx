@@ -1,13 +1,14 @@
 import { motion } from "framer-motion";
 import { slideItemVariants } from "@/components/SlideSection";
+import { asset } from "@/lib/utils";
 
 const people = [
-  { src: "/images/portraits/p1.jpg", name: "Alex Ion", role: "co-fondator" },
-  { src: "/images/portraits/p2.jpg", name: "Tudor Chirilă", role: "mentor" },
-  { src: "/images/portraits/p3.jpg", name: "Pavel Bartoș", role: "mentor" },
-  { src: "/images/portraits/p4.jpg", name: "Andreea Esca", role: "invitată masterclass" },
-  { src: "/images/portraits/p5.jpg", name: "Maia Morgenstern", role: "invitată" },
-  { src: "/images/portraits/p6.jpg", name: "Ștefan Iancu", role: "participant" },
+  { src: asset("/images/portraits/p1.jpg"), name: "Alex Ion", role: "co-fondator" },
+  { src: asset("/images/portraits/p2.jpg"), name: "Tudor Chirilă", role: "mentor" },
+  { src: asset("/images/portraits/p3.jpg"), name: "Pavel Bartoș", role: "mentor" },
+  { src: asset("/images/portraits/p4.jpg"), name: "Andreea Esca", role: "invitată masterclass" },
+  { src: asset("/images/portraits/p5.jpg"), name: "Maia Morgenstern", role: "invitată" },
+  { src: asset("/images/portraits/p6.jpg"), name: "Ștefan Iancu", role: "participant" },
 ];
 
 export function Slide10People() {

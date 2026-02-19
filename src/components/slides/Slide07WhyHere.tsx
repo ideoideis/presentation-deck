@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { slideItemVariants } from "@/components/SlideSection";
+import { asset } from "@/lib/utils";
 
 export function Slide07WhyHere() {
   return (
@@ -10,7 +11,7 @@ export function Slide07WhyHere() {
       {/* Left: photo with red frame */}
       <div className="flex-1 relative overflow-hidden">
         <img
-          src="/images/crowd-bw.jpg"
+          src={asset("/images/crowd-bw.jpg")}
           alt="Public outdoor la alexandria"
           className="w-full h-full object-cover"
           style={{ filter: "grayscale(100%) contrast(1.2)", opacity: 0.6 }}
