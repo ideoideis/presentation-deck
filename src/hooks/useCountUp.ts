@@ -1,8 +1,12 @@
 import { useState, useEffect, useRef } from "react";
 
 export function useCountUp(target: number, duration = 1200, inView = false) {
-  const [count, setCount] = useState(0);
+  const isPrint =
+    typeof window !== "undefined" && window.matchMedia("print").matches;
+  const [count, setCount] = useState(isPrint ? target : 0);
   const started = useRef(false);
+
+  if (isPrint) return target;
 
   useEffect(() => {
     if (!inView) {
