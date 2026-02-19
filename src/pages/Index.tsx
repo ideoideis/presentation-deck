@@ -1,14 +1,65 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { StickyHeader } from "@/components/StickyHeader";
+import { SlideNav } from "@/components/SlideNav";
+import { SlideSection } from "@/components/SlideSection";
+import { Slide01Cover } from "@/components/slides/Slide01Cover";
+import { Slide02Statement } from "@/components/slides/Slide02Statement";
+import { Slide03Typography } from "@/components/slides/Slide03Typography";
+import { Slide04Clarity } from "@/components/slides/Slide04Clarity";
+import { Slide05HowItLooks } from "@/components/slides/Slide05HowItLooks";
+import { Slide06Numbers } from "@/components/slides/Slide06Numbers";
+import { Slide07WhyHere } from "@/components/slides/Slide07WhyHere";
+import { Slide08Year2026 } from "@/components/slides/Slide08Year2026";
+import { Slide09TrackRecord } from "@/components/slides/Slide09TrackRecord";
+import { Slide10People } from "@/components/slides/Slide10People";
+import { Slide11ImpactStatement } from "@/components/slides/Slide11ImpactStatement";
+import { Slide12Safety } from "@/components/slides/Slide12Safety";
+import { Slide13WhyMakesSense } from "@/components/slides/Slide13WhyMakesSense";
+import { Slide14CTA } from "@/components/slides/Slide14CTA";
 
-const Index = () => {
+const TOTAL_SLIDES = 14;
+
+const slides = [
+  { id: "slide-01", component: <Slide01Cover /> },
+  { id: "slide-02", component: <Slide02Statement /> },
+  { id: "slide-03", component: <Slide03Typography /> },
+  { id: "slide-04", component: <Slide04Clarity /> },
+  { id: "slide-05", component: <Slide05HowItLooks /> },
+  { id: "slide-06", component: <Slide06Numbers /> },
+  { id: "slide-07", component: <Slide07WhyHere /> },
+  { id: "slide-08", component: <Slide08Year2026 /> },
+  { id: "slide-09", component: <Slide09TrackRecord /> },
+  { id: "slide-10", component: <Slide10People /> },
+  { id: "slide-11", component: <Slide11ImpactStatement /> },
+  { id: "slide-12", component: <Slide12Safety /> },
+  { id: "slide-13", component: <Slide13WhyMakesSense /> },
+  { id: "slide-14", component: <Slide14CTA /> },
+];
+
+export default function Index() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
-  );
-};
+    <>
+      {/* Sticky header — always on top */}
+      <StickyHeader />
 
-export default Index;
+      {/* Right-side slide nav */}
+      <SlideNav totalSlides={TOTAL_SLIDES} />
+
+      {/* Scroll-snap container */}
+      <div
+        id="snap-container"
+        className="snap-container"
+        style={{ height: "100dvh", overflowY: "scroll" }}
+      >
+        {slides.map((slide, i) => (
+          <SlideSection
+            key={slide.id}
+            id={slide.id}
+            data-slide-index={i}
+          >
+            {slide.component}
+          </SlideSection>
+        ))}
+      </div>
+    </>
+  );
+}
