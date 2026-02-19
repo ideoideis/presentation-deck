@@ -17,7 +17,7 @@ export function Slide05HowItLooks() {
   return (
     <div
       className="w-full h-full flex flex-col justify-center p-10 md:p-16"
-      style={{ backgroundColor: "#fff" }}
+      style={{ backgroundColor: "#f5f5f4" }}
     >
       <div className="flex flex-col justify-center gap-8 md:gap-0 md:flex-row">
         {/* Left: title */}

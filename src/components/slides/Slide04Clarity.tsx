@@ -8,7 +8,7 @@ const modules = [
   },
   {
     label: "public direct",
-    text: "10.000 spectatori locali în Alexandrie — comunitatea orașului.",
+    text: "10.000 spectatori locali în alexandria — comunitatea orașului.",
   },
   {
     label: "reach național",
@@ -91,7 +91,7 @@ export function Slide04Clarity() {
             fontWeight: 400,
           }}
         >
-          public țintă · per ediție
+          public · per ediție
         </span>
       </motion.div>
     </div>

@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import { slideItemVariants } from "@/components/SlideSection";
 
 const impactPoints = [
-  { label: "adolescenți + comunități", text: "adolescenți din toată țara și comunitățile în care se întorc — voce, experiență, efect în cascadă." },
-  { label: "alexandria", text: "comunitatea locală și dezvoltarea ei culturală — orașul devine scenă și referință pentru teatrul tânăr." },
-  { label: "network artiști", text: "o rețea anuală de artiști, mentori și profesioniști activați și conectați prin festival." },
+  { label: "adolescenți & comunități naționale", text: "voce, curaj, comunitate care se întoarce acasă cu ei." },
+  { label: "comunitate locală", text: "public nou + obicei cultural (orașul se adună, revine, își schimbă reflexul)." },
+  { label: "network astistic & educational", text: "profesioniști activați anual, lucru direct cu adolescenții." },
 ];
 
 export function Slide09TrackRecord() {
@@ -43,9 +43,10 @@ export function Slide09TrackRecord() {
               <p
                 className="lowercase"
                 style={{
-                  color: "rgba(255,255,255,0.4)",
-                  fontSize: "0.65rem",
-                  letterSpacing: "0.2em",
+                  color: "#fff",
+                  fontSize: "clamp(0.7rem, 1vw, 0.85rem)",
+                  fontWeight: 600,
+                  letterSpacing: "0.12em",
                   textTransform: "uppercase",
                   marginBottom: "0.75rem",
                 }}
@@ -54,9 +55,9 @@ export function Slide09TrackRecord() {
               </p>
               <p
                 style={{
-                  color: "#fff",
-                  fontSize: "clamp(0.95rem, 1.4vw, 1.2rem)",
-                  fontWeight: 500,
+                  color: "rgba(255,255,255,0.7)",
+                  fontSize: "clamp(0.85rem, 1.2vw, 1rem)",
+                  fontWeight: 300,
                   lineHeight: 1.4,
                 }}
               >
@@ -82,12 +83,12 @@ export function Slide09TrackRecord() {
         <p
           style={{
             color: "rgba(255,255,255,0.4)",
-            fontSize: "0.75rem",
+            fontSize: "0.65rem",
             letterSpacing: "0.1em",
             textTransform: "uppercase",
           }}
         >
-          impact constant · în țară, în oraș, în rețea.
+          20 ani · 4.000+ adolescenți · 200.000 public local cumulat
         </p>
       </motion.div>
     </div>

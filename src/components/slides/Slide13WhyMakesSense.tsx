@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 import { slideItemVariants } from "@/components/SlideSection";
 
-const rows = [
-  "investiție în adolescenți, nu doar în eveniment",
-  "brand care susține curajul și educația prin cultură",
-  "vizibilitate națională + impact local autentic",
-  "un proiect cu istoric și consecvență",
+const benefits = [
+  "asociere rară: 20 ani de consecvență, brand cultural recunoscut",
+  "impact real: adolescenți din toată țara + comunitate locală implicată",
+  "poveste care se vede: fotografie doc, momente, oameni, conținut autentic (nu reclamă)",
+  "relevanță: curaj, educație prin cultură, comunitate (valori ușor de susținut public)",
 ];
 
 export function Slide13WhyMakesSense() {
@@ -23,14 +23,24 @@ export function Slide13WhyMakesSense() {
             color: "#fff",
             letterSpacing: "-0.02em",
             lineHeight: 0.95,
+            marginBottom: "1rem",
+          }}
+        >
+          de ce să te asociezi
+        </motion.h2>
+        <motion.p
+          variants={slideItemVariants}
+          style={{
+            color: "rgba(255,255,255,0.75)",
+            fontSize: "clamp(0.85rem, 1.2vw, 1rem)",
             marginBottom: "3rem",
           }}
         >
-          de ce are sens
-        </motion.h2>
+          pentru un partener
+        </motion.p>
 
         <div className="flex flex-col gap-0">
-          {rows.map((row, i) => (
+          {benefits.map((row, i) => (
             <motion.div
               key={i}
               variants={slideItemVariants}

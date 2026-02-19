@@ -1,20 +1,19 @@
 import { motion } from "framer-motion";
 import { slideItemVariants } from "@/components/SlideSection";
 
-const checklist = [
-  "coordonare clară a grupurilor și mentorilor",
-  "fluxuri de zi structurate și previzibile",
-  "spații sigure, transport organizat",
-  "grijă pentru energie și confort",
+const points = [
+  "program intens, dar cu ritm sănătos",
+  "coordonare clară · disciplină de producție · grijă pentru oameni",
+  "20 ani de ediții, aceeași consistență",
 ];
 
 export function Slide12Safety() {
   return (
     <div
-      className="w-full h-full flex flex-col justify-between p-10 md:p-16"
+      className="w-full h-full flex flex-col justify-center p-10 md:p-16"
       style={{ backgroundColor: "#fff" }}
     >
-      <div className="flex-1 flex flex-col md:flex-row gap-12 md:gap-20 items-center pt-12 md:pt-16">
+      <div className="flex flex-col md:flex-row gap-12 md:gap-20 items-center">
         {/* Left */}
         <div className="md:w-2/5">
           <motion.div
@@ -27,7 +26,7 @@ export function Slide12Safety() {
             }}
           >
             <span style={{ color: "#fff", fontSize: "0.6rem", letterSpacing: "0.18em", textTransform: "uppercase" }}>
-              structură
+              credibilitate
             </span>
           </motion.div>
 
@@ -41,7 +40,7 @@ export function Slide12Safety() {
               lineHeight: 0.95,
             }}
           >
-            lucrăm cu adolescenți
+            cum livrăm
           </motion.h2>
 
           <motion.p
@@ -54,13 +53,13 @@ export function Slide12Safety() {
               maxWidth: "32ch",
             }}
           >
-            structură clară: coordonare, fluxuri de zi, spații sigure, transport organizat, grijă pentru energie și confort.
+            un sponsor înțelege: nu e haos.
           </motion.p>
         </div>
 
-        {/* Right: checklist */}
-        <div className="md:w-3/5 flex flex-col gap-3">
-          {checklist.map((item, i) => (
+        {/* Right: points */}
+        <div className="md:w-3/5 flex flex-col gap-4">
+          {points.map((item, i) => (
             <motion.div
               key={i}
               variants={slideItemVariants}
@@ -73,7 +72,6 @@ export function Slide12Safety() {
                 backgroundColor: i === 0 ? "rgba(231,0,76,0.04)" : "transparent",
               }}
             >
-              {/* Rectangle indicator */}
               <span
                 style={{
                   display: "block",

@@ -79,13 +79,22 @@ export function Slide07WhyHere() {
           </motion.p>
         </div>
 
-        <motion.span
+        <motion.a
+          href="https://maps.app.goo.gl/Ewj1h2r1nkPfBueN7"
+          target="_blank"
+          rel="noopener noreferrer"
           variants={slideItemVariants}
-          className="micro-label"
-          style={{ color: "rgba(255,255,255,0.2)" }}
+          className="micro-label transition-colors"
+          style={{ color: "rgba(255,255,255,0.5)", textDecoration: "none" }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.color = "#E7004C";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.color = "rgba(255,255,255,0.5)";
+          }}
         >
           alexandria · teleorman · românia
-        </motion.span>
+        </motion.a>
       </div>
     </div>
   );

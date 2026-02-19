@@ -13,8 +13,7 @@ const SLIDE_LABELS = [
   "oameni",
   "citat",
   "impact",
-  "structură",
-  "de ce sens",
+  "pentru partener",
   "contact",
 ];
 

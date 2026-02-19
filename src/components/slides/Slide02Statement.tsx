@@ -3,7 +3,7 @@ import { slideItemVariants } from "@/components/SlideSection";
 import { asset } from "@/lib/utils";
 
 const facts = [
-  "20 ani",
+  "de 20 ani",
   "200+ trupe aplicante",
   "160+ trupe participante",
   "4.000+ adolescenți participanți",

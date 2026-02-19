@@ -22,7 +22,7 @@ function StatItem({ stat }: { stat: typeof stats[0] }) {
       : count.toString();
 
   return (
-    <motion.div ref={ref} variants={slideItemVariants} style={{ borderTop: "1px solid rgba(255,255,255,0.12)", paddingTop: "1.25rem" }}>
+    <motion.div ref={ref} variants={slideItemVariants} style={{ borderTop: "1px solid rgba(255,255,255,0.18)", paddingTop: "1.25rem" }}>
       <p
         className="font-semibold lowercase leading-none"
         style={{
@@ -36,7 +36,7 @@ function StatItem({ stat }: { stat: typeof stats[0] }) {
       </p>
       <p
         className="micro-label mt-2"
-        style={{ color: "rgba(255,255,255,0.5)", fontSize: "0.65rem", letterSpacing: "0.15em" }}
+        style={{ color: "#fff", fontSize: "0.7rem", letterSpacing: "0.12em", opacity: 0.92, fontWeight: 500 }}
       >
         {stat.label}
       </p>
@@ -48,7 +48,7 @@ export function Slide06Numbers() {
   return (
     <div
       className="w-full h-full flex flex-col justify-between p-10 md:p-16"
-      style={{ backgroundColor: "#E7004C" }}
+      style={{ backgroundColor: "#c40045" }}
     >
       <div className="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-6 md:gap-y-8 pt-12 md:pt-16">
         {stats.map((stat, i) => (
