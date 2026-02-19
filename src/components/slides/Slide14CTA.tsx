@@ -1,23 +1,13 @@
 import { motion } from "framer-motion";
 import { slideItemVariants } from "@/components/SlideSection";
 
-const MICRO = "ediția #21 · 29.07–05.08.26 · alexandria";
-
 export function Slide14CTA() {
   return (
     <div
       className="w-full h-full flex flex-col justify-between p-10 md:p-16"
       style={{ backgroundColor: "#222324" }}
     >
-      <motion.span
-        variants={slideItemVariants}
-        className="micro-label"
-        style={{ color: "rgba(255,255,255,0.3)" }}
-      >
-        {MICRO}
-      </motion.span>
-
-      <div className="flex-1 flex flex-col md:flex-row gap-16 items-center">
+      <div className="flex-1 flex flex-col md:flex-row gap-16 items-center pt-12 md:pt-16">
         {/* Left: headline */}
         <div className="md:w-1/2">
           <motion.h2
@@ -133,7 +123,7 @@ export function Slide14CTA() {
 
           <motion.div variants={slideItemVariants} style={{ marginTop: "2rem" }}>
             <p style={{ color: "rgba(255,255,255,0.25)", fontSize: "0.65rem", letterSpacing: "0.12em", textTransform: "uppercase" }}>
-              ideo ideis · alexandria · ediția #21 · 2026
+              ideo ideis · alexandria · 2026
             </p>
           </motion.div>
         </div>

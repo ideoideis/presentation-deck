@@ -1,23 +1,13 @@
 import { motion } from "framer-motion";
 import { slideItemVariants } from "@/components/SlideSection";
 
-const MICRO = "ediția #21 · 29.07–05.08.26 · alexandria";
-
 export function Slide03Typography() {
   return (
     <div
       className="w-full h-full flex flex-col justify-between p-10 md:p-16"
       style={{ backgroundColor: "#fff" }}
     >
-      <motion.span
-        variants={slideItemVariants}
-        className="micro-label"
-        style={{ color: "rgba(0,0,0,0.35)" }}
-      >
-        {MICRO}
-      </motion.span>
-
-      <div>
+      <div className="pt-12 md:pt-16">
         <motion.h2
           variants={slideItemVariants}
           className="lowercase font-semibold leading-none"
@@ -45,7 +35,7 @@ export function Slide03Typography() {
       </div>
 
       <motion.div variants={slideItemVariants} style={{ display: "flex", alignItems: "flex-start", gap: "1.5rem" }}>
-        <span style={{ display: "block", width: "40px", height: "2px", backgroundColor: "#E7004C", marginTop: "0.6rem", flexShrink: 0 }} />
+        <span style={{ display: "block", width: "30px", height: "2px", backgroundColor: "#E7004C", marginTop: "0.6rem", flexShrink: 0 }} />
         <p
           style={{
             color: "#222324",
@@ -55,7 +45,7 @@ export function Slide03Typography() {
             opacity: 0.7,
           }}
         >
-          o săptămână în care adolescenții își construiesc vocea.
+          o săptămână în care adolescenții își {"\u00A0"}{"\u00A0"}{"\u00A0"}{"\u00A0"}construiesc vocea.
         </p>
       </motion.div>
     </div>

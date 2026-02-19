@@ -1,8 +1,6 @@
 import { motion } from "framer-motion";
 import { slideItemVariants } from "@/components/SlideSection";
 
-const MICRO = "ediția #21 · 29.07–05.08.26 · alexandria";
-
 const portraits = [
   { src: "/images/portraits/p1.jpg", name: "participantă", role: "teatru tânăr" },
   { src: "/images/portraits/p2.jpg", name: "participant", role: "scenografie" },
@@ -15,18 +13,10 @@ const portraits = [
 export function Slide10People() {
   return (
     <div
-      className="w-full h-full flex flex-col justify-between p-10 md:p-16"
+      className="w-full h-full flex flex-col justify-center p-10 md:p-16"
       style={{ backgroundColor: "#fff" }}
     >
-      <motion.span
-        variants={slideItemVariants}
-        className="micro-label"
-        style={{ color: "rgba(0,0,0,0.3)" }}
-      >
-        {MICRO}
-      </motion.span>
-
-      <div className="flex-1 flex flex-col md:flex-row gap-10 md:gap-16 items-center mt-6">
+      <div className="flex flex-col md:flex-row gap-10 md:gap-16 items-center">
         {/* Left: headline + text */}
         <div className="md:w-1/3">
           <motion.h2

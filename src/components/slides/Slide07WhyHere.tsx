@@ -1,8 +1,6 @@
 import { motion } from "framer-motion";
 import { slideItemVariants } from "@/components/SlideSection";
 
-const MICRO = "ediția #21 · 29.07–05.08.26 · alexandria";
-
 export function Slide07WhyHere() {
   return (
     <div
@@ -34,15 +32,7 @@ export function Slide07WhyHere() {
         className="flex flex-col justify-between p-10 md:p-14"
         style={{ minWidth: "clamp(280px, 40vw, 580px)", borderLeft: "1px solid rgba(255,255,255,0.08)" }}
       >
-        <motion.span
-          variants={slideItemVariants}
-          className="micro-label"
-          style={{ color: "rgba(255,255,255,0.35)" }}
-        >
-          {MICRO}
-        </motion.span>
-
-        <div>
+        <div className="pt-12 md:pt-16">
           <motion.span
             variants={slideItemVariants}
             style={{

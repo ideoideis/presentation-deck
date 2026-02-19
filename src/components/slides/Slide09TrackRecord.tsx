@@ -1,8 +1,6 @@
 import { motion } from "framer-motion";
 import { slideItemVariants } from "@/components/SlideSection";
 
-const MICRO = "ediția #21 · 29.07–05.08.26 · alexandria";
-
 const left = ["teatru tânăr", "spectacole invitate", "outdoor"];
 const right = ["cinemateca târzie", "discuții", "murale", "activări în oraș"];
 
@@ -12,15 +10,7 @@ export function Slide09TrackRecord() {
       className="w-full h-full flex flex-col justify-between p-10 md:p-16"
       style={{ backgroundColor: "#2c2d34" }}
     >
-      <motion.span
-        variants={slideItemVariants}
-        className="micro-label"
-        style={{ color: "rgba(255,255,255,0.3)" }}
-      >
-        {MICRO}
-      </motion.span>
-
-      <div className="flex-1 flex flex-col justify-center">
+      <div className="flex-1 flex flex-col justify-center pt-12 md:pt-16">
         <motion.h2
           variants={slideItemVariants}
           className="lowercase font-semibold leading-none"

@@ -1,7 +1,6 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { slideItemVariants } from "@/components/SlideSection";
-
-const MICRO = "ediția #21 · 29.07–05.08.26 · alexandria";
 
 const items = [
   "ateliere de teatru tânăr",
@@ -13,20 +12,14 @@ const items = [
 ];
 
 export function Slide05HowItLooks() {
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
   return (
     <div
-      className="w-full h-full flex flex-col justify-between p-10 md:p-16"
+      className="w-full h-full flex flex-col justify-center p-10 md:p-16"
       style={{ backgroundColor: "#fff" }}
     >
-      <motion.span
-        variants={slideItemVariants}
-        className="micro-label"
-        style={{ color: "rgba(0,0,0,0.35)" }}
-      >
-        {MICRO}
-      </motion.span>
-
-      <div className="flex-1 flex flex-col justify-center gap-8 md:gap-0 md:flex-row">
+      <div className="flex flex-col justify-center gap-8 md:gap-0 md:flex-row">
         {/* Left: title */}
         <div className="md:w-1/3 flex flex-col justify-center">
           <motion.h2
@@ -51,26 +44,29 @@ export function Slide05HowItLooks() {
             <motion.div
               key={i}
               variants={slideItemVariants}
+              onMouseEnter={() => setHoveredIndex(i)}
+              onMouseLeave={() => setHoveredIndex(null)}
               style={{
                 padding: "1rem 0",
                 borderBottom: "1px solid rgba(0,0,0,0.08)",
                 display: "flex",
                 alignItems: "center",
                 gap: "1rem",
+                cursor: "default",
               }}
             >
-              {/* Loading bar accent */}
-              {i < 3 && (
-                <span
-                  style={{
-                    display: "block",
-                    width: `${[60, 100, 40][i]}px`,
-                    height: "3px",
-                    backgroundColor: "#E7004C",
-                    flexShrink: 0,
-                  }}
-                />
-              )}
+              {/* Hover line – expands on hover, disappears on mouse leave */}
+              <motion.span
+                animate={{ width: hoveredIndex === i ? 120 : 0 }}
+                transition={{ duration: 0.25, ease: "easeOut" }}
+                style={{
+                  display: "block",
+                  height: "3px",
+                  backgroundColor: "#E7004C",
+                  flexShrink: 0,
+                  overflow: "hidden",
+                }}
+              />
               <p
                 style={{
                   color: "#222324",

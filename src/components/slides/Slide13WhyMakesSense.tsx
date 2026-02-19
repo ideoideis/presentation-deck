@@ -1,8 +1,6 @@
 import { motion } from "framer-motion";
 import { slideItemVariants } from "@/components/SlideSection";
 
-const MICRO = "ediția #21 · 29.07–05.08.26 · alexandria";
-
 const rows = [
   "investiție în adolescenți, nu doar în eveniment",
   "brand care susține curajul și educația prin cultură",
@@ -16,15 +14,7 @@ export function Slide13WhyMakesSense() {
       className="w-full h-full flex flex-col justify-between p-10 md:p-16"
       style={{ backgroundColor: "#E7004C" }}
     >
-      <motion.span
-        variants={slideItemVariants}
-        className="micro-label"
-        style={{ color: "rgba(255,255,255,0.5)" }}
-      >
-        {MICRO}
-      </motion.span>
-
-      <div className="flex-1 flex flex-col justify-center">
+      <div className="flex-1 flex flex-col justify-center pt-12 md:pt-16">
         <motion.h2
           variants={slideItemVariants}
           className="lowercase font-semibold leading-none"

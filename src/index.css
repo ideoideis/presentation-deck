@@ -153,3 +153,40 @@
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Print / PDF export — one slide per page */
+@page {
+  size: A4 landscape;
+  margin: 0;
+}
+
+@media print {
+  .no-print,
+  header,
+  nav[aria-label="Navigare slide-uri"] {
+    display: none !important;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .snap-container {
+    height: auto !important;
+    overflow: visible !important;
+    scroll-snap-type: none !important;
+  }
+
+  .snap-slide {
+    height: 100vh !important;
+    min-height: 100vh !important;
+    page-break-after: always;
+    page-break-inside: avoid;
+  }
+
+  .snap-slide:last-child {
+    page-break-after: auto;
+  }
+}

@@ -1,8 +1,6 @@
 import { motion } from "framer-motion";
 import { slideItemVariants } from "@/components/SlideSection";
 
-const MICRO = "ediția #21 · 29.07–05.08.26 · alexandria";
-
 const modules = [
   {
     label: "cine",
@@ -24,15 +22,7 @@ export function Slide04Clarity() {
       className="w-full h-full flex flex-col justify-between p-10 md:p-16"
       style={{ backgroundColor: "#2c2d34" }}
     >
-      <motion.span
-        variants={slideItemVariants}
-        className="micro-label"
-        style={{ color: "rgba(255,255,255,0.35)" }}
-      >
-        {MICRO}
-      </motion.span>
-
-      <div className="flex flex-col gap-4 md:gap-0 md:flex-row flex-1 items-stretch mt-12 md:mt-0">
+      <div className="flex flex-col gap-4 md:gap-0 md:flex-row flex-1 items-stretch pt-12 md:pt-16">
         {modules.map((mod, i) => (
           <motion.div
             key={i}

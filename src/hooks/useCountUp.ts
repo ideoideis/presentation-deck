@@ -5,7 +5,12 @@ export function useCountUp(target: number, duration = 1200, inView = false) {
   const started = useRef(false);
 
   useEffect(() => {
-    if (!inView || started.current) return;
+    if (!inView) {
+      started.current = false;
+      setCount(0);
+      return;
+    }
+    if (started.current) return;
     started.current = true;
 
     const start = performance.now();

@@ -1,8 +1,6 @@
 import { motion } from "framer-motion";
 import { slideItemVariants } from "@/components/SlideSection";
 
-const MICRO = "ediția #21 · 29.07–05.08.26 · alexandria";
-
 const rows = [
   { text: "mai multă integrare în comunitatea locală", accent: "integrare" },
   { text: "experiență de participant mai bună, mai sănătoasă ca ritm", accent: "experiență" },
@@ -15,15 +13,7 @@ export function Slide08Year2026() {
       className="w-full h-full flex flex-col justify-between p-10 md:p-16"
       style={{ backgroundColor: "#fff" }}
     >
-      <motion.span
-        variants={slideItemVariants}
-        className="micro-label"
-        style={{ color: "rgba(0,0,0,0.3)" }}
-      >
-        {MICRO}
-      </motion.span>
-
-      <div className="flex-1 flex flex-col justify-center">
+      <div className="flex-1 flex flex-col justify-center pt-12 md:pt-16">
         <motion.h2
           variants={slideItemVariants}
           className="font-semibold lowercase leading-none"

@@ -1,4 +1,5 @@
 import { useActiveSlide } from "@/hooks/useActiveSlide";
+import { SLIDE_BG } from "@/constants/slides";
 
 const SLIDE_LABELS = [
   "cover",
@@ -23,11 +24,14 @@ interface SlideNavProps {
 
 export function SlideNav({ totalSlides }: SlideNavProps) {
   const { activeSlide, goToSlide } = useActiveSlide(totalSlides);
+  const theme = SLIDE_BG[activeSlide] ?? "dark";
+  const activeColor = theme === "crimson" ? "#fff" : "#E7004C";
+  const inactiveBorder = theme === "white" ? "rgba(0,0,0,0.35)" : "rgba(255,255,255,0.45)";
 
   return (
     <nav
       aria-label="Navigare slide-uri"
-      className="fixed right-6 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-2 hidden md:flex"
+      className="no-print fixed right-6 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-2 hidden md:flex"
     >
       {Array.from({ length: totalSlides }).map((_, i) => (
         <button
@@ -44,8 +48,8 @@ export function SlideNav({ totalSlides }: SlideNavProps) {
               display: "block",
               width: activeSlide === i ? "28px" : "14px",
               height: "3px",
-              backgroundColor: activeSlide === i ? "#E7004C" : "transparent",
-              border: activeSlide === i ? "none" : "1.5px solid rgba(255,255,255,0.45)",
+              backgroundColor: activeSlide === i ? activeColor : "transparent",
+              border: activeSlide === i ? "none" : `1.5px solid ${inactiveBorder}`,
             }}
           />
         </button>

@@ -1,8 +1,6 @@
 import { motion } from "framer-motion";
 import { slideItemVariants } from "@/components/SlideSection";
 
-const MICRO = "ediția #21 · 29.07–05.08.26 · alexandria";
-
 export function Slide11ImpactStatement() {
   return (
     <div
@@ -31,12 +29,6 @@ export function Slide11ImpactStatement() {
             maxWidth: "clamp(280px, 55vw, 720px)",
           }}
         >
-          <p
-            className="micro-label mb-4"
-            style={{ color: "rgba(255,255,255,0.6)", fontSize: "0.6rem", letterSpacing: "0.2em" }}
-          >
-            {MICRO}
-          </p>
           <h2
             className="lowercase font-semibold leading-tight"
             style={{

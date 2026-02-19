@@ -1,39 +1,26 @@
 import { motion } from "framer-motion";
 import { slideItemVariants } from "@/components/SlideSection";
 
-const MICRO = "ediția #21 · 29.07–05.08.26 · alexandria";
-
 export function Slide01Cover() {
   return (
     <div
       className="w-full h-full flex flex-col justify-between p-10 md:p-16 relative"
       style={{ backgroundColor: "#E7004C" }}
     >
-      {/* Top micro label */}
-      <motion.span
-        variants={slideItemVariants}
-        className="micro-label"
-        style={{ color: "rgba(255,255,255,0.6)" }}
-      >
-        {MICRO}
-      </motion.span>
-
-      {/* Main content */}
-      <div className="flex flex-col gap-4">
-        <motion.h1
+      {/* Main content — StickyHeader shows festival info */}
+      <div className="flex flex-col gap-4 mt-12 md:mt-16">
+        <motion.img
+          src="/logo-ideo-ideis-festivalul.png"
+          alt="ideo ideis festivalul"
           variants={slideItemVariants}
-          className="font-semibold lowercase leading-none tracking-tight"
           style={{
-            fontSize: "clamp(3.5rem, 9vw, 9rem)",
-            color: "#fff",
-            letterSpacing: "-0.02em",
-            lineHeight: 0.92,
+            height: "clamp(9rem, 24vw, 24rem)",
+            width: "auto",
+            objectFit: "contain",
+            alignSelf: "flex-start",
+            marginTop: "-2rem",
           }}
-        >
-          ideo ideis
-          <br />
-          festivalul
-        </motion.h1>
+        />
 
         <motion.div
           variants={slideItemVariants}

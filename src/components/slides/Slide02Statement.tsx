@@ -1,8 +1,6 @@
 import { motion } from "framer-motion";
 import { slideItemVariants } from "@/components/SlideSection";
 
-const MICRO = "ediția #21 · 29.07–05.08.26 · alexandria";
-
 const facts = [
   "20 ani",
   "200+ trupe aplicante",
@@ -31,26 +29,20 @@ export function Slide02Statement() {
       <div className="relative z-10 w-full h-full flex flex-col md:flex-row items-stretch">
         {/* Left — red block + headline */}
         <div className="flex-1 flex flex-col justify-end p-10 md:p-16 md:pr-12">
-          <motion.span
-            variants={slideItemVariants}
-            className="micro-label mb-10"
-            style={{ color: "rgba(255,255,255,0.4)" }}
-          >
-            {MICRO}
-          </motion.span>
-
           <div>
             {/* Red block */}
             <motion.div
               variants={slideItemVariants}
               style={{
                 backgroundColor: "#E7004C",
-                display: "inline-block",
-                padding: "0.15rem 0.6rem",
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                padding: "0.35rem 0.6rem",
                 marginBottom: "1rem",
               }}
             >
-              <span style={{ color: "#fff", fontSize: "0.6rem", letterSpacing: "0.15em", textTransform: "uppercase", fontWeight: 400 }}>
+              <span style={{ color: "#fff", fontSize: "0.6rem", letterSpacing: "0.15em", textTransform: "uppercase", fontWeight: 400, lineHeight: 1 }}>
                 manifest
               </span>
             </motion.div>

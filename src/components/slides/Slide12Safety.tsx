@@ -1,8 +1,6 @@
 import { motion } from "framer-motion";
 import { slideItemVariants } from "@/components/SlideSection";
 
-const MICRO = "ediția #21 · 29.07–05.08.26 · alexandria";
-
 const checklist = [
   "coordonare clară a grupurilor și mentorilor",
   "fluxuri de zi structurate și previzibile",
@@ -16,15 +14,7 @@ export function Slide12Safety() {
       className="w-full h-full flex flex-col justify-between p-10 md:p-16"
       style={{ backgroundColor: "#fff" }}
     >
-      <motion.span
-        variants={slideItemVariants}
-        className="micro-label"
-        style={{ color: "rgba(0,0,0,0.3)" }}
-      >
-        {MICRO}
-      </motion.span>
-
-      <div className="flex-1 flex flex-col md:flex-row gap-12 md:gap-20 items-center">
+      <div className="flex-1 flex flex-col md:flex-row gap-12 md:gap-20 items-center pt-12 md:pt-16">
         {/* Left */}
         <div className="md:w-2/5">
           <motion.div
