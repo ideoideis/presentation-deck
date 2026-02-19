@@ -1,99 +1,125 @@
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import { slideItemVariants } from "@/components/SlideSection";
+import { useCountUp } from "@/hooks/useCountUp";
 
-const modules = [
-  {
-    label: "participanți",
-    text: "200 adolescenți (15–18 ani), 8 trupe din toată țara.",
-  },
-  {
-    label: "public direct",
-    text: "10.000 spectatori locali în alexandria — comunitatea orașului.",
-  },
-  {
-    label: "reach național",
-    text: "800.000 vizionări și interacțiuni în mass-media și online.",
-  },
+const stats = [
+  { value: 4000, prefix: "~", label: "participanți (15–18 ani)", detail: "adolescenți din toată țara" },
+  { value: 160, prefix: "", label: "trupe din țară", detail: "trupe înscrise" },
+  { value: 1600, prefix: "~", label: "voluntari (alexandria)", detail: "voluntari locali" },
+  { value: 200000, prefix: "", label: "public local", detail: "spectatori în alexandria" },
+  { value: 16000000, prefix: "~", label: "reach național", detail: "vizionări mass-media și online" },
 ];
+
+function StatItem({ stat, compact }: { stat: typeof stats[0]; compact?: boolean }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const inView = useInView(ref, { once: false, margin: "-10%" });
+  const count = useCountUp(stat.value, 1400, inView);
+
+  const formatted =
+    stat.value >= 1000
+      ? count.toLocaleString("ro-RO")
+      : count.toString();
+
+  return (
+    <motion.div
+      ref={ref}
+      variants={slideItemVariants}
+      className="min-w-0 flex-1 flex flex-col justify-between"
+      style={{
+        borderTop: "2px solid #E7004C",
+        borderLeft: "none",
+        padding:
+          "clamp(1.25rem, 2.5vw, 2rem) clamp(1rem, 2vw, 1.5rem) clamp(1rem, 2vw, 1.5rem)",
+      }}
+    >
+      <div>
+        <p
+          className="font-semibold lowercase tabular-nums"
+          style={{
+            fontSize: compact ? "clamp(1rem, 2.5vw, 2.25rem)" : "clamp(1.75rem, 4.5vw, 4.5rem)",
+            color: "#fff",
+            letterSpacing: "-0.04em",
+            lineHeight: 0.88,
+            marginBottom: "0.5rem",
+            overflow: "hidden",
+          }}
+        >
+          {stat.prefix}{formatted}
+        </p>
+        <p
+          style={{
+            color: "rgba(255,255,255,0.55)",
+            fontSize: "clamp(0.72rem, 1vw, 0.9rem)",
+            lineHeight: 1.4,
+            fontWeight: 400,
+          }}
+        >
+          {stat.detail}
+        </p>
+      </div>
+      <p
+        className="lowercase"
+        style={{
+          color: "#E7004C",
+          fontSize: "0.55rem",
+          letterSpacing: "0.18em",
+          textTransform: "uppercase",
+          marginTop: "0.75rem",
+          fontWeight: 600,
+        }}
+      >
+        {stat.label}
+      </p>
+    </motion.div>
+  );
+}
 
 export function Slide04Clarity() {
   return (
     <div
-      className="w-full h-full flex flex-col justify-between p-10 md:p-16"
-      style={{ backgroundColor: "#2c2d34" }}
+      className="w-full h-full flex flex-col overflow-hidden"
+      style={{
+        backgroundColor: "#2c2d34",
+        padding: "var(--slide-pt) var(--slide-px) var(--slide-py)",
+      }}
     >
-      <div className="flex flex-col gap-4 md:gap-0 md:flex-row flex-1 items-stretch pt-12 md:pt-16">
-        {modules.map((mod, i) => (
-          <motion.div
+      {/* Stats — 5 columns with big numbers */}
+      <div
+        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 flex-1 gap-0"
+        style={{ marginTop: "clamp(5rem, 3vh, 2rem)" }}
+      >
+        {stats.map((stat, i) => (
+          <div
             key={i}
-            variants={slideItemVariants}
-            className="flex-1 flex flex-col justify-start items-start"
             style={{
-              borderTop: "1px solid #E7004C",
-              borderLeft: i > 0 ? "1px solid rgba(255,255,255,0.08)" : "none",
-              padding: "2rem 2.5rem 3rem",
+              borderLeft: i > 0 ? "1px solid rgba(255,255,255,0.07)" : "none",
             }}
           >
-            {/* Red marker */}
-            <span
-              style={{
-                display: "block",
-                width: "28px",
-                height: "3px",
-                backgroundColor: "#E7004C",
-                marginBottom: "1.25rem",
-              }}
+            <StatItem
+              stat={stat}
+              compact={stat.value >= 100_000}
             />
-            <p
-              className="lowercase"
-              style={{
-                color: "rgba(255,255,255,0.4)",
-                fontSize: "0.65rem",
-                letterSpacing: "0.2em",
-                textTransform: "uppercase",
-                marginBottom: "0.75rem",
-              }}
-            >
-              {mod.label}
-            </p>
-            <p
-              style={{
-                color: "#fff",
-                fontSize: "clamp(1rem, 1.8vw, 1.5rem)",
-                fontWeight: 600,
-                lineHeight: 1.25,
-                letterSpacing: "-0.01em",
-              }}
-            >
-              {mod.text}
-            </p>
-          </motion.div>
+          </div>
         ))}
       </div>
 
-      {/* Bottom tag */}
-      <motion.div
+      {/* Eyebrow — bottom */}
+      <motion.p
         variants={slideItemVariants}
+        className="micro-label"
         style={{
-          backgroundColor: "#E7004C",
-          padding: "0.5rem 1.25rem",
-          display: "inline-flex",
-          alignSelf: "flex-start",
-          marginTop: "2.5rem",
+          color: "rgba(255,255,255,0.4)",
+          fontSize: "0.6rem",
+          letterSpacing: "0.2em",
+          textTransform: "uppercase",
+          marginTop: "clamp(1.25rem, 3vh, 2.5rem)",
+          paddingBottom: "0.25rem",
+          flexShrink: 0,
         }}
       >
-        <span
-          style={{
-            color: "#fff",
-            fontSize: "0.65rem",
-            letterSpacing: "0.15em",
-            textTransform: "uppercase",
-            fontWeight: 400,
-          }}
-        >
-          public · per ediție
-        </span>
-      </motion.div>
+        public · per ediție
+      </motion.p>
     </div>
   );
 }

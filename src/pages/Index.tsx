@@ -6,7 +6,6 @@ import { Slide02Statement } from "@/components/slides/Slide02Statement";
 import { Slide03Typography } from "@/components/slides/Slide03Typography";
 import { Slide04Clarity } from "@/components/slides/Slide04Clarity";
 import { Slide05HowItLooks } from "@/components/slides/Slide05HowItLooks";
-import { Slide06Education } from "@/components/slides/Slide06Education";
 import { Slide07WhyHere } from "@/components/slides/Slide07WhyHere";
 import { Slide08Year2026 } from "@/components/slides/Slide08Year2026";
 import { Slide09TrackRecord } from "@/components/slides/Slide09TrackRecord";
@@ -14,6 +13,7 @@ import { Slide10People } from "@/components/slides/Slide10People";
 import { Slide11ImpactStatement } from "@/components/slides/Slide11ImpactStatement";
 import { Slide13Remains } from "@/components/slides/Slide13Remains";
 import { Slide14CTA } from "@/components/slides/Slide14CTA";
+import { Slide06Education } from "@/components/slides/Slide06Education";
 
 const TOTAL_SLIDES = 13;
 

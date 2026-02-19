@@ -20,6 +20,11 @@
 
 @layer base {
   :root {
+    /* Slide layout */
+    --slide-pt: clamp(0.5rem, 2vh, 1.5rem);
+    --slide-px: clamp(2.5rem, 5vw, 4rem);
+    --slide-py: clamp(2.5rem, 5vw, 4rem);
+
     /* Festival brand */
     --brand-red: 346 100% 45%;         /* #E7004C */
     --brand-near-black: 210 4% 15%;   /* #222324 */

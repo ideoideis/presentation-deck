@@ -11,7 +11,7 @@ const stats = [
   { value: 16000000, prefix: "~", label: "reach național" },
 ];
 
-function StatItem({ stat }: { stat: typeof stats[0] }) {
+function StatItem({ stat, compact }: { stat: typeof stats[0]; compact?: boolean }) {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: false, margin: "-10%" });
   const count = useCountUp(stat.value, 1400, inView);
@@ -22,21 +22,37 @@ function StatItem({ stat }: { stat: typeof stats[0] }) {
       : count.toString();
 
   return (
-    <motion.div ref={ref} variants={slideItemVariants} style={{ borderTop: "1px solid rgba(255,255,255,0.18)", paddingTop: "1.25rem" }}>
+    <motion.div
+      ref={ref}
+      variants={slideItemVariants}
+      className="min-w-0"
+      style={{
+        borderTop: "1px solid rgba(255,255,255,0.18)",
+        paddingTop: compact ? "0.75rem" : "1.25rem",
+      }}
+    >
       <p
-        className="font-semibold lowercase leading-none"
+        className="font-semibold lowercase leading-none tabular-nums"
         style={{
-          fontSize: "clamp(2.5rem, 7vw, 7rem)",
+          fontSize: compact ? "clamp(1rem, 2.5vw, 2.25rem)" : "clamp(1.75rem, 4.5vw, 4.5rem)",
           color: "#fff",
           letterSpacing: "-0.03em",
           lineHeight: 0.9,
+          overflow: "hidden",
         }}
       >
         {stat.prefix}{formatted}
       </p>
       <p
-        className="micro-label mt-2"
-        style={{ color: "#fff", fontSize: "0.7rem", letterSpacing: "0.12em", opacity: 0.92, fontWeight: 500 }}
+        className="micro-label mt-1.5 md:mt-2"
+        style={{
+          color: "#fff",
+          fontSize: compact ? "0.58rem" : "0.7rem",
+          letterSpacing: "0.12em",
+          opacity: 0.92,
+          fontWeight: 500,
+          lineHeight: 1.3,
+        }}
       >
         {stat.label}
       </p>
@@ -47,12 +63,19 @@ function StatItem({ stat }: { stat: typeof stats[0] }) {
 export function Slide06Numbers() {
   return (
     <div
-      className="w-full h-full flex flex-col justify-between p-10 md:p-16"
-      style={{ backgroundColor: "#c40045" }}
+      className="w-full h-full flex flex-col justify-between overflow-hidden"
+      style={{
+        backgroundColor: "#c40045",
+        padding: "var(--slide-pt) var(--slide-px) var(--slide-py)",
+      }}
     >
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-6 md:gap-y-8 pt-12 md:pt-16">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-6 md:gap-x-8 gap-y-6 md:gap-y-8 pt-8 md:pt-12 flex-1 content-center">
         {stats.map((stat, i) => (
-          <StatItem key={i} stat={stat} />
+          <StatItem
+            key={i}
+            stat={stat}
+            compact={stat.value >= 100_000}
+          />
         ))}
       </div>
 
@@ -63,6 +86,7 @@ export function Slide06Numbers() {
           padding: "0.5rem 1rem",
           display: "inline-flex",
           alignSelf: "flex-start",
+          flexShrink: 0,
         }}
       >
         <span
