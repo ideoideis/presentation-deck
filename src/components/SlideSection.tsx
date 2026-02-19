@@ -1,6 +1,5 @@
-import { ReactNode } from "react";
+import { ReactNode, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
 
 interface SlideSectionProps {
   id: string;
@@ -20,7 +19,7 @@ const containerVariants = {
 };
 
 export const slideItemVariants = {
-  hidden: { opacity: 0, y: 32 },
+  hidden: { opacity: 0, y: 28 },
   visible: {
     opacity: 1,
     y: 0,
@@ -30,7 +29,7 @@ export const slideItemVariants = {
 
 export function SlideSection({ id, className = "", children, ...rest }: SlideSectionProps) {
   const ref = useRef<HTMLElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-20%" });
+  const inView = useInView(ref, { once: true, margin: "-15%" });
 
   return (
     <section
@@ -40,7 +39,7 @@ export function SlideSection({ id, className = "", children, ...rest }: SlideSec
       {...rest}
     >
       <motion.div
-        className="w-full h-full"
+        style={{ width: "100%", height: "100%" }}
         variants={containerVariants}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
