@@ -3,12 +3,12 @@ import { motion } from "framer-motion";
 import { slideItemVariants } from "@/components/SlideSection";
 
 const items = [
-  "ateliere de teatru tânăr",
-  "arte alăturate: film, foto, dans, scriere, new media, scenografie, make-up",
+  "ateliere de teatru tânăr + arte alăturate (film, foto, dans, scriere, new media, scenografie)",
   "spectacole de teatru tânăr",
-  "spectacole invitate + outdoor",
-  "cinemateca târzie + discuții",
-  "povești + masterclass-uri",
+  "spectacole invitate",
+  "cinemateca târzie + Q&A",
+  "masterclass-uri si seara povestitorilor",
+  "murale și activări în oraș",
 ];
 
 export function Slide05HowItLooks() {
@@ -32,13 +32,13 @@ export function Slide05HowItLooks() {
               lineHeight: 0.95,
             }}
           >
-            cum arată,
+            ce se intamplă,
             <br />
-            <span style={{ color: "#E7004C" }}>concret</span>
+            <span style={{ color: "#E7004C" }}>anual</span>
           </motion.h2>
         </div>
 
-        {/* Right: list */}
+        {/* Right: activity list */}
         <div className="md:w-2/3 flex flex-col justify-center gap-1 md:pl-16 md:border-l border-l-0" style={{ borderColor: "rgba(0,0,0,0.1)" }}>
           {items.map((item, i) => (
             <motion.div
@@ -55,7 +55,6 @@ export function Slide05HowItLooks() {
                 cursor: "default",
               }}
             >
-              {/* Hover line – expands on hover, disappears on mouse leave */}
               <motion.span
                 animate={{ width: hoveredIndex === i ? 120 : 0 }}
                 transition={{ duration: 0.25, ease: "easeOut" }}
@@ -67,14 +66,7 @@ export function Slide05HowItLooks() {
                   overflow: "hidden",
                 }}
               />
-              <p
-                style={{
-                  color: "#222324",
-                  fontSize: "clamp(0.9rem, 1.5vw, 1.2rem)",
-                  fontWeight: 400,
-                  lineHeight: 1.3,
-                }}
-              >
+              <p style={{ color: "#222324", fontSize: "clamp(0.9rem, 1.5vw, 1.2rem)", fontWeight: 400, lineHeight: 1.3 }}>
                 {item}
               </p>
             </motion.div>

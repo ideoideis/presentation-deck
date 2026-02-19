@@ -4,11 +4,11 @@ import { slideItemVariants } from "@/components/SlideSection";
 import { useCountUp } from "@/hooks/useCountUp";
 
 const stats = [
-  { value: 200, prefix: "~", label: "participanți (15–18 ani)" },
-  { value: 8, prefix: "", label: "trupe din țară" },
-  { value: 80, prefix: "~", label: "voluntari (alexandria)" },
-  { value: 10000, prefix: "", label: "public local (țintă)" },
-  { value: 800000, prefix: "", label: "reach național (țintă)" },
+  { value: 4000, prefix: "~", label: "participanți (15–18 ani)" },
+  { value: 160, prefix: "", label: "trupe din țară" },
+  { value: 1600, prefix: "~", label: "voluntari (alexandria)" },
+  { value: 200000, prefix: "", label: "public local" },
+  { value: 16000000, prefix: "~", label: "reach național" },
 ];
 
 function StatItem({ stat }: { stat: typeof stats[0] }) {
@@ -56,13 +56,22 @@ export function Slide06Numbers() {
         ))}
       </div>
 
-      <motion.p
+      <motion.div
         variants={slideItemVariants}
-        className="micro-label"
-        style={{ color: "rgba(255,255,255,0.35)", fontSize: "0.6rem", letterSpacing: "0.15em" }}
+        style={{
+          backgroundColor: "rgba(0,0,0,0.2)",
+          padding: "0.5rem 1rem",
+          display: "inline-flex",
+          alignSelf: "flex-start",
+        }}
       >
-        date cumulate · 20 ediții
-      </motion.p>
+        <span
+          className="micro-label"
+          style={{ color: "#fff", fontSize: "0.75rem", letterSpacing: "0.15em", fontWeight: 500 }}
+        >
+          date cumulate · 20 ediții
+        </span>
+      </motion.div>
     </div>
   );
 }

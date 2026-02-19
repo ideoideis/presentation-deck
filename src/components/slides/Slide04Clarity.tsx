@@ -3,16 +3,16 @@ import { slideItemVariants } from "@/components/SlideSection";
 
 const modules = [
   {
-    label: "cine",
-    text: "~200 adolescenți (15–18 ani), 8 trupe din toată țara.",
+    label: "participanți",
+    text: "200 adolescenți (15–18 ani), 8 trupe din toată țara.",
   },
   {
-    label: "ce",
-    text: "ateliere intense + spectacole + întâlniri cu profesioniști.",
+    label: "public direct",
+    text: "10.000 spectatori locali în Alexandrie — comunitatea orașului.",
   },
   {
-    label: "cum se vede",
-    text: "alexandria devine scenă: public local, outdoor, filme, discuții, murale.",
+    label: "reach național",
+    text: "800.000 vizionări și interacțiuni în mass-media și online.",
   },
 ];
 
@@ -27,7 +27,7 @@ export function Slide04Clarity() {
           <motion.div
             key={i}
             variants={slideItemVariants}
-            className="flex-1 flex flex-col justify-end"
+            className="flex-1 flex flex-col justify-start items-start"
             style={{
               borderTop: "1px solid #E7004C",
               borderLeft: i > 0 ? "1px solid rgba(255,255,255,0.08)" : "none",
@@ -91,7 +91,7 @@ export function Slide04Clarity() {
             fontWeight: 400,
           }}
         >
-          10.000 public local (țintă) · 800.000 reach național (țintă)
+          public țintă · per ediție
         </span>
       </motion.div>
     </div>

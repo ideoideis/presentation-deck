@@ -86,7 +86,7 @@ export function Slide02Statement() {
             className="micro-label mb-6"
             style={{ color: "rgba(255,255,255,0.35)" }}
           >
-            în cifre
+            în cifre · per ediție
           </motion.p>
           <div className="flex flex-col gap-5">
             {facts.map((fact, i) => (

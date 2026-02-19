@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
 import { slideItemVariants } from "@/components/SlideSection";
 
-const left = ["teatru tânăr", "spectacole invitate", "outdoor"];
-const right = ["cinemateca târzie", "discuții", "murale", "activări în oraș"];
+const impactPoints = [
+  { label: "experiență", text: "peste 20 de ani de consecvență și dezvoltare continuă." },
+  { label: "rezultate", text: "mii de adolescenți formați, spectacole create, comunități activate." },
+  { label: "impact", text: "Alexandria devine referință pentru teatrul tânăr și artele strâns legate." },
+];
 
 export function Slide09TrackRecord() {
   return (
@@ -19,71 +22,48 @@ export function Slide09TrackRecord() {
             color: "#fff",
             letterSpacing: "-0.02em",
             lineHeight: 0.95,
-            marginBottom: "3.5rem",
+            marginBottom: "3rem",
           }}
         >
-          am făcut asta,{" "}
+          impact{" "}
           <span style={{ color: "#E7004C" }}>constant</span>
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          {/* Left column */}
-          <div>
-            <motion.p
+        <div className="flex flex-col md:flex-row gap-6 md:gap-8">
+          {impactPoints.map((point, i) => (
+            <motion.div
+              key={i}
               variants={slideItemVariants}
-              className="micro-label mb-5"
-              style={{ color: "rgba(255,255,255,0.3)", letterSpacing: "0.15em", fontSize: "0.6rem" }}
+              className="flex-1"
+              style={{
+                borderTop: "1px solid #E7004C",
+                padding: "1.5rem 0 0",
+              }}
             >
-              program — scenă
-            </motion.p>
-            {left.map((item, i) => (
-              <motion.div
-                key={i}
-                variants={slideItemVariants}
+              <p
+                className="lowercase"
                 style={{
-                  padding: "0.9rem 0",
-                  borderBottom: "1px solid rgba(255,255,255,0.07)",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "1rem",
+                  color: "rgba(255,255,255,0.4)",
+                  fontSize: "0.65rem",
+                  letterSpacing: "0.2em",
+                  textTransform: "uppercase",
+                  marginBottom: "0.75rem",
                 }}
               >
-                <span style={{ display: "block", width: "20px", height: "1px", backgroundColor: "#E7004C" }} />
-                <p style={{ color: "#fff", fontSize: "clamp(0.95rem, 1.4vw, 1.2rem)", fontWeight: 400 }}>
-                  {item}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Right column */}
-          <div>
-            <motion.p
-              variants={slideItemVariants}
-              className="micro-label mb-5"
-              style={{ color: "rgba(255,255,255,0.3)", letterSpacing: "0.15em", fontSize: "0.6rem" }}
-            >
-              program — oraș
-            </motion.p>
-            {right.map((item, i) => (
-              <motion.div
-                key={i}
-                variants={slideItemVariants}
+                {point.label}
+              </p>
+              <p
                 style={{
-                  padding: "0.9rem 0",
-                  borderBottom: "1px solid rgba(255,255,255,0.07)",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "1rem",
+                  color: "#fff",
+                  fontSize: "clamp(0.95rem, 1.4vw, 1.2rem)",
+                  fontWeight: 500,
+                  lineHeight: 1.4,
                 }}
               >
-                <span style={{ display: "block", width: "20px", height: "1px", backgroundColor: "#E7004C" }} />
-                <p style={{ color: "#fff", fontSize: "clamp(0.95rem, 1.4vw, 1.2rem)", fontWeight: 400 }}>
-                  {item}
-                </p>
-              </motion.div>
-            ))}
-          </div>
+                {point.text}
+              </p>
+            </motion.div>
+          ))}
         </div>
       </div>
 
@@ -107,7 +87,7 @@ export function Slide09TrackRecord() {
             textTransform: "uppercase",
           }}
         >
-          peste 20 de ani de consecvență.
+          festivalul tânăr pentru un oraș în creștere.
         </p>
       </motion.div>
     </div>

@@ -45,7 +45,7 @@ export function Slide03Typography() {
             opacity: 0.7,
           }}
         >
-          o săptămână în care adolescenții își {"\u00A0"}{"\u00A0"}{"\u00A0"}{"\u00A0"}construiesc vocea.
+          o săptămână în care adolescenții își construiesc vocea.
         </p>
       </motion.div>
     </div>

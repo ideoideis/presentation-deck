@@ -30,7 +30,7 @@ export function StickyHeader() {
           padding: 0,
         }}
       >
-        festivalul · ediția #21 · 29.07–05.08.26
+        festivalul · ediția #21 · 29.07–05.08.26 · alexandria
       </button>
 
       <a
