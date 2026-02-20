@@ -4,27 +4,27 @@ import { slideItemVariants } from "@/components/SlideSection";
 
 const modules = [
   {
-    label: "adolescenți",
-    subtitle: "pe scenă, în proces",
-    text: "ateliere intensive + lucru direct cu profesioniști, pe scenă și în proces",
+    label: "empatie & comunicare",
+    subtitle: "prin exercițiu, nu prin teorie",
+    text: "Atelierele de teatru și noile media îi pun pe adolescenți în situații reale: să asculte, să colaboreze, să negocieze. Competențe pe care nicio materie școlară nu le predă sistematic.",
     index: "01",
   },
   {
-    label: "copii",
-    subtitle: "laboratorul ideo ideis",
-    text: "joacă și creativitate ca prim contact cu arta, în oraș",
+    label: "gândire critică",
+    subtitle: "întrebări reale, contexte reale",
+    text: "Spectacolele și dialogurile cu artiști relevanți provoacă adolescenții să analizeze, să argumenteze și să-și formeze opinii proprii, nu să reproducă răspunsuri.",
     index: "02",
   },
   {
-    label: "profesori & comunitate",
-    subtitle: "rețeaua care crește",
-    text: "ateliere și întâlniri care cresc publicul și îl țin aproape",
+    label: "responsabilitate & implicare",
+    subtitle: "caractere formate, nu premiate",
+    text: "Prin cadrul oferit, Ideo Ideis modelează caractere: ajută tinerii să-și clarifice valorile, să înțeleagă ce înseamnă să fii parte dintr-o comunitate și să-și asume rolul în ea.",
     index: "03",
   },
   {
-    label: "toate vârstele",
-    subtitle: "talk-uri, masterclass-uri",
-    text: "talk-uri, masterclass-uri, discuții după spectacole și film",
+    label: "integrare comunitară",
+    subtitle: "orașul ca scenă",
+    text: "În 2026 extindem programul pentru a include întreaga comunitate din Alexandria, familii, profesori, public larg, nu doar participanții selectați.",
     index: "04",
   },
 ];
@@ -34,7 +34,7 @@ export function Slide06Education() {
 
   return (
     <div
-      className="w-full h-full flex flex-col md:pr-[clamp(var(--slide-px),10vw,6rem)]"
+      className="w-full h-full flex flex-col"
       style={{
         backgroundColor: "#222324",
         padding: "var(--slide-pt) var(--slide-px) var(--slide-py)",
@@ -50,12 +50,27 @@ export function Slide06Education() {
           letterSpacing: "-0.02em",
           lineHeight: 0.95,
           marginBottom: "clamp(1.5rem, 4vh, 3rem)",
-          marginTop: "clamp(5rem, 3vh, 2rem)",
+          marginTop: "clamp(3rem, 8vh, 5rem)",
         }}
       >
-        educație{" "}
-        <span style={{ color: "#E7004C" }}>non-formală</span>
+        ce învață{" "}
+        <span style={{ color: "#E7004C" }}>adolescenții</span>
       </motion.h2>
+
+      <motion.p
+        variants={slideItemVariants}
+        style={{
+          color: "rgba(255,255,255,0.4)",
+          fontSize: "clamp(0.82rem, 1.1vw, 0.95rem)",
+          lineHeight: 1.6,
+          maxWidth: "72ch",
+          marginRight: 0,
+          marginTop: "clamp(1.25rem, 3vh, 2rem)",
+          marginBottom: "clamp(1.25rem, 3vh, 2rem)",
+        }}
+      >
+        Ideo Ideis este unul dintre puținele festivaluri din România gândite pentru adolescenți și pentru felul în care teatrul poate fi un instrument de formare personală. Într-o lume grăbită, oferim un cadru în care tinerii pot încetini, pot explora întrebări reale și pot învăța să-și exprime vocea. Nu urmărim divertisment, ci cultivăm atenția, empatia și curajul unei generații care va duce mai departe valori esențiale pentru o societate mai deschisă și mai solidară.
+      </motion.p>
 
       {/* Interactive rows */}
       <div className="flex flex-col flex-1 justify-center gap-0">
@@ -89,8 +104,8 @@ export function Slide06Education() {
                 }}
               >
                 {/* Row header */}
-                <div className="flex items-center justify-between gap-3 md:gap-4">
-                  <div className="flex flex-col sm:flex-row sm:items-center gap-0.5 sm:gap-4 md:gap-6 min-w-0">
+                <div className="flex items-center justify-between gap-4">
+                  <div className="flex items-center gap-4 md:gap-6">
                     {/* Index number */}
                     <span
                       style={{
@@ -134,15 +149,11 @@ export function Slide06Education() {
                     animate={{ rotate: isActive ? 45 : 0 }}
                     transition={{ duration: 0.22, ease: "easeOut" }}
                     style={{
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
+                      display: "block",
                       width: "16px",
                       height: "16px",
-                      padding: "0.5rem",
                       position: "relative",
                       flexShrink: 0,
-                      marginRight: "1rem",
                     }}
                   >
                     <span
@@ -184,12 +195,12 @@ export function Slide06Education() {
                       style={{ overflow: "hidden" }}
                     >
                       <p
-                        className="pl-8 sm:pl-[calc(1.8rem+1rem+clamp(1rem,1.5vw,1.5rem))]"
                         style={{
                           color: "rgba(255,255,255,0.55)",
                           fontSize: "clamp(0.85rem, 1.15vw, 1rem)",
                           lineHeight: 1.65,
                           paddingTop: "0.75rem",
+                          paddingLeft: "calc(1.8rem + 1rem + clamp(1rem, 1.5vw, 1.5rem))",
                           maxWidth: "55ch",
                         }}
                       >

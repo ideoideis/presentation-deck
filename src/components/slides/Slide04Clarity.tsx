@@ -4,11 +4,11 @@ import { slideItemVariants } from "@/components/SlideSection";
 import { useCountUp } from "@/hooks/useCountUp";
 
 const stats = [
-  { value: 4000, prefix: "~", label: "participanți (15–18 ani)", detail: "adolescenți din toată țara" },
-  { value: 160, prefix: "", label: "trupe din țară", detail: "trupe înscrise" },
-  { value: 1600, prefix: "~", label: "voluntari (alexandria)", detail: "voluntari locali" },
-  { value: 200000, prefix: "", label: "public local", detail: "spectatori în alexandria" },
-  { value: 16000000, prefix: "~", label: "reach național", detail: "vizionări mass-media și online" },
+  { value: 6000, prefix: "mai bine de ", label: "adolescenți au crescut alături de Ideo Ideis", detail: "participanți din toată țara", note: "" },
+  { value: 500, prefix: "", label: "evenimente de-a lungul anilor", detail: "spectacole, proiecții, ateliere, concerte", note: "" },
+  { value: 160, prefix: "", label: "trupe din țară", detail: "trupe înscrise / ediție", note: "" },
+  { value: 200000, prefix: "", label: "public local", detail: "spectatori · Alexandria · cumulat", note: "" },
+  { value: 16000000, prefix: "~", label: "reach național", detail: "vizibilitate · canale media culturale", note: "" },
 ];
 
 function StatItem({ stat, compact }: { stat: typeof stats[0]; compact?: boolean }) {
@@ -71,6 +71,19 @@ function StatItem({ stat, compact }: { stat: typeof stats[0]; compact?: boolean 
       >
         {stat.label}
       </p>
+      {stat.note && (
+        <p
+          style={{
+            color: "rgba(255,255,255,0.4)",
+            fontSize: "clamp(0.65rem, 0.85vw, 0.75rem)",
+            lineHeight: 1.45,
+            marginTop: "0.5rem",
+            fontStyle: "italic",
+          }}
+        >
+          {stat.note}
+        </p>
+      )}
     </motion.div>
   );
 }
@@ -120,7 +133,7 @@ export function Slide04Clarity() {
           flexShrink: 0,
         }}
       >
-        public · per ediție
+        impact · în cifre
       </motion.p>
     </div>
   );

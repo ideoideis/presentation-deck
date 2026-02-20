@@ -69,7 +69,7 @@ export function Slide07WhyHere() {
               maxWidth: "38ch",
             }}
           >
-            în alexandria, cultura nu se întâmplă „în afara vieții". intră în oraș, în spații obișnuite, și le schimbă sensul.
+            În fiecare vară, săli de sport devin spații de ateliere, curțile de școală se transformă în contexte de dialog, iar comunitatea locală respiră alt ritm. Un oraș mic devenit epicentru cultural.
           </motion.p>
         </div>
 

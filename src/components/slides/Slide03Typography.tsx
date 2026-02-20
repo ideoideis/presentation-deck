@@ -7,7 +7,7 @@ export function Slide03Typography() {
       className="w-full h-full flex flex-col justify-end md:justify-between gap-6 md:gap-0 p-10 md:p-16"
       style={{ backgroundColor: "#fff" }}
     >
-      <div className="pt-0 md:pt-16">
+      <div className="pt-0 md:pt-16" style={{ marginBottom: "2.5rem" }}>
         <motion.h2
           variants={slideItemVariants}
           className="lowercase font-semibold leading-none"
@@ -40,12 +40,12 @@ export function Slide03Typography() {
           style={{
             color: "#222324",
             fontSize: "clamp(0.9rem, 1.4vw, 1.15rem)",
-            maxWidth: "42ch",
+            maxWidth: "48ch",
             lineHeight: 1.55,
             opacity: 0.7,
           }}
         >
-          o săptămână în care adolescenții își construiesc vocea.
+          adolescenții învață prin exercițiu, prin curiozitate și prin confruntarea cu întrebări reale. În fiecare an, programul e construit pentru a provoca, iar adolescenții folosesc teatrul ca pretext pentru ceva mai important: să înțeleagă ce-i frământă, să-și asume cine sunt și să învețe ce înseamnă să fie parte dintr-o comunitate.
         </p>
       </motion.div>
     </div>

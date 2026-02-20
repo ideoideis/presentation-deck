@@ -3,11 +3,11 @@ import { slideItemVariants } from "@/components/SlideSection";
 import { asset } from "@/lib/utils";
 
 const facts = [
-  "de 20 ani",
-  "200+ trupe aplicante",
-  "160+ trupe participante",
-  "4.000+ adolescenți participanți",
-  "artiști · mentori · traineri · invitați",
+  "20 de ani de consecvență",
+  "500+ evenimente de-a lungul anilor",
+  "6000+ adolescenți au crescut alături de Ideo Ideis",
+  "câteva mii de spectatori anual",
+  "vizibilitate națională",
 ];
 
 export function Slide02Statement() {
@@ -22,85 +22,120 @@ export function Slide02Statement() {
           src={asset("/images/workshop-bw.jpg")}
           alt="Adolescenți la atelier de teatru tânăr"
           className="w-full h-full object-cover"
-          style={{ filter: "grayscale(100%) contrast(1.15)", opacity: 0.35 }}
+          style={{ filter: "grayscale(100%) contrast(1.15)", opacity: 0.32 }}
         />
       </div>
 
       {/* Content grid */}
       <div className="relative z-10 w-full h-full flex flex-col md:flex-row items-stretch">
-        {/* Left — red block + headline */}
-        <div className="flex-1 flex flex-col justify-end p-10 md:p-16 md:pr-12">
+        {/* Left — headline */}
+        <div
+          className="flex-1 flex flex-col justify-end"
+          style={{
+            padding: "var(--slide-pt) var(--slide-px) var(--slide-py)",
+            paddingRight: "clamp(1.5rem, 4vw, 3rem)",
+          }}
+        >
           <div>
-            {/* Red block */}
+            {/* Eyebrow */}
             <motion.div
               variants={slideItemVariants}
               style={{
                 backgroundColor: "#E7004C",
                 display: "inline-flex",
                 alignItems: "center",
-                justifyContent: "center",
-                padding: "0.35rem 0.6rem",
-                marginBottom: "1rem",
+                padding: "0.3rem 0.6rem",
+                marginBottom: "1.25rem",
               }}
             >
-              <span style={{ color: "#fff", fontSize: "0.6rem", letterSpacing: "0.15em", textTransform: "uppercase", fontWeight: 400, lineHeight: 1 }}>
-                manifest
+              <span
+                style={{
+                  color: "#fff",
+                  fontSize: "0.58rem",
+                  letterSpacing: "0.18em",
+                  textTransform: "uppercase",
+                  fontWeight: 400,
+                  lineHeight: 1,
+                }}
+              >
+                despre festival
               </span>
             </motion.div>
 
             <motion.h2
               variants={slideItemVariants}
-              className="lowercase font-semibold leading-tight"
+              className="lowercase font-semibold"
               style={{
-                fontSize: "clamp(1.8rem, 4.5vw, 4.2rem)",
+                fontSize: "clamp(1.75rem, 4.2vw, 3.8rem)",
                 color: "#fff",
                 letterSpacing: "-0.01em",
-                lineHeight: 1.05,
+                lineHeight: 1.08,
                 maxWidth: "22ch",
+                marginTop: "0.25rem",
               }}
             >
-              ideo ideis este un manifest artistic și social.
+              nu spectacol gata făcut, ci proces viu.
             </motion.h2>
 
             <motion.p
               variants={slideItemVariants}
               style={{
-                color: "rgba(255,255,255,0.6)",
-                fontSize: "clamp(0.95rem, 1.4vw, 1.2rem)",
-                marginTop: "1.25rem",
-                maxWidth: "40ch",
-                lineHeight: 1.55,
+                color: "rgba(255,255,255,0.55)",
+                fontSize: "clamp(0.9rem, 1.3vw, 1.1rem)",
+                marginTop: "1.5rem",
+                maxWidth: "42ch",
+                lineHeight: 1.65,
               }}
             >
-              susține adolescenții din românia în a se exprima așa cum sunt.
+              De 20 de ani, Ideo Ideis construiește un spațiu unde adolescenții întâlnesc teatrul nu ca un spectacol gata făcut, ci ca un proces viu. Arta nu e doar un decor, ci un instrument prin care tinerii își clarifică valorile, învață despre responsabilitate și descoperă ce fel de oameni vor să devină.
             </motion.p>
           </div>
         </div>
 
         {/* Right — facts column */}
         <div
-          className="flex flex-col justify-end p-10 md:p-16 md:pl-8 md:border-l md:border-white/10 pt-8 md:pt-0 md:min-w-[clamp(220px,28vw,380px)]"
+          className="flex flex-col justify-end"
+          style={{
+            padding: "var(--slide-pt) var(--slide-px) var(--slide-py)",
+            paddingLeft: "clamp(1.5rem, 3vw, 2.5rem)",
+            borderLeft: "1px solid rgba(255,255,255,0.08)",
+            minWidth: "clamp(210px, 26vw, 340px)",
+          }}
         >
           <motion.p
             variants={slideItemVariants}
-            className="micro-label mb-6"
-            style={{ color: "rgba(255,255,255,0.35)" }}
+            style={{
+              color: "rgba(255,255,255,0.3)",
+              fontSize: "0.6rem",
+              letterSpacing: "0.18em",
+              textTransform: "uppercase",
+              marginBottom: "1.5rem",
+            }}
           >
-            în cifre · per ediție
+            în cifre
           </motion.p>
+
           <div className="flex flex-col gap-5">
             {facts.map((fact, i) => (
               <motion.div key={i} variants={slideItemVariants}>
                 <span
                   style={{
                     display: "block",
-                    width: "24px",
+                    width: "20px",
                     height: "1px",
                     backgroundColor: "#E7004C",
-                    marginBottom: "0.4rem",
+                    marginBottom: "0.5rem",
                   }}
                 />
-                <p style={{ color: "#fff", fontSize: "clamp(0.85rem, 1.2vw, 1.05rem)", fontWeight: 600, letterSpacing: "-0.01em" }}>
+                <p
+                  style={{
+                    color: "#fff",
+                    fontSize: "clamp(0.85rem, 1.15vw, 1rem)",
+                    fontWeight: 600,
+                    letterSpacing: "-0.01em",
+                    lineHeight: 1.3,
+                  }}
+                >
                   {fact}
                 </p>
               </motion.div>

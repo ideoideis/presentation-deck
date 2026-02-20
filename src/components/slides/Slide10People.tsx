@@ -49,7 +49,7 @@ export function Slide10People() {
         <div className="md:w-1/3">
           <div
             className="flex items-center gap-4"
-            style={{ marginBottom: "0.75rem" }}
+            style={{ marginBottom: "1.25rem" }}
           >
             <motion.h2
               variants={slideItemVariants}
@@ -124,9 +124,7 @@ export function Slide10People() {
               maxWidth: "30ch",
             }}
           >
-            doar câțiva dintre oamenii care au trecut prin ideo ideis.
-            <br />
-            artisti, mentori, traineri și invitați care lucrează direct cu adolescenții, în roluri diferite.
+            artiști, mentori, traineri și invitați care lucrează direct cu adolescenții - doar câțiva dintre oamenii care au trecut prin Ideo Ideis.
           </motion.p>
         </div>
 

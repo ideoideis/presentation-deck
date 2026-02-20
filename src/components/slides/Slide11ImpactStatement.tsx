@@ -14,7 +14,7 @@ export function Slide11ImpactStatement() {
           src={asset("/images/hero-bw.jpg")}
           alt="Adolescenți pe scenă la ideo ideis"
           className="w-full h-full object-cover"
-          style={{ filter: "grayscale(100%) contrast(1.15)", opacity: 0.4 }}
+          style={{ filter: "grayscale(100%) contrast(1.15)", opacity: 0.38 }}
         />
       </div>
 
@@ -25,21 +25,21 @@ export function Slide11ImpactStatement() {
           variants={slideItemVariants}
           style={{
             backgroundColor: "#E7004C",
-            padding: "2.5rem 3rem 2.5rem",
+            padding: "2.5rem clamp(2.5rem, 5vw, 4rem) 2.5rem",
             flex: "0 0 auto",
-            maxWidth: "clamp(280px, 55vw, 720px)",
+            maxWidth: "clamp(280px, 60vw, 760px)",
           }}
         >
           <h2
-            className="lowercase font-semibold leading-tight"
+            className="lowercase font-semibold"
             style={{
-              fontSize: "clamp(1.5rem, 3.5vw, 3.2rem)",
+              fontSize: "clamp(1.4rem, 3.2vw, 3rem)",
               color: "#fff",
               letterSpacing: "-0.015em",
-              lineHeight: 1.05,
+              lineHeight: 1.08,
             }}
           >
-            adolescenții pleacă cu voce. orașul rămâne cu obicei cultural.
+            Ideo Ideis nu formează doar viitori artiști, ci oameni conștienți de puterea pe care o au de a schimba ceva în jurul lor.
           </h2>
         </motion.div>
 
@@ -47,30 +47,30 @@ export function Slide11ImpactStatement() {
         <motion.div
           variants={slideItemVariants}
           style={{
-            padding: "2.5rem 3rem",
-            borderTop: "1px solid rgba(255,255,255,0.12)",
+            padding: "2.5rem clamp(1.5rem, 3vw, 3rem)",
+            borderTop: "1px solid rgba(255,255,255,0.1)",
           }}
         >
           <span
             style={{
               display: "block",
-              width: "24px",
-              height: "2px",
+              width: "20px",
+              height: "1.5px",
               backgroundColor: "#E7004C",
               marginBottom: "1rem",
             }}
           />
           <p
             style={{
-              color: "rgba(255,255,255,0.55)",
-              fontSize: "0.8rem",
+              color: "rgba(255,255,255,0.5)",
+              fontSize: "0.78rem",
               letterSpacing: "0.08em",
-              lineHeight: 1.5,
+              lineHeight: 1.6,
               textTransform: "uppercase",
               maxWidth: "22ch",
             }}
           >
-            impact în adolescenți + impact în comunitate.
+            relevanță culturală + impact social real.
           </p>
         </motion.div>
       </div>

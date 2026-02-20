@@ -2,9 +2,18 @@ import { motion } from "framer-motion";
 import { slideItemVariants } from "@/components/SlideSection";
 
 const impactPoints = [
-  { label: "adolescenți & comunități naționale", text: "voce, curaj, comunitate care se întoarce acasă cu ei." },
-  { label: "comunitate locală", text: "public nou + obicei cultural (orașul se adună, revine, își schimbă reflexul)." },
-  { label: "network astistic & educational", text: "profesioniști activați anual, lucru direct cu adolescenții." },
+  {
+    label: "impact în adolescenți",
+    text: "6000+ adolescenți au crescut alături de Ideo Ideis. Nu formăm doar viitori artiști, ci oameni conștienți de puterea pe care o au de a schimba ceva în jurul lor.",
+  },
+  {
+    label: "impact în comunitate",
+    text: "Un oraș mic devenit epicentru cultural câteva zile pe an. Impactul continuă prin evenimente pe tot parcursul anului.",
+  },
+  {
+    label: "impact în rețea",
+    text: "Artiști, mentori, profesioniști activați anual. Network cu vizibilitate națională, 20 ani de credibilitate. 500+ evenimente de-a lungul timpului.",
+  },
 ];
 
 export function Slide09TrackRecord() {
@@ -23,6 +32,7 @@ export function Slide09TrackRecord() {
             letterSpacing: "-0.02em",
             lineHeight: 0.95,
             marginBottom: "3rem",
+            marginTop: "0.5rem",
           }}
         >
           impact{" "}
@@ -36,7 +46,7 @@ export function Slide09TrackRecord() {
               variants={slideItemVariants}
               className="flex-1"
               style={{
-                borderTop: "1px solid #E7004C",
+                borderTop: "2px solid #E7004C",
                 padding: "1.5rem 0 0",
               }}
             >
@@ -44,21 +54,21 @@ export function Slide09TrackRecord() {
                 className="lowercase"
                 style={{
                   color: "#fff",
-                  fontSize: "clamp(0.7rem, 1vw, 0.85rem)",
+                  fontSize: "clamp(0.7rem, 0.9vw, 0.82rem)",
                   fontWeight: 600,
                   letterSpacing: "0.12em",
                   textTransform: "uppercase",
-                  marginBottom: "0.75rem",
+                  marginBottom: "0.65rem",
                 }}
               >
                 {point.label}
               </p>
               <p
                 style={{
-                  color: "rgba(255,255,255,0.7)",
+                  color: "rgba(255,255,255,0.65)",
                   fontSize: "clamp(0.85rem, 1.2vw, 1rem)",
-                  fontWeight: 300,
-                  lineHeight: 1.4,
+                  fontWeight: 400,
+                  lineHeight: 1.55,
                 }}
               >
                 {point.text}
@@ -72,19 +82,19 @@ export function Slide09TrackRecord() {
         variants={slideItemVariants}
         style={{
           marginTop: "2rem",
-          borderTop: "1px solid rgba(255,255,255,0.1)",
+          borderTop: "1px solid rgba(255,255,255,0.08)",
           paddingTop: "1.25rem",
           display: "flex",
           alignItems: "center",
           gap: "1rem",
         }}
       >
-        <span style={{ display: "block", width: "32px", height: "2px", backgroundColor: "#E7004C" }} />
+        <span style={{ display: "block", width: "28px", height: "1.5px", backgroundColor: "#E7004C", flexShrink: 0 }} />
         <p
           style={{
-            color: "rgba(255,255,255,0.4)",
-            fontSize: "0.65rem",
-            letterSpacing: "0.1em",
+            color: "rgba(255,255,255,0.35)",
+            fontSize: "0.6rem",
+            letterSpacing: "0.12em",
             textTransform: "uppercase",
           }}
         >

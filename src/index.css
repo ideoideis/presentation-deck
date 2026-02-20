@@ -116,7 +116,7 @@
 
 @media (max-width: 768px) {
   .snap-container {
-    scroll-snap-type: y proximity;
+    scroll-snap-type: y mandatory;
   }
 }
 
@@ -137,7 +137,7 @@
 
   .snap-slide {
     scroll-snap-stop: normal;
-    height: auto;
+    height: 100dvh;
     min-height: 100dvh;
     font-size: 88%;
   }
