@@ -129,7 +129,6 @@ export function Slide07Education() {
                 {/* Row header */}
                 <div className="flex items-center justify-between gap-4">
                   <div className="flex items-center gap-4 md:gap-6">
-                    {/* Index number */}
                     <span
                       style={{
                         color: isActive ? "#E7004C" : "rgba(255,255,255,0.18)",

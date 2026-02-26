@@ -63,8 +63,8 @@ export function Slide01Cover() {
         </motion.div>
       </div>
 
-      {/* Bottom: ediția + scroll */}
-      <div className="flex flex-end justify-end">
+      {/* Bottom: scroll */}
+      <div className="flex items-end justify-end">
         {/*
         <motion.div variants={slideItemVariants}>
           <p style={{ color: "rgba(255,255,255,0.5)", fontSize: "0.65rem", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: "0.25rem" }}>

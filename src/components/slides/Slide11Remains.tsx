@@ -37,17 +37,17 @@ export function Slide11Remains() {
         <motion.p
           variants={slideItemVariants}
           style={{
-            color: "rgba(255,255,255,0.7)",
+            color: "rgba(255,255,255,0.75)",
             fontSize: "clamp(0.95rem, 1.3vw, 1.1rem)",
-            lineHeight: 1.65,
-            maxWidth: "55ch",
-            marginBottom: "1.5rem",
+            lineHeight: 1.7,
+            maxWidth: "50ch",
+            marginBottom: "1.75rem",
           }}
         >
           Fiecare colaborare poate fi construită în jurul valorilor noastre comune.
         </motion.p>
 
-        <div className="flex flex-col gap-0">
+        <div className="flex flex-col gap-0" style={{ marginBottom: "1.5rem" }}>
           {items.map((item, i) => (
             <motion.div
               key={i}

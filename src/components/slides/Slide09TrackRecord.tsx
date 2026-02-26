@@ -7,7 +7,7 @@ export function Slide09TrackRecord() {
       className="w-full h-full flex flex-col justify-between p-10 md:p-16"
       style={{ backgroundColor: "#2c2d34" }}
     >
-      <div className="flex-1 flex flex-col justify-center pt-12 md:pt-16">
+      <div className="flex-1 flex flex-col justify-center pt-12 md:pt-16" style={{ maxWidth: "52ch" }}>
         <motion.h2
           variants={slideItemVariants}
           className="lowercase font-semibold leading-none"
@@ -43,7 +43,7 @@ export function Slide09TrackRecord() {
             fontSize: "clamp(0.9rem, 1.25vw, 1.05rem)",
             lineHeight: 1.65,
             maxWidth: "60ch",
-            marginBottom: "1rem",
+            marginBottom: "1.5rem",
           }}
         >
           Comunitatea rămâne activă. Procesul de creștere continuă.

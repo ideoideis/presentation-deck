@@ -65,11 +65,11 @@ export function Slide02Statement() {
             <motion.p
               variants={slideItemVariants}
               style={{
-                color: "rgba(255,255,255,0.9)",
+                color: "rgba(255,255,255,0.95)",
                 fontSize: "clamp(0.95rem, 1.35vw, 1.15rem)",
                 marginTop: "0.25rem",
-                maxWidth: "42ch",
-                lineHeight: 1.65,
+                maxWidth: "40ch",
+                lineHeight: 1.7,
               }}
             >
               Ideo Ideis este un festival național de teatru tânăr organizat anual la Alexandria.
@@ -78,11 +78,11 @@ export function Slide02Statement() {
             <motion.p
               variants={slideItemVariants}
               style={{
-                color: "rgba(255,255,255,0.6)",
+                color: "rgba(255,255,255,0.7)",
                 fontSize: "clamp(0.9rem, 1.25vw, 1.05rem)",
-                marginTop: "1.25rem",
-                maxWidth: "42ch",
-                lineHeight: 1.65,
+                marginTop: "1.5rem",
+                maxWidth: "40ch",
+                lineHeight: 1.7,
               }}
             >
               Timp de o săptămână, adolescenți din toată țara participă la ateliere, spectacole și dialoguri alături de artiști și mentori.
@@ -91,11 +91,11 @@ export function Slide02Statement() {
             <motion.p
               variants={slideItemVariants}
               style={{
-                color: "rgba(255,255,255,0.55)",
+                color: "rgba(255,255,255,0.6)",
                 fontSize: "clamp(0.88rem, 1.2vw, 1rem)",
-                marginTop: "1rem",
-                maxWidth: "42ch",
-                lineHeight: 1.65,
+                marginTop: "1.25rem",
+                maxWidth: "40ch",
+                lineHeight: 1.7,
               }}
             >
               Pe tot parcursul anului, Ideo Ideis continuă prin Ideo Talks, podcasturi, ateliere și inițiative dedicate tinerilor.

@@ -6,7 +6,7 @@ export function Slide08WhyHere() {
   return (
     <div
       className="w-full h-full flex flex-col md:flex-row"
-      style={{ backgroundColor: "#222324" }}
+      style={{ backgroundColor: "#fff" }}
     >
       {/* Left: photo with red frame */}
       <div className="flex-1 relative overflow-hidden">
@@ -14,7 +14,7 @@ export function Slide08WhyHere() {
           src={asset("/images/crowd-bw.jpg")}
           alt="Public outdoor la alexandria"
           className="w-full h-full object-cover"
-          style={{ filter: "grayscale(100%) contrast(1.2)", opacity: 0.6 }}
+          style={{ filter: "grayscale(100%) contrast(1.2)", opacity: 0.75 }}
         />
         {/* Red frame */}
         <motion.div
@@ -25,7 +25,8 @@ export function Slide08WhyHere() {
 
       {/* Right: text */}
       <div
-        className="flex flex-col justify-between p-6 md:p-14 md:min-w-[min(40vw,580px)] md:border-l md:border-white/10"
+        className="flex flex-col justify-between p-6 md:p-14 md:min-w-[min(40vw,580px)] md:border-l"
+        style={{ borderColor: "rgba(0,0,0,0.08)" }}
       >
         <div className="pt-12 md:pt-16">
           <motion.span
@@ -49,21 +50,21 @@ export function Slide08WhyHere() {
             className="lowercase font-semibold leading-none"
             style={{
               fontSize: "clamp(2.5rem, 5vw, 4.5rem)",
-              color: "#fff",
+              color: "#222324",
               letterSpacing: "-0.02em",
               lineHeight: 0.95,
               marginBottom: "2rem",
             }}
           >
-            festivalul
+            în
             <br />
-            <span style={{ color: "#E7004C" }}>continuă</span>
+            <span style={{ color: "#E7004C" }}>toată țara</span>
           </motion.h2>
 
           <motion.p
             variants={slideItemVariants}
             style={{
-              color: "rgba(255,255,255,0.65)",
+              color: "rgba(34,35,36,0.7)",
               fontSize: "clamp(0.9rem, 1.4vw, 1.1rem)",
               lineHeight: 1.65,
               maxWidth: "38ch",
@@ -74,7 +75,7 @@ export function Slide08WhyHere() {
           <motion.p
             variants={slideItemVariants}
             style={{
-              color: "rgba(255,255,255,0.6)",
+              color: "rgba(34,35,36,0.6)",
               fontSize: "clamp(0.88rem, 1.3vw, 1.05rem)",
               lineHeight: 1.65,
               maxWidth: "38ch",
@@ -86,7 +87,7 @@ export function Slide08WhyHere() {
           <motion.p
             variants={slideItemVariants}
             style={{
-              color: "rgba(255,255,255,0.55)",
+              color: "rgba(34,35,36,0.55)",
               fontSize: "clamp(0.88rem, 1.3vw, 1.05rem)",
               lineHeight: 1.65,
               maxWidth: "38ch",
@@ -103,12 +104,12 @@ export function Slide08WhyHere() {
           rel="noopener noreferrer"
           variants={slideItemVariants}
           className="micro-label transition-colors"
-          style={{ color: "rgba(255,255,255,0.5)", textDecoration: "none" }}
+          style={{ color: "rgba(34,35,36,0.4)", textDecoration: "none" }}
           onMouseEnter={(e) => {
             e.currentTarget.style.color = "#E7004C";
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.color = "rgba(255,255,255,0.5)";
+            e.currentTarget.style.color = "rgba(34,35,36,0.4)";
           }}
         >
           alexandria · teleorman · românia

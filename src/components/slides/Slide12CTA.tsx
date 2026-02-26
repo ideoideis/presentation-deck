@@ -24,7 +24,7 @@ export function Slide12CTA() {
     <div
       className="w-full h-full flex flex-col justify-between p-10 md:p-16"
       style={{
-        backgroundColor: "#222324",
+        backgroundColor: "#E7004C",
       }}
     >
       <div className="flex-1 flex flex-col md:flex-row gap-10 md:gap-16 items-start mt-6 md:mt-10">
@@ -35,46 +35,54 @@ export function Slide12CTA() {
               variants={slideItemVariants}
               className="lowercase font-semibold leading-none"
               style={{
-                fontSize: "clamp(2.5rem, 6.5vw, 6.5rem)",
+                fontSize: "clamp(2.25rem, 5.5vw, 5rem)",
                 color: "#fff",
                 letterSpacing: "-0.03em",
-                lineHeight: 0.9,
+                lineHeight: 0.95,
                 marginBottom: "1.5rem",
               }}
             >
-              hai să
-              <br />
-              <span style={{ color: "#E7004C" }}>construim</span>
-              <br />
-              împreună
+              Ediția 21 începe acum.
             </motion.h2>
 
             <motion.p
               variants={slideItemVariants}
               style={{
-                color: "rgba(255,255,255,0.5)",
+                color: "rgba(255,255,255,0.7)",
                 fontSize: "clamp(0.9rem, 1.25vw, 1rem)",
                 lineHeight: 1.7,
                 maxWidth: "42ch",
               }}
             >
-              Ediția 21 începe acum. Vă invităm să deveniți parte dintr-un proiect care construiește, an de an, o generație mai atentă, mai creativă și mai conectată la lume.
+              Vă invităm să deveniți parte dintr-un proiect care construiește, an de an, o generație mai atentă, mai creativă și mai conectată la lume.
             </motion.p>
             <motion.p
               variants={slideItemVariants}
               style={{
-                color: "rgba(255,255,255,0.45)",
+                color: "rgba(255,255,255,0.6)",
                 fontSize: "clamp(0.85rem, 1.15vw, 0.95rem)",
                 lineHeight: 1.6,
                 maxWidth: "42ch",
-                marginTop: "0.75rem",
+                marginTop: "1rem",
               }}
             >
-              Ne vedem la vară la Alexandria. Pe parcursul anului ne vedem la București sau în oricare dintre orașele unde organizăm evenimente.
+              Ne vedem la vară la Alexandria.
+            </motion.p>
+            <motion.p
+              variants={slideItemVariants}
+              style={{
+                color: "rgba(255,255,255,0.6)",
+                fontSize: "clamp(0.85rem, 1.15vw, 0.95rem)",
+                lineHeight: 1.6,
+                maxWidth: "42ch",
+                marginTop: "0.5rem",
+              }}
+            >
+              Pe parcursul anului ne vedem la București sau în oricare dintre orașele unde organizăm evenimente.
             </motion.p>
           </div>
 
-          {/* CTA Button */}
+          {/* CTA Buttons */}
           <motion.div
             variants={slideItemVariants}
             style={{ display: "flex", flexDirection: "column", gap: "0.65rem", alignItems: "flex-start" }}
@@ -85,8 +93,8 @@ export function Slide12CTA() {
               rel="noopener noreferrer"
               style={{
                 display: "inline-block",
-                backgroundColor: "#E7004C",
-                color: "#fff",
+                backgroundColor: "#fff",
+                color: "#E7004C",
                 padding: "0.85rem 2rem",
                 fontSize: "0.72rem",
                 letterSpacing: "0.16em",
@@ -95,7 +103,7 @@ export function Slide12CTA() {
                 fontWeight: 600,
                 transition: "opacity 0.2s",
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.82")}
+              onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.88")}
               onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
             >
               contactează-ne →
@@ -106,23 +114,23 @@ export function Slide12CTA() {
               style={{
                 display: "inline-block",
                 backgroundColor: "transparent",
-                color: "rgba(255,255,255,0.55)",
+                color: "rgba(255,255,255,0.75)",
                 padding: "0.85rem 2rem",
                 fontSize: "0.72rem",
                 letterSpacing: "0.16em",
                 textTransform: "uppercase",
                 textDecoration: "none",
                 fontWeight: 400,
-                border: "1px solid rgba(255,255,255,0.18)",
+                border: "1px solid rgba(255,255,255,0.35)",
                 transition: "border-color 0.2s, color 0.2s",
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = "rgba(255,255,255,0.45)";
+                e.currentTarget.style.borderColor = "#fff";
                 e.currentTarget.style.color = "#fff";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = "rgba(255,255,255,0.18)";
-                e.currentTarget.style.color = "rgba(255,255,255,0.55)";
+                e.currentTarget.style.borderColor = "rgba(255,255,255,0.35)";
+                e.currentTarget.style.color = "rgba(255,255,255,0.75)";
               }}
             >
               descarcă pdf
@@ -133,12 +141,12 @@ export function Slide12CTA() {
         {/* Right: contact info */}
         <div
           className="md:w-1/2"
-          style={{ borderLeft: "1px solid rgba(255,255,255,0.08)", paddingLeft: "clamp(1.5rem, 4vw, 3.5rem)" }}
+          style={{ borderLeft: "1px solid rgba(255,255,255,0.2)", paddingLeft: "clamp(1.5rem, 4vw, 3.5rem)" }}
         >
           <motion.p
             variants={slideItemVariants}
             style={{
-              color: "rgba(255,255,255,0.28)",
+              color: "rgba(255,255,255,0.45)",
               fontSize: "0.6rem",
               letterSpacing: "0.18em",
               textTransform: "uppercase",
@@ -169,17 +177,17 @@ export function Slide12CTA() {
               alignItems: "center",
               gap: "1.25rem",
               padding: "0.75rem 0",
-              borderBottom: "1px solid rgba(255,255,255,0.07)",
+              borderBottom: "1px solid rgba(255,255,255,0.15)",
               color: "#fff",
               textDecoration: "none",
               fontSize: "clamp(0.9rem, 1.3vw, 1.05rem)",
               letterSpacing: "0.04em",
               transition: "color 0.2s",
             }}
-            onMouseEnter={(e) => (e.currentTarget.style.color = "#E7004C")}
-            onMouseLeave={(e) => (e.currentTarget.style.color = "#fff")}
+            onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.7")}
+            onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
           >
-            <span style={{ display: "block", width: "16px", height: "1px", backgroundColor: "#E7004C", flexShrink: 0 }} />
+            <span style={{ display: "block", width: "16px", height: "1px", backgroundColor: "#fff", flexShrink: 0 }} />
             gales@ideoideis.ro
           </motion.a>
 
@@ -191,24 +199,24 @@ export function Slide12CTA() {
               alignItems: "center",
               gap: "1.25rem",
               padding: "1rem 0",
-              borderBottom: "1px solid rgba(255,255,255,0.07)",
+              borderBottom: "1px solid rgba(255,255,255,0.15)",
               color: "#fff",
               textDecoration: "none",
               fontSize: "clamp(0.9rem, 1.3vw, 1.05rem)",
               letterSpacing: "0.04em",
-              transition: "color 0.2s",
+              transition: "opacity 0.2s",
             }}
-            onMouseEnter={(e) => (e.currentTarget.style.color = "#E7004C")}
-            onMouseLeave={(e) => (e.currentTarget.style.color = "#fff")}
+            onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.7")}
+            onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
           >
-            <span style={{ display: "block", width: "16px", height: "1px", backgroundColor: "#E7004C", flexShrink: 0 }} />
+            <span style={{ display: "block", width: "16px", height: "1px", backgroundColor: "#fff", flexShrink: 0 }} />
             0722347439
           </motion.a>
 
           <motion.div variants={slideItemVariants} style={{ marginTop: "1.5rem" }}>
             <p
               style={{
-                color: "rgba(255,255,255,0.28)",
+                color: "rgba(255,255,255,0.45)",
                 fontSize: "0.6rem",
                 letterSpacing: "0.18em",
                 textTransform: "uppercase",
@@ -225,9 +233,9 @@ export function Slide12CTA() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  style={{ color: "rgba(255,255,255,0.45)", transition: "color 0.2s" }}
-                  onMouseEnter={(e) => { e.currentTarget.style.color = "#E7004C"; }}
-                  onMouseLeave={(e) => { e.currentTarget.style.color = "rgba(255,255,255,0.45)"; }}
+                  style={{ color: "rgba(255,255,255,0.6)", transition: "color 0.2s" }}
+                  onMouseEnter={(e) => { e.currentTarget.style.color = "#fff"; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.color = "rgba(255,255,255,0.6)"; }}
                 >
                   <Icon />
                 </a>
