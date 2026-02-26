@@ -98,7 +98,7 @@ export function Slide11Remains() {
         </motion.p>
       </div>
 
-      <motion.div
+      {/*<motion.div
         variants={slideItemVariants}
         style={{
           color: "rgba(255,255,255,0.35)",
@@ -110,7 +110,7 @@ export function Slide11Remains() {
         }}
       >
         parteneriat
-      </motion.div>
+      </motion.div>*/}
     </div>
   );
 }

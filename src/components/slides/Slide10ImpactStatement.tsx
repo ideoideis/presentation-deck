@@ -1,5 +1,5 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
+import { slideItemVariants } from "@/components/SlideSection";
 import { asset } from "@/lib/utils";
 
 const ASSOCIERE_ITEMS = [
@@ -9,191 +9,117 @@ const ASSOCIERE_ITEMS = [
   "impact social real",
 ];
 
-const stagger = {
-  visible: { transition: { staggerChildren: 0.06, delayChildren: 0.1 } },
-  hidden: {},
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, x: 12 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.35, ease: [0.22, 1, 0.36, 1] } },
-};
-
 export function Slide10ImpactStatement() {
-  const [hovered, setHovered] = useState<number | null>(null);
-
-  const chipStyle = {
-    padding: "0.5rem 1rem",
-    fontSize: "clamp(0.8rem, 1vw, 0.9rem)",
-    color: "#1a1a1a",
-    backgroundColor: "rgba(255,255,255,0.96)",
-    backdropFilter: "blur(10px)",
-    WebkitBackdropFilter: "blur(10px)",
-    border: "1px solid rgba(0,0,0,0.1)",
-    fontWeight: 500,
-    transition: "all 0.25s ease",
-    cursor: "default",
-    boxShadow: "0 2px 16px rgba(0,0,0,0.08)",
-  };
-
   return (
-    <div
-      className="w-full h-full relative overflow-hidden"
-      style={{ backgroundColor: "#f5f4f2" }}
-    >
-      {/* Full-bleed image — dominant, clearly visible */}
-      <div
-        className="absolute inset-0"
-        style={{
-          backgroundImage: `url(${asset("/images/hero-bw.jpg")})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          //filter: "grayscale(35%) contrast(1.02)",
-          opacity: 0.85,
-        }}
+    <div className="w-full h-full relative overflow-hidden">
+      {/* Full-bleed photo — visible, dominant */}
+      <img
+        src={asset("/images/hero-bw.jpg")}
+        alt="Participanți Ideo Ideis pe scenă"
+        className="absolute inset-0 w-full h-full object-cover"
+        style={{ filter: "grayscale(100%) contrast(1.05)" }}
       />
 
-      {/* Scattered content blocks — image shows between them */}
-
-      {/* 1. Headline — compact strip top-left */}
-      <motion.div
-        variants={stagger}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-10%" }}
-        className="absolute z-10 top-[8%] md:top-[10%]"
-        style={{ left: "var(--slide-px)", maxWidth: "min(90vw, 420px)" }}
+      {/* Solid panel — text on dark background for readability, photo visible on right */}
+      <div
+        className="absolute inset-y-0 left-0 flex flex-col justify-center"
+        style={{
+          width: "min(90vw, 480px)",
+          background: "linear-gradient(to right, rgba(18,18,20,0.95) 0%, rgba(18,18,20,0.92) 85%, transparent 100%)",
+          padding: "clamp(3.5rem, 9vh, 5rem) clamp(1.5rem, 4vw, 2.5rem) var(--slide-py) var(--slide-px)",
+        }}
       >
         <motion.span
-          variants={itemVariants}
+          variants={slideItemVariants}
           style={{
-            display: "block",
-            width: "28px",
-            height: "3px",
-            backgroundColor: "#E7004C",
-            marginBottom: "0.9rem",
+            display: "inline-block",
+            color: "#E7004C",
+            fontSize: "0.6rem",
+            letterSpacing: "0.18em",
+            textTransform: "uppercase",
+            marginBottom: "1rem",
           }}
-        />
-        <motion.p
-          variants={itemVariants}
-          className="lowercase font-semibold"
+        >
+          parteneriat
+        </motion.span>
+
+        <motion.h2
+          variants={slideItemVariants}
+          className="lowercase font-semibold leading-tight"
           style={{
-            ...chipStyle,
-            padding: "1.1rem 1.35rem",
-            fontSize: "clamp(1.05rem, 1.9vw, 1.65rem)",
-            lineHeight: 1.35,
+            fontSize: "clamp(1.25rem, 2.6vw, 2rem)",
+            color: "#fff",
+            letterSpacing: "-0.02em",
+            lineHeight: 1.25,
+            marginBottom: "1rem",
           }}
         >
           A susține Ideo Ideis înseamnă a susține dezvoltarea unei generații și vitalitatea culturală a unei comunități.
-        </motion.p>
+        </motion.h2>
+
         <motion.p
-          variants={itemVariants}
+          variants={slideItemVariants}
           style={{
-            ...chipStyle,
-            padding: "0.9rem 1.2rem",
-            fontSize: "clamp(0.88rem, 1.15vw, 0.98rem)",
-            lineHeight: 1.5,
-            marginTop: "0.75rem",
+            color: "rgba(255,255,255,0.92)",
+            fontSize: "clamp(0.88rem, 1.2vw, 1rem)",
+            lineHeight: 1.65,
+            marginBottom: "1.25rem",
           }}
         >
           Brandurile partenere devin parte din acest proces susținând un program național cu credibilitate și asociindu-se cu o generație activă, educată și implicată.
         </motion.p>
-      </motion.div>
 
-      {/* 2. Tags — floating pills, center-right area */}
-      <motion.div
-        variants={stagger}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-10%" }}
-        className="absolute z-10 top-[42%] md:top-[45%]"
-        style={{
-          right: "var(--slide-pr)",
-          maxWidth: "min(85vw, 300px)",
-          padding: "1rem 1.25rem",
-          backgroundColor: "rgba(255,255,255,0.96)",
-          backdropFilter: "blur(10px)",
-          WebkitBackdropFilter: "blur(10px)",
-          borderRadius: "4px",
-          boxShadow: "0 2px 20px rgba(0,0,0,0.1)",
-          border: "1px solid rgba(0,0,0,0.08)",
-        }}
-      >
         <motion.p
-          variants={itemVariants}
+          variants={slideItemVariants}
           style={{
-            fontSize: "clamp(0.8rem, 1vw, 0.9rem)",
-            color: "#1a1a1a",
+            color: "rgba(255,255,255,0.75)",
+            fontSize: "clamp(0.78rem, 1vw, 0.88rem)",
             fontWeight: 600,
             letterSpacing: "0.02em",
-            marginBottom: "0.75rem",
+            marginBottom: "0.5rem",
           }}
         >
           Înseamnă asociere cu:
         </motion.p>
-        <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "0.4rem", marginBottom: "1rem" }}>
           {ASSOCIERE_ITEMS.map((item, i) => (
             <motion.span
               key={i}
-              variants={itemVariants}
-              onMouseEnter={() => setHovered(i)}
-              onMouseLeave={() => setHovered(null)}
+              variants={slideItemVariants}
+              whileHover={{
+                backgroundColor: "#E7004C",
+                color: "#fff",
+              }}
+              transition={{ duration: 0.2 }}
               style={{
-                ...chipStyle,
-                color: hovered === i ? "#fff" : "#1a1a1a",
-                backgroundColor: hovered === i ? "#E7004C" : "rgba(255,255,255,0.96)",
-                borderColor: hovered === i ? "#E7004C" : "rgba(0,0,0,0.1)",
+                display: "inline-block",
+                padding: "0.35rem 0.75rem",
+                fontSize: "clamp(0.78rem, 0.95vw, 0.85rem)",
+                color: "#fff",
+                backgroundColor: "rgba(255,255,255,0.15)",
+                fontWeight: 500,
+                cursor: "default",
               }}
             >
               {item}
             </motion.span>
           ))}
         </div>
-      </motion.div>
 
-      {/* 3. Conclusion — bottom-left */}
-      <motion.div
-        variants={stagger}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-10%" }}
-        className="absolute z-10 bottom-[10%] md:bottom-[12%]"
-        style={{ left: "var(--slide-px)", maxWidth: "min(90vw, 340px)" }}
-      >
         <motion.p
-          variants={itemVariants}
+          variants={slideItemVariants}
           style={{
-            ...chipStyle,
-            padding: "1.1rem 1.35rem",
-            fontSize: "clamp(0.95rem, 1.2vw, 1.05rem)",
+            color: "#fff",
+            fontSize: "clamp(0.88rem, 1.1vw, 0.98rem)",
             fontWeight: 600,
             lineHeight: 1.5,
-            borderTop: "2px solid rgba(231,0,76,0.5)",
-            paddingTop: "1.15rem",
+            paddingTop: "0.85rem",
+            borderTop: "1px solid rgba(255,255,255,0.3)",
           }}
         >
           Parteneriatul devine contribuție la un proces viu, nu doar prezență de brand.
         </motion.p>
-      </motion.div>
-
-      {/* 4. Label — bottom-right corner */}
-      <motion.p
-        variants={itemVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-10%" }}
-        className="absolute z-10 bottom-[5%] md:bottom-[6%]"
-        style={{
-          right: "var(--slide-pr)",
-          color: "rgba(0,0,0,0.6)",
-          fontSize: "0.7rem",
-          letterSpacing: "0.18em",
-          textTransform: "uppercase",
-          fontWeight: 500,
-        }}
-      >
-        parteneriat
-      </motion.p>
+      </div>
     </div>
   );
 }

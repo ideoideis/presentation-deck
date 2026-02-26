@@ -59,7 +59,7 @@ export function Slide03Typography() {
           style={{
             padding: "1.5rem 1.75rem",
             backgroundColor: "#fff",
-            borderRadius: "4px",
+            borderRadius: 0,
             boxShadow: "0 2px 12px rgba(0,0,0,0.04)",
             maxWidth: "48ch",
           }}
@@ -91,7 +91,7 @@ export function Slide03Typography() {
         variants={slideItemVariants}
         className="flex flex-col justify-center"
         style={{
-          padding: "var(--slide-pt) var(--slide-pr) var(--slide-py) var(--slide-px)",
+          padding: "var(--slide-pt) clamp(2rem, 8vw, 5rem) var(--slide-py) var(--slide-px)",
           minWidth: "clamp(280px, 38vw, 440px)",
           backgroundColor: "#fff",
           borderLeft: "1px solid rgba(0,0,0,0.06)",
@@ -146,7 +146,7 @@ export function Slide03Typography() {
                   bottom: 0,
                   width: "100%",
                   backgroundColor: "#E7004C",
-                  borderRadius: "0 4px 4px 0",
+                  borderRadius: 0,
                 }}
                 initial={false}
                 animate={{

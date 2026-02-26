@@ -67,7 +67,7 @@ export function Slide12CTA() {
                 marginTop: "1rem",
               }}
             >
-              Ne vedem la vară la Alexandria.
+              ne vedem la vară la Alexandria.
             </motion.p>
             <motion.p
               variants={slideItemVariants}

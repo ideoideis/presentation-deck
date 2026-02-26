@@ -70,7 +70,7 @@ export function Slide04Year2026() {
               marginTop: "1.5rem",
               padding: "1rem 1.25rem",
               backgroundColor: "rgba(255,255,255,0.12)",
-              borderRadius: "4px",
+              borderRadius: 0,
               borderLeft: "3px solid #fff",
             }}
           >

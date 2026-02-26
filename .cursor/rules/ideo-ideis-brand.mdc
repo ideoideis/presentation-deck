@@ -1,0 +1,25 @@
+---
+description: Ideo Ideis brand guidelines — font, culori, dimensiuni (doar aparență vizuală)
+globs: src/components/slides/**/*.tsx
+alwaysApply: false
+---
+
+# Ideo Ideis Brand — Stiluri vizuale
+
+## Culori
+- **Primary**: #E7004C (PANTONE 1925 C) — roșu Ideo
+- **Gri-uri**: #222324, #2c2d34 (alternativă la black)
+- Roșu Ideo pentru elemente de accent (highlights, borduri, butoane)
+
+## Tipografie
+- **Font**: Söhne (Buch 400, Halbfett 600)
+- Titluri: lowercase, font-weight 600, aliniere la stânga
+- Body: aliniere la stânga, nu justify, nu centrat
+- Letter-spacing: -0.02em pentru titluri, 0.15–0.2em pentru labels uppercase
+
+## Elemente grafice
+- unghiuri drepte (borderRadius: 0), nu cercuri/rotunjiri pe carduri și elemente decorative
+- dreptunghiuri, linii, forme geometrice simple
+
+## Fotografii
+- portrete și imagini: grayscale(100%) pentru coerență vizuală
