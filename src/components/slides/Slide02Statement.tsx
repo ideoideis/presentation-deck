@@ -62,32 +62,43 @@ export function Slide02Statement() {
               </span>
             </motion.div>
 
-            <motion.h2
+            <motion.p
               variants={slideItemVariants}
-              className="lowercase font-semibold"
               style={{
-                fontSize: "clamp(1.75rem, 4.2vw, 3.8rem)",
-                color: "#fff",
-                letterSpacing: "-0.01em",
-                lineHeight: 1.08,
-                maxWidth: "22ch",
+                color: "rgba(255,255,255,0.9)",
+                fontSize: "clamp(0.95rem, 1.35vw, 1.15rem)",
                 marginTop: "0.25rem",
+                maxWidth: "42ch",
+                lineHeight: 1.65,
               }}
             >
-              nu spectacol gata făcut, ci proces viu.
-            </motion.h2>
+              Ideo Ideis este un festival național de teatru tânăr organizat anual la Alexandria.
+            </motion.p>
+
+            <motion.p
+              variants={slideItemVariants}
+              style={{
+                color: "rgba(255,255,255,0.6)",
+                fontSize: "clamp(0.9rem, 1.25vw, 1.05rem)",
+                marginTop: "1.25rem",
+                maxWidth: "42ch",
+                lineHeight: 1.65,
+              }}
+            >
+              Timp de o săptămână, adolescenți din toată țara participă la ateliere, spectacole și dialoguri alături de artiști și mentori.
+            </motion.p>
 
             <motion.p
               variants={slideItemVariants}
               style={{
                 color: "rgba(255,255,255,0.55)",
-                fontSize: "clamp(0.9rem, 1.3vw, 1.1rem)",
-                marginTop: "1.5rem",
+                fontSize: "clamp(0.88rem, 1.2vw, 1rem)",
+                marginTop: "1rem",
                 maxWidth: "42ch",
                 lineHeight: 1.65,
               }}
             >
-              De 20 de ani, Ideo Ideis construiește un spațiu unde adolescenții întâlnesc teatrul nu ca un spectacol gata făcut, ci ca un proces viu. Arta nu e doar un decor, ci un instrument prin care tinerii își clarifică valorile, învață despre responsabilitate și descoperă ce fel de oameni vor să devină.
+              Pe tot parcursul anului, Ideo Ideis continuă prin Ideo Talks, podcasturi, ateliere și inițiative dedicate tinerilor.
             </motion.p>
           </div>
         </div>

@@ -26,40 +26,53 @@ export function Slide01Cover() {
 
         <motion.div
           variants={slideItemVariants}
-          style={{ display: "flex", alignItems: "center", gap: "1.5rem", marginTop: "1.5rem" }}
+          style={{ display: "flex", flexDirection: "column", gap: "0.5rem", marginTop: "1.5rem" }}
         >
-          {/* Red accent line 
-          <span
-            style={{
-              display: "block",
-              width: "48px",
-              height: "2px",
-              backgroundColor: "rgba(255,255,255,0.5)",
-            }}
-          />
-          */}
           <p
             style={{
-              color: "rgba(255,255,255,0.75)",
-              fontSize: "1.1rem",
+              color: "rgba(255,255,255,0.9)",
+              fontSize: "clamp(1rem, 1.5vw, 1.2rem)",
               fontWeight: 400,
               letterSpacing: "0.02em",
             }}
           >
-            o săptămână în care adolescenții își construiesc vocea, iar orașul devine scenă.
+            20 de ani de festival care modelează generații
+          </p>
+          <p
+            style={{
+              color: "rgba(255,255,255,0.7)",
+              fontSize: "clamp(0.85rem, 1.2vw, 1rem)",
+              fontWeight: 400,
+              letterSpacing: "0.08em",
+              textTransform: "uppercase",
+            }}
+          >
+            festival național de teatru tânăr
+          </p>
+          <p
+            style={{
+              color: "rgba(255,255,255,0.85)",
+              fontSize: "clamp(1rem, 1.4vw, 1.15rem)",
+              fontWeight: 500,
+              letterSpacing: "0.02em",
+              marginTop: "0.5rem",
+            }}
+          >
+            Alexandria · 29 iulie – 5 august 2026
           </p>
         </motion.div>
       </div>
 
       {/* Bottom: ediția + scroll */}
-      <div className="flex items-end justify-between">
+      <div className="flex flex-end justify-end">
+        {/*
         <motion.div variants={slideItemVariants}>
           <p style={{ color: "rgba(255,255,255,0.5)", fontSize: "0.65rem", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: "0.25rem" }}>
             ediția
           </p>
           <p style={{ color: "#fff", fontSize: "2.5rem", fontWeight: 600, lineHeight: 1 }}>#21</p>
         </motion.div>
-
+        */}
         <motion.div
           variants={slideItemVariants}
           className="flex flex-col items-center gap-2"

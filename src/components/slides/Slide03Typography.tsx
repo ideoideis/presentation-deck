@@ -7,46 +7,88 @@ export function Slide03Typography() {
       className="w-full h-full flex flex-col justify-end md:justify-between gap-6 md:gap-0 p-10 md:p-16"
       style={{ backgroundColor: "#fff" }}
     >
-      <div className="pt-0 md:pt-16" style={{ marginBottom: "2.5rem" }}>
-        <motion.h2
+      <div className="pt-0 md:pt-16" style={{ marginBottom: "1.5rem" }}>
+        <motion.p
           variants={slideItemVariants}
-          className="lowercase font-semibold leading-none"
           style={{
-            fontSize: "clamp(3rem, 12vw, 15rem)",
             color: "#222324",
-            letterSpacing: "-0.04em",
-            lineHeight: 0.88,
+            fontSize: "clamp(1rem, 1.5vw, 1.2rem)",
+            lineHeight: 1.6,
+            maxWidth: "52ch",
           }}
         >
-          exprimă
-        </motion.h2>
-        <motion.h2
+          În fiecare vară, Alexandria respiră alt ritm.
+        </motion.p>
+        <motion.p
           variants={slideItemVariants}
-          className="lowercase font-semibold leading-none"
           style={{
-            fontSize: "clamp(3rem, 12vw, 15rem)",
-            color: "#E7004C",
-            letterSpacing: "-0.04em",
-            lineHeight: 0.88,
+            color: "#222324",
+            fontSize: "clamp(0.95rem, 1.4vw, 1.15rem)",
+            lineHeight: 1.6,
+            maxWidth: "52ch",
+            marginTop: "0.75rem",
           }}
         >
-          ce ești
-        </motion.h2>
+          Oamenii ies seara în piață la proiecțiile de film. Merg la spectacolele de teatru. Se întâlnesc și rămân la dialog după reprezentații.
+        </motion.p>
+        <motion.p
+          variants={slideItemVariants}
+          style={{
+            color: "#222324",
+            fontSize: "clamp(0.95rem, 1.4vw, 1.15rem)",
+            lineHeight: 1.6,
+            maxWidth: "52ch",
+            marginTop: "0.75rem",
+          }}
+        >
+          Festivalul aduce împreună adolescenți, artiști și comunitatea locală. Pentru câteva zile, orașul se adună în jurul culturii.
+        </motion.p>
       </div>
 
-      <motion.div variants={slideItemVariants} style={{ display: "flex", alignItems: "flex-start", gap: "1.5rem" }}>
-        <span style={{ display: "block", width: "30px", height: "2px", backgroundColor: "#E7004C", marginTop: "0.6rem", flexShrink: 0 }} />
+      <motion.div
+        variants={slideItemVariants}
+        style={{
+          borderTop: "1px solid rgba(0,0,0,0.08)",
+          paddingTop: "1.5rem",
+          marginTop: "1rem",
+        }}
+      >
         <p
           style={{
-            color: "#222324",
-            fontSize: "clamp(0.9rem, 1.4vw, 1.15rem)",
-            maxWidth: "48ch",
-            lineHeight: 1.55,
-            opacity: 0.7,
+            color: "rgba(34,35,36,0.5)",
+            fontSize: "0.6rem",
+            letterSpacing: "0.18em",
+            textTransform: "uppercase",
+            marginBottom: "1rem",
           }}
         >
-          adolescenții învață prin exercițiu, prin curiozitate și prin confruntarea cu întrebări reale. În fiecare an, programul e construit pentru a provoca, iar adolescenții folosesc teatrul ca pretext pentru ceva mai important: să înțeleagă ce-i frământă, să-și asume cine sunt și să învețe ce înseamnă să fie parte dintr-o comunitate.
+          ce se întâmplă anual
         </p>
+        <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+          {[
+            "ateliere de teatru tânăr + arte alăturate (film, foto, dans, scriere, new media, scenografie)",
+            "spectacole de teatru tânăr",
+            "spectacole invitate",
+            "cinemateca târzie + Q&A",
+            "masterclass-uri și seara povestitorilor",
+            "murale și activări în oraș",
+          ].map((item, i) => (
+            <p
+              key={i}
+              style={{
+                color: "#222324",
+                fontSize: "clamp(0.88rem, 1.2vw, 1rem)",
+                lineHeight: 1.4,
+                display: "flex",
+                alignItems: "center",
+                gap: "0.75rem",
+              }}
+            >
+              <span style={{ display: "block", width: "8px", height: "8px", backgroundColor: "#E7004C", flexShrink: 0 }} />
+              {item}
+            </p>
+          ))}
+        </div>
       </motion.div>
     </div>
   );

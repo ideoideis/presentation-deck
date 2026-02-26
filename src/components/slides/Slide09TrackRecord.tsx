@@ -1,21 +1,6 @@
 import { motion } from "framer-motion";
 import { slideItemVariants } from "@/components/SlideSection";
 
-const impactPoints = [
-  {
-    label: "impact în adolescenți",
-    text: "6000+ adolescenți au crescut alături de Ideo Ideis. Nu formăm doar viitori artiști, ci oameni conștienți de puterea pe care o au de a schimba ceva în jurul lor.",
-  },
-  {
-    label: "impact în comunitate",
-    text: "Un oraș mic devenit epicentru cultural câteva zile pe an. Impactul continuă prin evenimente pe tot parcursul anului.",
-  },
-  {
-    label: "impact în rețea",
-    text: "Artiști, mentori, profesioniști activați anual. Network cu vizibilitate națională, 20 ani de credibilitate. 500+ evenimente de-a lungul timpului.",
-  },
-];
-
 export function Slide09TrackRecord() {
   return (
     <div
@@ -31,51 +16,50 @@ export function Slide09TrackRecord() {
             color: "#fff",
             letterSpacing: "-0.02em",
             lineHeight: 0.95,
-            marginBottom: "3rem",
+            marginBottom: "2rem",
             marginTop: "0.5rem",
           }}
         >
-          impact{" "}
-          <span style={{ color: "#E7004C" }}>constant</span>
+          Ideo Ideis{" "}
+          <span style={{ color: "#E7004C" }}>continuă</span>
         </motion.h2>
 
-        <div className="flex flex-col md:flex-row gap-6 md:gap-8">
-          {impactPoints.map((point, i) => (
-            <motion.div
-              key={i}
-              variants={slideItemVariants}
-              className="flex-1"
-              style={{
-                borderTop: "2px solid #E7004C",
-                padding: "1.5rem 0 0",
-              }}
-            >
-              <p
-                className="lowercase"
-                style={{
-                  color: "#fff",
-                  fontSize: "clamp(0.7rem, 0.9vw, 0.82rem)",
-                  fontWeight: 600,
-                  letterSpacing: "0.12em",
-                  textTransform: "uppercase",
-                  marginBottom: "0.65rem",
-                }}
-              >
-                {point.label}
-              </p>
-              <p
-                style={{
-                  color: "rgba(255,255,255,0.65)",
-                  fontSize: "clamp(0.85rem, 1.2vw, 1rem)",
-                  fontWeight: 400,
-                  lineHeight: 1.55,
-                }}
-              >
-                {point.text}
-              </p>
-            </motion.div>
-          ))}
-        </div>
+        <motion.p
+          variants={slideItemVariants}
+          style={{
+            color: "rgba(255,255,255,0.7)",
+            fontSize: "clamp(0.95rem, 1.35vw, 1.15rem)",
+            lineHeight: 1.65,
+            maxWidth: "60ch",
+            marginBottom: "1.5rem",
+          }}
+        >
+          Dialogul început la Alexandria merge mai departe prin podcasturi, Ideo Talks și ateliere organizate pe tot parcursul anului.
+        </motion.p>
+        <motion.p
+          variants={slideItemVariants}
+          style={{
+            color: "rgba(255,255,255,0.65)",
+            fontSize: "clamp(0.9rem, 1.25vw, 1.05rem)",
+            lineHeight: 1.65,
+            maxWidth: "60ch",
+            marginBottom: "1rem",
+          }}
+        >
+          Comunitatea rămâne activă. Procesul de creștere continuă.
+        </motion.p>
+        <motion.p
+          variants={slideItemVariants}
+          style={{
+            color: "#E7004C",
+            fontSize: "clamp(1rem, 1.4vw, 1.2rem)",
+            fontWeight: 600,
+            lineHeight: 1.5,
+            maxWidth: "50ch",
+          }}
+        >
+          Ideo Ideis este un ecosistem, nu doar un eveniment.
+        </motion.p>
       </div>
 
       <motion.div
