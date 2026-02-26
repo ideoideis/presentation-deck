@@ -28,9 +28,9 @@ export function Slide12CTA() {
         padding: "var(--slide-pt) var(--slide-pr) var(--slide-py) var(--slide-px)",
       }}
     >
-      <div className="flex-1 flex flex-col md:flex-row gap-10 md:gap-16 items-start mt-12 md:mt-20">
+      <div className="flex-1 flex flex-row gap-16 items-start mt-16">
         {/* Left: headline + quote + button */}
-        <div className="md:w-1/2 flex flex-col gap-8">
+        <div className="w-1/2 flex flex-col gap-8">
           <div>
             <motion.h2
               variants={slideItemVariants}
@@ -141,8 +141,8 @@ export function Slide12CTA() {
 
         {/* Right: contact info */}
         <div
-          className="md:w-1/2"
-          style={{ borderLeft: "1px solid rgba(255,255,255,0.2)", paddingLeft: "clamp(1.5rem, 4vw, 3.5rem)" }}
+          className="w-1/2"
+          style={{ borderLeft: "1px solid rgba(255,255,255,0.2)", paddingLeft: "var(--slide-px)" }}
         >
           <motion.p
             variants={slideItemVariants}

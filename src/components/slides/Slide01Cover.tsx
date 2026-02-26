@@ -12,7 +12,7 @@ export function Slide01Cover() {
       }}
     >
       {/* Main content — StickyHeader shows festival info */}
-      <div className="flex flex-col gap-4 mt-20 md:mt-28">
+      <div className="flex flex-col gap-4 mt-24">
         <motion.img
           src={asset("/logo-ideo-ideis-festivalul.png")}
           alt="ideo ideis festivalul"

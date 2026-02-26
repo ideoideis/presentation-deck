@@ -47,9 +47,9 @@ export function Slide06People() {
         padding: "var(--slide-pt) var(--slide-pr) var(--slide-py) var(--slide-px)",
       }}
     >
-      <div className="flex flex-col md:flex-row gap-10 md:gap-16 items-center justify-center w-full max-w-6xl">
+      <div className="flex flex-row gap-16 items-center justify-center w-full max-w-6xl">
         {/* Left: headline + text */}
-        <div className="md:w-1/3">
+        <div className="w-1/3">
           <div
             className="flex items-center gap-4"
             style={{ marginBottom: "1.25rem" }}
@@ -132,7 +132,7 @@ export function Slide06People() {
         </div>
 
         {/* Right: portrait mosaic or video */}
-        <div className="md:w-2/3 relative">
+        <div className="w-2/3 relative">
           <motion.div
             className="grid gap-0"
             style={{ gridTemplateColumns: "repeat(3, 1fr)" }}

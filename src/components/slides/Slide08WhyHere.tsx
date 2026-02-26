@@ -5,7 +5,7 @@ import { asset } from "@/lib/utils";
 export function Slide08WhyHere() {
   return (
     <div
-      className="w-full h-full flex flex-col md:flex-row"
+      className="w-full h-full flex flex-row"
       style={{ backgroundColor: "#fff" }}
     >
       {/* Left: photo with red frame */}
@@ -19,19 +19,19 @@ export function Slide08WhyHere() {
         {/* Red frame */}
         <motion.div
           variants={slideItemVariants}
-          className="absolute border-[1.5px] border-[#E7004C] pointer-events-none inset-4 md:inset-10"
+          className="absolute border-[1.5px] border-[#E7004C] pointer-events-none inset-10"
         />
       </div>
 
       {/* Right: text */}
       <div
-        className="flex flex-col justify-between md:min-w-[min(40vw,580px)] md:border-l"
+        className="flex flex-col justify-between flex-1 min-w-0 border-l"
         style={{
           borderColor: "rgba(0,0,0,0.08)",
           padding: "var(--slide-pt) var(--slide-pr) var(--slide-py) var(--slide-px)",
         }}
       >
-        <div className="pt-12 md:pt-16">
+        <div className="pt-12">
           <motion.span
             variants={slideItemVariants}
             style={{

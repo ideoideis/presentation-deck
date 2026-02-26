@@ -27,7 +27,7 @@ export function Slide02Statement() {
       </div>
 
       {/* Content grid */}
-      <div className="relative z-10 w-full h-full flex flex-col md:flex-row items-stretch">
+      <div className="relative z-10 w-full h-full flex flex-row items-stretch">
         {/* Left — headline */}
         <div
           className="flex-1 flex flex-col justify-end"
@@ -106,9 +106,10 @@ export function Slide02Statement() {
         <div
           className="flex flex-col justify-end"
           style={{
-            padding: "var(--slide-pt) var(--slide-pr) var(--slide-py) clamp(1.5rem, 3vw, 2.5rem)",
+            padding: "var(--slide-pt) var(--slide-pr) var(--slide-py) var(--slide-px)",
             borderLeft: "1px solid rgba(255,255,255,0.08)",
-            minWidth: "clamp(210px, 26vw, 340px)",
+            minWidth: "0",
+            flex: "0 0 45%",
           }}
         >
           <motion.p

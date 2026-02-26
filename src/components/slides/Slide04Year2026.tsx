@@ -16,9 +16,9 @@ export function Slide04Year2026() {
         padding: "var(--slide-pt) var(--slide-pr) var(--slide-py) var(--slide-px)",
       }}
     >
-      <div className="flex-1 flex flex-col md:flex-row justify-center gap-8 md:gap-12 mt-6 md:mt-10">
+      <div className="flex-1 flex flex-row justify-center gap-12 mt-8">
         {/* Left: 2026 text */}
-        <div className="md:w-1/2 flex flex-col justify-center">
+        <div className="w-1/2 flex flex-col justify-center">
           <motion.h2
             variants={slideItemVariants}
             className="font-semibold lowercase leading-none"
@@ -84,7 +84,7 @@ export function Slide04Year2026() {
         </div>
 
         {/* Right: ce construim împreună */}
-        <div className="md:w-1/2 flex flex-col justify-center md:border-l md:pl-12" style={{ borderColor: "rgba(255,255,255,0.2)" }}>
+        <div className="w-1/2 flex flex-col justify-center border-l pl-12" style={{ borderColor: "rgba(255,255,255,0.2)" }}>
           <motion.p
             variants={slideItemVariants}
             style={{

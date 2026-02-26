@@ -10,7 +10,7 @@ export function Slide09TrackRecord() {
         padding: "var(--slide-pt) var(--slide-pr) var(--slide-py) var(--slide-px)",
       }}
     >
-      <div className="flex-1 flex flex-col justify-center pt-12 md:pt-16" style={{ maxWidth: "52ch" }}>
+      <div className="flex-1 flex flex-col justify-center pt-12" style={{ maxWidth: "52ch" }}>
         <motion.h2
           variants={slideItemVariants}
           className="lowercase font-semibold leading-none"

@@ -5,23 +5,24 @@ export function StickyHeader() {
   const { activeSlide, goToSlide } = useActiveSlide(12);
   const theme = SLIDE_BG[activeSlide] ?? "dark";
   const textColor = theme === "white" ? "rgba(0,0,0,0.7)" : "rgba(255,255,255,0.9)";
-  const hoverColor = "#E7004C";
+  const hoverColor = theme === "crimson" ? "#fff" : "#E7004C";
 
   return (
     <header
-      className="no-print fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 py-3 md:px-8 md:py-4"
+      className="no-print fixed top-0 left-0 right-0 z-50 flex items-center justify-between"
       style={{
-        paddingTop: "max(0.75rem, env(safe-area-inset-top))",
-        paddingLeft: "max(1rem, env(safe-area-inset-left))",
-        paddingRight: "max(1rem, env(safe-area-inset-right))",
+        paddingTop: "calc(var(--header-top, 0px) + max(0.5rem, env(safe-area-inset-top)))",
+        paddingLeft: "max(1.5rem, env(safe-area-inset-left))",
+        paddingRight: "max(1.5rem, env(safe-area-inset-right))",
+        paddingBottom: "0.5rem",
       }}
     >
       <button
         onClick={() => goToSlide(0)}
-        className="micro-label tracking-widest focus-visible:outline text-left min-w-0 truncate max-w-[65vw] md:max-w-none"
+        className="micro-label tracking-widest focus-visible:outline text-left min-w-0 truncate"
         style={{
           color: textColor,
-          fontSize: "clamp(0.5rem, 2.2vw, 0.6rem)",
+          fontSize: "calc(0.6rem * var(--slide-scale, 1))",
           letterSpacing: "0.15em",
           textTransform: "uppercase",
           background: "none",
@@ -40,7 +41,7 @@ export function StickyHeader() {
         className="micro-label focus-visible:outline"
         style={{
           color: textColor,
-          fontSize: "0.6rem",
+          fontSize: "calc(0.6rem * var(--slide-scale, 1))",
           letterSpacing: "0.2em",
           textTransform: "uppercase",
           textDecoration: "none",

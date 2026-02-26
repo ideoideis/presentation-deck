@@ -24,9 +24,9 @@ export function Slide10ImpactStatement() {
       <div
         className="absolute inset-y-0 left-0 flex flex-col justify-center"
         style={{
-          width: "min(90vw, 480px)",
+          width: "min(100%, 480px)",
           background: "linear-gradient(to right, rgba(18,18,20,0.95) 0%, rgba(18,18,20,0.92) 85%, transparent 100%)",
-          padding: "clamp(3.5rem, 9vh, 5rem) clamp(1.5rem, 4vw, 2.5rem) var(--slide-py) var(--slide-px)",
+          padding: "var(--slide-pt) var(--slide-pr) var(--slide-py) var(--slide-px)",
         }}
       >
         <motion.span

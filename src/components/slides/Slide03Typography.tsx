@@ -16,7 +16,7 @@ export function Slide03Typography() {
 
   return (
     <div
-      className="w-full h-full flex flex-col md:flex-row"
+      className="w-full h-full flex flex-row"
       style={{
         backgroundColor: "#f8f7f5",
       }}
@@ -91,8 +91,9 @@ export function Slide03Typography() {
         variants={slideItemVariants}
         className="flex flex-col justify-center"
         style={{
-          padding: "var(--slide-pt) clamp(2rem, 8vw, 5rem) var(--slide-py) var(--slide-px)",
-          minWidth: "clamp(280px, 38vw, 440px)",
+          padding: "var(--slide-pt) var(--slide-pr) var(--slide-py) var(--slide-px)",
+          minWidth: "0",
+          flex: "0 0 42%",
           backgroundColor: "#fff",
           borderLeft: "1px solid rgba(0,0,0,0.06)",
         }}
@@ -118,7 +119,7 @@ export function Slide03Typography() {
         >
           unde poate fi brandul tău?
         </p>
-        <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
           {PROGRAM_ITEMS.map((item, i) => (
             <div
               key={i}

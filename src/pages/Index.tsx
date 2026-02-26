@@ -1,3 +1,4 @@
+import { useLayoutEffect } from "react";
 import { StickyHeader } from "@/components/StickyHeader";
 import { SlideNav } from "@/components/SlideNav";
 import { SlideSection } from "@/components/SlideSection";
@@ -14,6 +15,7 @@ import { Slide10ImpactStatement } from "@/components/slides/Slide10ImpactStateme
 import { Slide11Remains } from "@/components/slides/Slide11Remains";
 import { Slide12CTA } from "@/components/slides/Slide12CTA";
 
+const DESIGN_W = 960;
 const TOTAL_SLIDES = 12;
 
 const slides = [
@@ -32,6 +34,20 @@ const slides = [
 ];
 
 export default function Index() {
+  useLayoutEffect(() => {
+    const update = () => {
+      const w = window.innerWidth;
+      if (w < DESIGN_W) {
+        document.documentElement.style.setProperty("--slide-scale", String(w / DESIGN_W));
+      } else {
+        document.documentElement.style.removeProperty("--slide-scale");
+      }
+    };
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
+
   return (
     <>
       {/* Sticky header — always on top */}

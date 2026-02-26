@@ -49,8 +49,8 @@ export function Slide07Education() {
           color: "#fff",
           letterSpacing: "-0.02em",
           lineHeight: 0.95,
-          marginBottom: "clamp(1.5rem, 4vh, 3rem)",
-          marginTop: "clamp(3rem, 8vh, 5rem)",
+          marginBottom: "clamp(1rem, 2vw, 2rem)",
+          marginTop: "clamp(1.5rem, 3.5vw, 3.5rem)",
         }}
       >
         ce învață{" "}
@@ -60,8 +60,8 @@ export function Slide07Education() {
       <div
         style={{
           maxWidth: "78ch",
-          marginTop: "clamp(1.25rem, 3vh, 2rem)",
-          marginBottom: "clamp(1.5rem, 4vh, 2.5rem)",
+          marginTop: "clamp(0.75rem, 1.5vw, 1.5rem)",
+          marginBottom: "clamp(1rem, 2vw, 2rem)",
         }}
       >
         <motion.p
@@ -131,7 +131,7 @@ export function Slide07Education() {
               >
                 {/* Row header */}
                 <div className="flex items-center justify-between gap-4">
-                  <div className="flex items-center gap-4 md:gap-6">
+                  <div className="flex items-center gap-6">
                     <span
                       style={{
                         color: isActive ? "#E7004C" : "rgba(255,255,255,0.18)",

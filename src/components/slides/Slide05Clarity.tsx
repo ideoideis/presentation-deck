@@ -29,8 +29,7 @@ function StatItem({ stat, compact }: { stat: typeof stats[0]; compact?: boolean 
       style={{
         borderTop: "2px solid #E7004C",
         borderLeft: "none",
-        padding:
-          "clamp(1.25rem, 2.5vw, 2rem) clamp(1rem, 2vw, 1.5rem) clamp(1rem, 2vw, 1.5rem)",
+        padding: "1.5rem 1.25rem",
       }}
     >
       <div>
@@ -95,7 +94,6 @@ export function Slide05Clarity() {
       style={{
         backgroundColor: "#2c2d34",
         padding: "var(--slide-pt) var(--slide-pr) var(--slide-py) var(--slide-px)",
-        paddingTop: "clamp(3.5rem, 10vh, 5rem)",
       }}
     >
       {/* Lead line */}
@@ -106,6 +104,7 @@ export function Slide05Clarity() {
           fontSize: "clamp(0.95rem, 1.25vw, 1.1rem)",
           lineHeight: 1.6,
           maxWidth: "52ch",
+          marginTop: "2.5rem",
           marginBottom: "0.5rem",
         }}
       >
@@ -114,17 +113,15 @@ export function Slide05Clarity() {
 
       {/* Stats — 3 cols desktop, 2 cols mobile for deck readability */}
       <div
-        className="grid grid-cols-2 md:grid-cols-3 flex-1 gap-0"
-        style={{ marginTop: "clamp(2rem, 2vh, 1.5rem)" }}
+        className="grid grid-cols-3 flex-1 gap-0"
+        style={{ marginTop: "2rem" }}
       >
         {stats.map((stat, i) => (
           <div
             key={i}
-            className={`${i === 4 ? "col-span-2 md:col-span-1" : ""} ${
-              i % 2 === 1 ? "border-l border-white/[0.07]" : ""
-            } ${i % 2 === 1 && i % 3 === 0 ? "md:border-l-0" : ""} ${
-              i % 3 > 0 ? "md:border-l md:border-white/[0.07]" : ""
-            } ${i >= 2 ? "border-t border-white/[0.07]" : ""}`}
+            className={`${i === 4 ? "col-span-1" : ""} ${
+              i % 3 > 0 ? "border-l border-white/[0.07]" : ""
+            } ${i >= 3 ? "border-t border-white/[0.07]" : ""}`}
           >
             <StatItem
               stat={stat}
@@ -143,7 +140,7 @@ export function Slide05Clarity() {
           fontSize: "0.6rem",
           letterSpacing: "0.2em",
           textTransform: "uppercase",
-          marginTop: "clamp(1.25rem, 3vh, 2.5rem)",
+          marginTop: "2rem",
           paddingBottom: "0.25rem",
           flexShrink: 0,
         }}

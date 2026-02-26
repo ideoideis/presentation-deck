@@ -39,7 +39,7 @@ export function SlideSection({ id, className = "", children, ...rest }: SlideSec
       {...rest}
     >
       <motion.div
-        style={{ width: "100%", height: "100%" }}
+        className="slide-content-inner"
         variants={containerVariants}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
