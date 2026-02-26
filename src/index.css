@@ -183,7 +183,7 @@
 
 /* Print / PDF export — one slide per page */
 @page {
-  size: A4 landscape;
+  size: 13.333in 7.5in;
   margin: 0;
 }
 
@@ -198,6 +198,9 @@
   body {
     margin: 0;
     padding: 0;
+    /* Preserve exact colors in PDF — prevents browser from lightening/desaturating */
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
   }
 
   .snap-container {
@@ -207,6 +210,8 @@
   }
 
   .snap-slide {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
     aspect-ratio: 16 / 9 !important;
     height: auto !important;
     min-height: 0 !important;

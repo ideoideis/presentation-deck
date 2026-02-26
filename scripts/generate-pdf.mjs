@@ -65,35 +65,56 @@ async function main() {
 
   console.log("Generating PDF...");
   const puppeteer = await import("puppeteer");
-  const browser = await puppeteer.default.launch({ headless: true });
+  const browser = await puppeteer.default.launch({
+    headless: true,
+    args: ["--force-color-profile=srgb"],
+  });
   const page = await browser.newPage();
 
   await page.emulateMediaType("print");
   await page.goto(url, { waitUntil: "networkidle0", timeout: 30000 });
 
-  // Force animations to completed state for print
+  // Wait for web fonts (Söhne) to load so they embed correctly in the PDF
+  await page.evaluate(() => document.fonts.ready);
+  await new Promise((r) => setTimeout(r, 300));
+
+  // Force framer-motion animations to completed state while preserving
+  // intentional image filters/opacity (grayscale, contrast, etc.)
   await page.evaluate(() => {
     const style = document.createElement("style");
     style.textContent = `
-      .snap-slide * { animation: none !important; transition: none !important; }
-      .snap-slide [style*="opacity"] { opacity: 1 !important; transform: none !important; }
+      .snap-slide * {
+        animation: none !important;
+        transition: none !important;
+      }
     `;
     document.head.appendChild(style);
+
+    document.querySelectorAll('.snap-slide [style]').forEach((el) => {
+      if (el.tagName === 'IMG') return;
+      if (el.style.filter) return;
+      const op = parseFloat(el.style.opacity);
+      if (op === 0) {
+        el.style.opacity = '1';
+        el.style.transform = 'none';
+      }
+    });
   });
   await new Promise((r) => setTimeout(r, 500));
 
   await page.pdf({
     path: outputPath,
-    format: "A4",
-    landscape: true,
+    width: "13.333in",
+    height: "7.5in",
     printBackground: true,
     margin: { top: 0, right: 0, bottom: 0, left: 0 },
     preferCSSPageSize: true,
+    tagged: true,
   });
 
   await browser.close();
   cleanup();
-  console.log(`PDF saved to public/deck-ideo-ideis-2026.pdf`);
+  console.log(`PDF saved to ${outputPath}`);
 }
 
 main().catch((err) => {

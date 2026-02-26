@@ -12,8 +12,8 @@ export function StickyHeader() {
       className="no-print fixed top-0 left-0 right-0 z-50 flex items-center justify-between"
       style={{
         paddingTop: "calc(var(--header-top, 0px) + max(0.5rem, env(safe-area-inset-top)))",
-        paddingLeft: "max(1.5rem, env(safe-area-inset-left))",
-        paddingRight: "max(1.5rem, env(safe-area-inset-right))",
+        paddingLeft: "max(min(1.5rem, calc(var(--slide-px, 2.5rem) * var(--slide-scale, 1))), env(safe-area-inset-left))",
+        paddingRight: "max(min(1.5rem, calc(var(--slide-px, 2.5rem) * var(--slide-scale, 1))), env(safe-area-inset-right))",
         paddingBottom: "0.5rem",
       }}
     >

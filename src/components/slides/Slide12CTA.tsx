@@ -3,6 +3,9 @@ import { Facebook, Instagram, Youtube, Linkedin } from "lucide-react";
 import { slideItemVariants } from "@/components/SlideSection";
 import { asset } from "@/lib/utils";
 
+const isPrint =
+  typeof window !== "undefined" && window.matchMedia("print").matches;
+
 const SOCIAL_LINKS = [
   { href: "https://www.facebook.com/ideoideis", label: "Facebook", Icon: Facebook },
   { href: "https://www.instagram.com/ideoideis/", label: "Instagram", Icon: Instagram },
@@ -110,8 +113,11 @@ export function Slide12CTA() {
               contactează-ne →
             </a>
             <a
-              href={asset("deck-ideo-ideis-2026.pdf")}
-              download
+              href={isPrint ? "https://ideoideis.github.io/presentation-deck/" : asset("deck-ideo-ideis-2026.pdf")}
+              {...(isPrint
+                ? { target: "_blank", rel: "noopener noreferrer" }
+                : { download: true }
+              )}
               style={{
                 display: "inline-block",
                 backgroundColor: "transparent",
@@ -134,7 +140,7 @@ export function Slide12CTA() {
                 e.currentTarget.style.color = "rgba(255,255,255,0.75)";
               }}
             >
-              descarcă această prezentare pdf
+              {isPrint ? "vezi prezentarea online →" : "descarcă această prezentare pdf"}
             </a>
           </motion.div>
         </div>

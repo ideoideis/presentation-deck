@@ -17,7 +17,7 @@ export function Slide11Remains() {
         padding: "var(--slide-pt) var(--slide-pr) var(--slide-py) var(--slide-px)",
       }}
     >
-      <div className="flex-1 flex flex-col justify-center pt-12">
+      <div className="flex-1 flex flex-col justify-center pt-2">
         <motion.h2
           variants={slideItemVariants}
           className="lowercase font-semibold leading-none"
