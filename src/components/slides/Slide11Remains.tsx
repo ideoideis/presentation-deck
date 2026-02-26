@@ -14,7 +14,7 @@ export function Slide11Remains() {
       className="w-full h-full flex flex-col justify-between"
       style={{
         backgroundColor: "#0d0d0e",
-        padding: "var(--slide-pt) var(--slide-px) var(--slide-py)",
+        padding: "var(--slide-pt) var(--slide-pr) var(--slide-py) var(--slide-px)",
       }}
     >
       <div className="flex-1 flex flex-col justify-center pt-12 md:pt-16">

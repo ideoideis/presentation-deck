@@ -4,8 +4,11 @@ import { slideItemVariants } from "@/components/SlideSection";
 export function Slide09TrackRecord() {
   return (
     <div
-      className="w-full h-full flex flex-col justify-between p-10 md:p-16"
-      style={{ backgroundColor: "#2c2d34" }}
+      className="w-full h-full flex flex-col justify-between"
+      style={{
+        backgroundColor: "#2c2d34",
+        padding: "var(--slide-pt) var(--slide-pr) var(--slide-py) var(--slide-px)",
+      }}
     >
       <div className="flex-1 flex flex-col justify-center pt-12 md:pt-16" style={{ maxWidth: "52ch" }}>
         <motion.h2

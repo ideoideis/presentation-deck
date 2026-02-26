@@ -94,13 +94,28 @@ export function Slide05Clarity() {
       className="w-full h-full flex flex-col overflow-hidden"
       style={{
         backgroundColor: "#2c2d34",
-        padding: "var(--slide-pt) var(--slide-px) var(--slide-py)",
+        padding: "var(--slide-pt) var(--slide-pr) var(--slide-py) var(--slide-px)",
+        paddingTop: "clamp(3.5rem, 10vh, 5rem)",
       }}
     >
+      {/* Lead line */}
+      <motion.p
+        variants={slideItemVariants}
+        style={{
+          color: "rgba(255,255,255,0.85)",
+          fontSize: "clamp(0.95rem, 1.25vw, 1.1rem)",
+          lineHeight: 1.6,
+          maxWidth: "52ch",
+          marginBottom: "0.5rem",
+        }}
+      >
+        6.000+ adolescenți formați, 200.000 spectatori, 16M+ reach media — un proiect cu impact cultural și vizibilitate națională.
+      </motion.p>
+
       {/* Stats — 3 cols desktop, 2 cols mobile for deck readability */}
       <div
         className="grid grid-cols-2 md:grid-cols-3 flex-1 gap-0"
-        style={{ marginTop: "clamp(4rem, 3vh, 2rem)" }}
+        style={{ marginTop: "clamp(2rem, 2vh, 1.5rem)" }}
       >
         {stats.map((stat, i) => (
           <div

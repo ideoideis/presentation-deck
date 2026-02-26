@@ -37,7 +37,7 @@ export function Slide07Education() {
       className="w-full h-full flex flex-col"
       style={{
         backgroundColor: "#222324",
-        padding: "var(--slide-pt) var(--slide-px) var(--slide-py)",
+        padding: "var(--slide-pt) var(--slide-pr) var(--slide-py) var(--slide-px)",
       }}
     >
       {/* Title */}
@@ -57,46 +57,49 @@ export function Slide07Education() {
         <span style={{ color: "#E7004C" }}>adolescenții</span>
       </motion.h2>
 
-      <motion.p
-        variants={slideItemVariants}
+      <div
         style={{
-          color: "rgba(255,255,255,0.55)",
-          fontSize: "clamp(0.88rem, 1.15vw, 1rem)",
-          lineHeight: 1.6,
-          maxWidth: "72ch",
-          marginRight: 0,
+          maxWidth: "78ch",
           marginTop: "clamp(1.25rem, 3vh, 2rem)",
-          marginBottom: "clamp(1.25rem, 3vh, 2rem)",
+          marginBottom: "clamp(1.5rem, 4vh, 2.5rem)",
         }}
       >
-        La IDEO, teatrul este instrumentul de clarificare a valorilor, responsabilitate, exprimare și asumare.
-      </motion.p>
-      <motion.p
-        variants={slideItemVariants}
-        style={{
-          color: "rgba(255,255,255,0.5)",
-          fontSize: "clamp(0.85rem, 1.1vw, 0.95rem)",
-          lineHeight: 1.6,
-          maxWidth: "72ch",
-          marginBottom: "0.75rem",
-        }}
-      >
-        Adolescenții creează, lucrează în echipe, discută teme actuale și urcă pe scenă.
-      </motion.p>
-      <motion.p
-        variants={slideItemVariants}
-        style={{
-          color: "rgba(255,255,255,0.45)",
-          fontSize: "clamp(0.82rem, 1.05vw, 0.9rem)",
-          lineHeight: 1.6,
-          maxWidth: "72ch",
-        }}
-      >
-        Este unul dintre puținele festivaluri din România construit special pentru această vârstă.
-      </motion.p>
+        <motion.p
+          variants={slideItemVariants}
+          style={{
+            color: "rgba(255,255,255,0.7)",
+            fontSize: "clamp(0.95rem, 1.2vw, 1.05rem)",
+            lineHeight: 1.75,
+            marginBottom: "1rem",
+          }}
+        >
+          La IDEO, teatrul este instrumentul de clarificare a valorilor, responsabilitate, exprimare și asumare.
+        </motion.p>
+        <motion.p
+          variants={slideItemVariants}
+          style={{
+            color: "rgba(255,255,255,0.6)",
+            fontSize: "clamp(0.95rem, 1.2vw, 1.05rem)",
+            lineHeight: 1.75,
+            marginBottom: "1rem",
+          }}
+        >
+          Adolescenții creează, lucrează în echipe, discută teme actuale și urcă pe scenă.
+        </motion.p>
+        <motion.p
+          variants={slideItemVariants}
+          style={{
+            color: "rgba(255,255,255,0.55)",
+            fontSize: "clamp(0.95rem, 1.2vw, 1.05rem)",
+            lineHeight: 1.75,
+          }}
+        >
+          Este unul dintre puținele festivaluri din România construit special pentru această vârstă.
+        </motion.p>
+      </div>
 
       {/* Interactive rows */}
-      <div className="flex flex-col flex-1 justify-center gap-0">
+      <div className="flex flex-col flex-1 justify-center gap-0" style={{ maxWidth: "80ch" }}>
         {modules.map((mod, i) => {
           const isActive = active === i;
           return (
@@ -146,7 +149,7 @@ export function Slide07Education() {
                       className="lowercase font-medium"
                       style={{
                         color: isActive ? "#fff" : "rgba(255,255,255,0.7)",
-                        fontSize: "clamp(1rem, 1.8vw, 1.4rem)",
+                        fontSize: "clamp(1rem, 1.6vw, 1.3rem)",
                         letterSpacing: "-0.01em",
                         transition: "color 0.22s",
                       }}
@@ -223,7 +226,7 @@ export function Slide07Education() {
                           lineHeight: 1.65,
                           paddingTop: "0.75rem",
                           paddingLeft: "calc(1.8rem + 1rem + clamp(1rem, 1.5vw, 1.5rem))",
-                          maxWidth: "55ch",
+                          maxWidth: "72ch",
                         }}
                       >
                         {mod.text}

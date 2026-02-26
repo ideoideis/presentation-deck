@@ -13,7 +13,7 @@ export function Slide04Year2026() {
       className="w-full h-full flex flex-col justify-between"
       style={{
         backgroundColor: "#E7004C",
-        padding: "var(--slide-pt) var(--slide-px) var(--slide-py)",
+        padding: "var(--slide-pt) var(--slide-pr) var(--slide-py) var(--slide-px)",
       }}
     >
       <div className="flex-1 flex flex-col md:flex-row justify-center gap-8 md:gap-12 mt-6 md:mt-10">
@@ -64,6 +64,23 @@ export function Slide04Year2026() {
           >
             Un spațiu comun pentru adolescenți, copii și adulți, în jurul spectacolelor, proiecțiilor și dialogurilor. Festivalul devine orașul și invită comunitatea să participe.
           </motion.p>
+          <motion.div
+            variants={slideItemVariants}
+            style={{
+              marginTop: "1.5rem",
+              padding: "1rem 1.25rem",
+              backgroundColor: "rgba(255,255,255,0.12)",
+              borderRadius: "4px",
+              borderLeft: "3px solid #fff",
+            }}
+          >
+            <p style={{ color: "#fff", fontSize: "clamp(0.85rem, 1.1vw, 0.95rem)", fontWeight: 600, marginBottom: "0.35rem" }}>
+              2026 înseamnă:
+            </p>
+            <p style={{ color: "rgba(255,255,255,0.9)", fontSize: "clamp(0.82rem, 1vw, 0.9rem)", lineHeight: 1.5 }}>
+              +20% reach media față de 2025 · cel mai mare hub comunitar în aer liber la sud de București
+            </p>
+          </motion.div>
         </div>
 
         {/* Right: ce construim împreună */}

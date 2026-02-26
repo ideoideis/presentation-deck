@@ -4,16 +4,13 @@ import { SLIDE_BG } from "@/constants/slides";
 export function StickyHeader() {
   const { activeSlide, goToSlide } = useActiveSlide(12);
   const theme = SLIDE_BG[activeSlide] ?? "dark";
-  const textColor = theme === "white" ? "rgba(0,0,0,0.5)" : "rgba(255,255,255,0.6)";
+  const textColor = theme === "white" ? "rgba(0,0,0,0.7)" : "rgba(255,255,255,0.9)";
   const hoverColor = "#E7004C";
 
   return (
     <header
       className="no-print fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 py-3 md:px-8 md:py-4"
       style={{
-        background: "transparent",
-        backdropFilter: "none",
-        mixBlendMode: "normal",
         paddingTop: "max(0.75rem, env(safe-area-inset-top))",
         paddingLeft: "max(1rem, env(safe-area-inset-left))",
         paddingRight: "max(1rem, env(safe-area-inset-right))",

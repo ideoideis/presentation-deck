@@ -2,13 +2,13 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { slideItemVariants } from "@/components/SlideSection";
 
-const PROGRAM_ITEMS = [
-  "ateliere de teatru tânăr + arte alăturate (film, foto, dans, scriere, new media, scenografie)",
-  "spectacole de teatru tânăr",
-  "spectacole invitate",
-  "cinemateca târzie + Q&A",
-  "masterclass-uri și seara povestitorilor",
-  "murale și activări în oraș",
+const PROGRAM_ITEMS: { activity: string; opportunity: string }[] = [
+  { activity: "ateliere de teatru tânăr + arte alăturate", opportunity: "branding în spații educaționale · kit-uri personalizate" },
+  { activity: "spectacole de teatru tânăr", opportunity: "asociere cu conținut cultural" },
+  { activity: "spectacole invitate", opportunity: "vizibilitate la evenimente" },
+  { activity: "cinemateca târzie + Q&A", opportunity: "conținut cultural · public tânăr" },
+  { activity: "masterclass-uri și seara povestitorilor", opportunity: "dialog cu generația activă" },
+  { activity: "murale și activări în oraș", opportunity: "vizibilitate outdoor · revitalizare urbană" },
 ];
 
 export function Slide03Typography() {
@@ -25,7 +25,7 @@ export function Slide03Typography() {
       <div
         className="flex-1 flex flex-col justify-center"
         style={{
-          padding: "clamp(2.5rem, 6vw, 4rem) clamp(2.5rem, 5vw, 4rem)",
+          padding: "var(--slide-pt) var(--slide-pr) var(--slide-py) var(--slide-px)",
         }}
       >
         {/* Lead — headline treatment */}
@@ -91,7 +91,7 @@ export function Slide03Typography() {
         variants={slideItemVariants}
         className="flex flex-col justify-center"
         style={{
-          padding: "clamp(2.5rem, 6vw, 4rem) clamp(2.5rem, 5vw, 4rem)",
+          padding: "var(--slide-pt) var(--slide-pr) var(--slide-py) var(--slide-px)",
           minWidth: "clamp(280px, 38vw, 440px)",
           backgroundColor: "#fff",
           borderLeft: "1px solid rgba(0,0,0,0.06)",
@@ -103,10 +103,20 @@ export function Slide03Typography() {
             fontSize: "0.6rem",
             letterSpacing: "0.18em",
             textTransform: "uppercase",
-            marginBottom: "1.5rem",
+            marginBottom: "0.35rem",
           }}
         >
           ce se întâmplă anual
+        </p>
+        <p
+          style={{
+            color: "#E7004C",
+            fontSize: "clamp(0.8rem, 1vw, 0.9rem)",
+            fontWeight: 600,
+            marginBottom: "1.25rem",
+          }}
+        >
+          unde poate fi brandul tău?
         </p>
         <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
           {PROGRAM_ITEMS.map((item, i) => (
@@ -117,8 +127,8 @@ export function Slide03Typography() {
               style={{
                 position: "relative",
                 display: "flex",
-                alignItems: "flex-start",
-                gap: "1rem",
+                flexDirection: "column",
+                gap: "0.25rem",
                 padding: "0.85rem 1rem",
                 backgroundColor: "rgba(247,247,247,0.8)",
                 borderRadius: "4px",
@@ -158,7 +168,19 @@ export function Slide03Typography() {
                   transition: "color 0.2s ease",
                 }}
               >
-                {item}
+                {item.activity}
+              </p>
+              <p
+                style={{
+                  position: "relative",
+                  zIndex: 1,
+                  color: hovered === i ? "rgba(255,255,255,0.85)" : "rgba(34,35,36,0.5)",
+                  fontSize: "clamp(0.72rem, 0.95vw, 0.82rem)",
+                  lineHeight: 1.35,
+                  transition: "color 0.2s ease",
+                }}
+              >
+                {item.opportunity}
               </p>
             </div>
           ))}

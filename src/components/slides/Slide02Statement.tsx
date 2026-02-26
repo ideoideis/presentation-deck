@@ -3,11 +3,11 @@ import { slideItemVariants } from "@/components/SlideSection";
 import { asset } from "@/lib/utils";
 
 const facts = [
-  "20 de ani de consecvență",
+  "6.000+ adolescenți formați",
+  "200.000 spectatori",
+  "16M+ reach media",
   "500+ evenimente de-a lungul anilor",
-  "6000+ adolescenți au crescut alături de Ideo Ideis",
-  "câteva mii de spectatori anual",
-  "vizibilitate națională",
+  "proiect cu impact cultural și vizibilitate națională",
 ];
 
 export function Slide02Statement() {
@@ -32,8 +32,7 @@ export function Slide02Statement() {
         <div
           className="flex-1 flex flex-col justify-end"
           style={{
-            padding: "var(--slide-pt) var(--slide-px) var(--slide-py)",
-            paddingRight: "clamp(1.5rem, 4vw, 3rem)",
+            padding: "var(--slide-pt) var(--slide-pr) var(--slide-py) var(--slide-px)",
           }}
         >
           <div>
@@ -107,8 +106,7 @@ export function Slide02Statement() {
         <div
           className="flex flex-col justify-end"
           style={{
-            padding: "var(--slide-pt) var(--slide-px) var(--slide-py)",
-            paddingLeft: "clamp(1.5rem, 3vw, 2.5rem)",
+            padding: "var(--slide-pt) var(--slide-pr) var(--slide-py) clamp(1.5rem, 3vw, 2.5rem)",
             borderLeft: "1px solid rgba(255,255,255,0.08)",
             minWidth: "clamp(210px, 26vw, 340px)",
           }}
@@ -141,7 +139,7 @@ export function Slide02Statement() {
                 <p
                   style={{
                     color: "#fff",
-                    fontSize: "clamp(0.85rem, 1.15vw, 1rem)",
+                    fontSize: "clamp(0.95rem, 1.25vw, 1.1rem)",
                     fontWeight: 600,
                     letterSpacing: "-0.01em",
                     lineHeight: 1.3,

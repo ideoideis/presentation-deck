@@ -5,11 +5,14 @@ import { asset } from "@/lib/utils";
 export function Slide01Cover() {
   return (
     <div
-      className="w-full h-full flex flex-col justify-between p-6 md:p-16 relative"
-      style={{ backgroundColor: "#E7004C" }}
+      className="w-full h-full flex flex-col justify-between relative"
+      style={{
+        backgroundColor: "#E7004C",
+        padding: "var(--slide-pt) var(--slide-pr) var(--slide-py) var(--slide-px)",
+      }}
     >
       {/* Main content — StickyHeader shows festival info */}
-      <div className="flex flex-col gap-4 mt-12 md:mt-16">
+      <div className="flex flex-col gap-4 mt-20 md:mt-28">
         <motion.img
           src={asset("/logo-ideo-ideis-festivalul.png")}
           alt="ideo ideis festivalul"
@@ -36,7 +39,7 @@ export function Slide01Cover() {
               letterSpacing: "0.02em",
             }}
           >
-            20 de ani de festival care modelează generații
+            21 de ani de festival care modelează generații
           </p>
           <p
             style={{

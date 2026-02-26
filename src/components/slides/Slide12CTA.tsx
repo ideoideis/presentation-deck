@@ -22,12 +22,13 @@ const SOCIAL_LINKS = [
 export function Slide12CTA() {
   return (
     <div
-      className="w-full h-full flex flex-col justify-between p-10 md:p-16"
+      className="w-full h-full flex flex-col justify-between"
       style={{
         backgroundColor: "#E7004C",
+        padding: "var(--slide-pt) var(--slide-pr) var(--slide-py) var(--slide-px)",
       }}
     >
-      <div className="flex-1 flex flex-col md:flex-row gap-10 md:gap-16 items-start mt-6 md:mt-10">
+      <div className="flex-1 flex flex-col md:flex-row gap-10 md:gap-16 items-start mt-12 md:mt-20">
         {/* Left: headline + quote + button */}
         <div className="md:w-1/2 flex flex-col gap-8">
           <div>
@@ -133,7 +134,7 @@ export function Slide12CTA() {
                 e.currentTarget.style.color = "rgba(255,255,255,0.75)";
               }}
             >
-              descarcă pdf
+              descarcă această prezentare pdf
             </a>
           </motion.div>
         </div>

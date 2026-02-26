@@ -25,8 +25,11 @@ export function Slide08WhyHere() {
 
       {/* Right: text */}
       <div
-        className="flex flex-col justify-between p-6 md:p-14 md:min-w-[min(40vw,580px)] md:border-l"
-        style={{ borderColor: "rgba(0,0,0,0.08)" }}
+        className="flex flex-col justify-between md:min-w-[min(40vw,580px)] md:border-l"
+        style={{
+          borderColor: "rgba(0,0,0,0.08)",
+          padding: "var(--slide-pt) var(--slide-pr) var(--slide-py) var(--slide-px)",
+        }}
       >
         <div className="pt-12 md:pt-16">
           <motion.span

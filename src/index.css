@@ -20,10 +20,11 @@
 
 @layer base {
   :root {
-    /* Slide layout — tighter on mobile for deck presentation */
+    /* Slide layout — consistent margins, same value everywhere */
     --slide-pt: clamp(0.5rem, 2vh, 1.5rem);
-    --slide-px: clamp(1rem, 5vw, 4rem);
-    --slide-py: clamp(1rem, 5vw, 4rem);
+    --slide-px: clamp(1.5rem, 6vw, 4rem);
+    --slide-py: clamp(1.5rem, 6vw, 4rem);
+    --slide-pr: var(--slide-px);
 
     /* Festival brand */
     --brand-red: 346 100% 45%;         /* #E7004C */
@@ -131,8 +132,8 @@
 
 @media (max-width: 768px) {
   :root {
-    --slide-px: 1rem;
-    --slide-py: 1rem;
+    --slide-px: 1.5rem;
+    --slide-py: 1.5rem;
   }
 
   .snap-slide {

@@ -61,8 +61,8 @@ export function Slide10ImpactStatement() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-10%" }}
-        className="absolute z-10 top-[8%] left-[5%] md:top-[10%] md:left-[6%]"
-        style={{ maxWidth: "min(90vw, 420px)" }}
+        className="absolute z-10 top-[8%] md:top-[10%]"
+        style={{ left: "var(--slide-px)", maxWidth: "min(90vw, 420px)" }}
       >
         <motion.span
           variants={itemVariants}
@@ -86,6 +86,18 @@ export function Slide10ImpactStatement() {
         >
           A susține Ideo Ideis înseamnă a susține dezvoltarea unei generații și vitalitatea culturală a unei comunități.
         </motion.p>
+        <motion.p
+          variants={itemVariants}
+          style={{
+            ...chipStyle,
+            padding: "0.9rem 1.2rem",
+            fontSize: "clamp(0.88rem, 1.15vw, 0.98rem)",
+            lineHeight: 1.5,
+            marginTop: "0.75rem",
+          }}
+        >
+          Brandurile partenere devin parte din acest proces susținând un program național cu credibilitate și asociindu-se cu o generație activă, educată și implicată.
+        </motion.p>
       </motion.div>
 
       {/* 2. Tags — floating pills, center-right area */}
@@ -94,8 +106,9 @@ export function Slide10ImpactStatement() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-10%" }}
-        className="absolute z-10 top-[42%] right-[5%] md:top-[45%] md:right-[7%]"
+        className="absolute z-10 top-[42%] md:top-[45%]"
         style={{
+          right: "var(--slide-pr)",
           maxWidth: "min(85vw, 300px)",
           padding: "1rem 1.25rem",
           backgroundColor: "rgba(255,255,255,0.96)",
@@ -144,8 +157,8 @@ export function Slide10ImpactStatement() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-10%" }}
-        className="absolute z-10 bottom-[10%] left-[5%] md:bottom-[12%] md:left-[6%]"
-        style={{ maxWidth: "min(90vw, 340px)" }}
+        className="absolute z-10 bottom-[10%] md:bottom-[12%]"
+        style={{ left: "var(--slide-px)", maxWidth: "min(90vw, 340px)" }}
       >
         <motion.p
           variants={itemVariants}
@@ -169,8 +182,9 @@ export function Slide10ImpactStatement() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-10%" }}
-        className="absolute z-10 bottom-[5%] right-[5%] md:bottom-[6%] md:right-[7%]"
+        className="absolute z-10 bottom-[5%] md:bottom-[6%]"
         style={{
+          right: "var(--slide-pr)",
           color: "rgba(0,0,0,0.6)",
           fontSize: "0.7rem",
           letterSpacing: "0.18em",
