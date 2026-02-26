@@ -2,7 +2,7 @@ import { useActiveSlide } from "@/hooks/useActiveSlide";
 import { SLIDE_BG } from "@/constants/slides";
 
 export function StickyHeader() {
-  const { activeSlide, goToSlide } = useActiveSlide(14);
+  const { activeSlide, goToSlide } = useActiveSlide(12);
   const theme = SLIDE_BG[activeSlide] ?? "dark";
   const textColor = theme === "white" ? "rgba(0,0,0,0.5)" : "rgba(255,255,255,0.6)";
   const hoverColor = "#E7004C";
@@ -38,8 +38,8 @@ export function StickyHeader() {
       </button>
 
       <a
-        href="#slide-14"
-        onClick={(e) => { e.preventDefault(); goToSlide(13); }}
+        href="#slide-12"
+        onClick={(e) => { e.preventDefault(); goToSlide(11); }}
         className="micro-label focus-visible:outline"
         style={{
           color: textColor,

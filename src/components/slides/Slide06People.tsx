@@ -17,7 +17,7 @@ const VIDEO_SRC = asset("/videos/prieteni-ideo-ideis-teaser.mp4");
 
 const PULSE_DELAY_MS = 4000;
 
-export function Slide10People() {
+export function Slide06People() {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const [hasEverClickedPlay, setHasEverClickedPlay] = useState(false);
   const [pulseActive, setPulseActive] = useState(false);

@@ -88,7 +88,7 @@ function StatItem({ stat, compact }: { stat: typeof stats[0]; compact?: boolean 
   );
 }
 
-export function Slide04Clarity() {
+export function Slide05Clarity() {
   return (
     <div
       className="w-full h-full flex flex-col overflow-hidden"
