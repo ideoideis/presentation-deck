@@ -75,12 +75,12 @@ export function Slide06People() {
               }}
               animate={
                 shouldPulse
-                  ? { scale: [1, 1.28, 1], opacity: [1, 0.7, 1] }
+                  ? { scale: [1, 1.5, 1], opacity: [1, 0.5, 1] }
                   : { scale: 1, opacity: 1 }
               }
               transition={
                 shouldPulse
-                  ? { repeat: Infinity, duration: 1.2, ease: "easeInOut" }
+                  ? { repeat: Infinity, duration: 0.9, ease: "easeInOut" }
                   : { duration: 0.2 }
               }
               aria-label={isVideoPlaying ? "Stop video" : "Play video"}
@@ -88,8 +88,8 @@ export function Slide06People() {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                width: 30,
-                height: 30,
+                width: 36,
+                height: 36,
                 borderRadius: "50%",
                 border: "none",
                 background: "#fff",
