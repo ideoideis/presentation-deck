@@ -90,7 +90,7 @@ export function Slide11Remains() {
             fontSize: "clamp(0.9rem, 1.2vw, 1rem)",
             fontWeight: 600,
             lineHeight: 1.5,
-            marginTop: "1.5rem",
+            marginTop: "0.75rem",
             maxWidth: "50ch",
           }}
         >

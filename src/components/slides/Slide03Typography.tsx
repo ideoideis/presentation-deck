@@ -91,7 +91,10 @@ export function Slide03Typography() {
         variants={slideItemVariants}
         className="flex flex-col justify-center"
         style={{
-          padding: "var(--slide-pt) var(--slide-pr) var(--slide-py) var(--slide-px)",
+          paddingTop: "3.5rem",
+          paddingBottom: "2.5rem",
+          paddingLeft: "var(--slide-px)",
+          paddingRight: "var(--slide-pr)",
           minWidth: "0",
           flex: "0 0 42%",
           backgroundColor: "#fff",
@@ -130,7 +133,7 @@ export function Slide03Typography() {
                 display: "flex",
                 flexDirection: "column",
                 gap: "0.25rem",
-                padding: "0.85rem 1rem",
+                padding: "0.6rem 1rem",
                 backgroundColor: "rgba(247,247,247,0.8)",
                 borderRadius: "4px",
                 borderLeft: "3px solid #E7004C",
