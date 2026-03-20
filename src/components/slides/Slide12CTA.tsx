@@ -249,6 +249,21 @@ export function Slide12CTA() {
               ))}
             </div>
           </motion.div>
+
+          <motion.p
+            variants={slideItemVariants}
+            style={{
+              color: "#fff",
+              fontSize: "clamp(0.9rem, 1.15vw, 1rem)",
+              fontWeight: 600,
+              lineHeight: 1.35,
+              margin: 0,
+              marginTop: "1.75rem",
+            }}
+          >
+            Asociația T.E.T. Alexandria{" "}
+            <span style={{ fontWeight: 500, color: "rgba(255,255,255,0.65)" }}>(ONG)</span>
+          </motion.p>
         </div>
       </div>
     </div>
