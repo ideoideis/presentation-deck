@@ -146,7 +146,7 @@ export function Slide07Education() {
                         transition: "opacity 0.2s",
                       }}
                     >
-                      — {mod.subtitle}
+                       {mod.subtitle}
                     </span>
                   </div>
 

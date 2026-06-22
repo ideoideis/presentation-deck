@@ -11,16 +11,15 @@
     "labels": [
       "cover",
       "manifest",
-      "voce",
       "ce se întâmplă",
-      "ediția #21",
-      "de ce aici",
       "2026",
-      "proof",
-      "oameni",
-      "citat",
       "impact",
-      "pentru partener",
+      "oameni",
+      "educație",
+      "în țară",
+      "ecosistem",
+      "parteneriat",
+      "împreună",
       "contact"
     ]
   },
@@ -54,6 +53,7 @@
     "p2": "Festivalul aduce împreună adolescenți, artiști și comunitatea locală. Pentru câteva zile, orașul se adună în jurul culturii.",
     "eyebrow1": "ce se întâmplă anual",
     "eyebrow2": "unde poate fi brandul tău?",
+    "ngoLabel": "ONG-uri din toată țara animă piața, alături de comunitatea locală",
     "program": [
       { "activity": "ateliere de teatru tânăr + arte alăturate", "opportunity": "branding în spații educaționale · kit-uri personalizate" },
       { "activity": "spectacole de teatru tânăr", "opportunity": "asociere cu conținut cultural" },
@@ -65,20 +65,20 @@
   },
   "slide04": {
     "year": "2026",
-    "p1": "În 2026, piața devine centrul festivalului.",
-    "p2": "Un loc deschis de schimb de idei, informații și experiențe culturale.",
-    "p3": "Un spațiu comun pentru adolescenți, copii și adulți, în jurul spectacolelor, proiecțiilor și dialogurilor. Festivalul devine orașul și invită comunitatea să participe.",
+    "p1": "În 2026, Piața Ideo Ideis devine inima festivalului: un hub deschis pentru organizații din toată țara.",
+    "p2": "Un spațiu de schimb între ONG-uri, artiști și comunitatea locală — idei, proiecte și experiențe împărtășite.",
+    "p3": "Festivalul devine orașul și invită întreaga comunitate să participe, alături de organizații active la nivel național.",
     "calloutTitle": "2026 înseamnă:",
-    "calloutText": "+20% reach media față de 2025 · cel mai mare hub comunitar în aer liber la sud de București",
+    "calloutText": "+20% reach media față de 2025 · cel mai mare hub comunitar și civic în aer liber la sud de București",
     "eyebrow": "ce construim împreună",
     "rows": [
-      "mai multă <hl>integrare</hl> a comunității din Alexandria în activitățile festivalului",
-      "<hl>experiență</hl> mai bună pentru participanți și public: ritm sănătos, acces larg",
-      "<hl>vizibilitate</hl> națională sporită și colaborări cu impact clar"
+      "un <hl>hub</hl> național unde ONG-uri din toată țara se întâlnesc cu comunitatea",
+      "<hl>participare</hl> largă: adolescenți, familii și public din tot orașul",
+      "<hl>vizibilitate</hl> națională și impact cultural și civic real"
     ]
   },
   "slide05": {
-    "lead": "6.000+ adolescenți formați, 200.000 spectatori, 16M+ reach media — un proiect cu impact cultural și vizibilitate națională.",
+    "lead": "6.000+ adolescenți formați, 200.000 spectatori, 16M+ reach media: un proiect cu impact cultural și vizibilitate națională.",
     "eyebrow": "impact · în cifre",
     "stats": [
       { "prefix": "mai bine de ", "label": "adolescenți au crescut alături de Ideo Ideis", "detail": "participanți din toată țara" },

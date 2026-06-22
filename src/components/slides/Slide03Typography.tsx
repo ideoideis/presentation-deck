@@ -3,6 +3,17 @@ import { motion } from "framer-motion";
 import { Trans, useTranslation } from "react-i18next";
 import { slideItemVariants } from "@/components/SlideSection";
 
+// Participating NGOs from across the country — names are proper nouns, the same
+// in every language. Shown as a light "bubble" row to signal the national reach.
+const NGOS = [
+  "Tineri Pentru Tineri",
+  "Centrul pentru Jurnalism Independent",
+  "Funky Citizens",
+  "Școala 9",
+  "Urbanium / REPER21",
+  "Asociația Moașelor",
+];
+
 export function Slide03Typography() {
   const { t } = useTranslation();
   const programItems = t("slide03.program", { returnObjects: true }) as {
@@ -26,22 +37,22 @@ export function Slide03Typography() {
         }}
       >
         {/* Lead — headline treatment */}
-        <motion.div variants={slideItemVariants} style={{ marginBottom: "1.75rem" }}>
+        <motion.div variants={slideItemVariants} style={{ marginBottom: "1.1rem" }}>
           <span
             style={{
               display: "block",
               width: "40px",
               height: "4px",
               backgroundColor: "#E7004C",
-              marginBottom: "1rem",
+              marginBottom: "0.75rem",
             }}
           />
           <p
             style={{
               color: "#222324",
-              fontSize: "clamp(1.5rem, 2.8vw, 2.2rem)",
+              fontSize: "clamp(1.4rem, 2.5vw, 2rem)",
               fontWeight: 600,
-              lineHeight: 1.25,
+              lineHeight: 1.2,
               letterSpacing: "-0.02em",
               maxWidth: "28ch",
             }}
@@ -54,7 +65,7 @@ export function Slide03Typography() {
         <motion.div
           variants={slideItemVariants}
           style={{
-            padding: "1.5rem 1.75rem",
+            padding: "1.1rem 1.4rem",
             backgroundColor: "#fff",
             borderRadius: 0,
             boxShadow: "0 2px 12px rgba(0,0,0,0.04)",
@@ -64,8 +75,8 @@ export function Slide03Typography() {
           <p
             style={{
               color: "#222324",
-              fontSize: "clamp(0.95rem, 1.35vw, 1.1rem)",
-              lineHeight: 1.65,
+              fontSize: "clamp(0.9rem, 1.2vw, 1rem)",
+              lineHeight: 1.55,
             }}
           >
             {t("slide03.p1")}
@@ -73,13 +84,48 @@ export function Slide03Typography() {
           <p
             style={{
               color: "#222324",
-              fontSize: "clamp(0.95rem, 1.35vw, 1.1rem)",
-              lineHeight: 1.65,
-              marginTop: "1rem",
+              fontSize: "clamp(0.9rem, 1.2vw, 1rem)",
+              lineHeight: 1.55,
+              marginTop: "0.75rem",
             }}
           >
             {t("slide03.p2")}
           </p>
+        </motion.div>
+
+        {/* National NGO presence — light bubble row */}
+        <motion.div variants={slideItemVariants} style={{ marginTop: "0.9rem", maxWidth: "48ch" }}>
+          <p
+            style={{
+              color: "rgba(34,35,36,0.45)",
+              fontSize: "0.58rem",
+              letterSpacing: "0.16em",
+              textTransform: "uppercase",
+              marginBottom: "0.6rem",
+            }}
+          >
+            {t("slide03.ngoLabel")}
+          </p>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "0.4rem" }}>
+            {NGOS.map((name) => (
+              <span
+                key={name}
+                style={{
+                  display: "inline-block",
+                  padding: "0.28rem 0.7rem",
+                  borderRadius: "999px",
+                  backgroundColor: "#fff",
+                  border: "1px solid rgba(231,0,76,0.4)",
+                  color: "#222324",
+                  fontSize: "clamp(0.64rem, 0.82vw, 0.74rem)",
+                  fontWeight: 500,
+                  lineHeight: 1.2,
+                }}
+              >
+                {name}
+              </span>
+            ))}
+          </div>
         </motion.div>
       </div>
 
@@ -88,8 +134,8 @@ export function Slide03Typography() {
         variants={slideItemVariants}
         className="flex flex-col justify-center"
         style={{
-          paddingTop: "3.5rem",
-          paddingBottom: "2.5rem",
+          paddingTop: "3rem",
+          paddingBottom: "2rem",
           paddingLeft: "var(--slide-px)",
           paddingRight: "var(--slide-pr)",
           minWidth: "0",
@@ -114,12 +160,12 @@ export function Slide03Typography() {
             color: "#E7004C",
             fontSize: "clamp(0.8rem, 1vw, 0.9rem)",
             fontWeight: 600,
-            marginBottom: "1.25rem",
+            marginBottom: "0.85rem",
           }}
         >
           {t("slide03.eyebrow2")}
         </p>
-        <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
           {programItems.map((item, i) => (
             <div
               key={i}
@@ -129,8 +175,8 @@ export function Slide03Typography() {
                 position: "relative",
                 display: "flex",
                 flexDirection: "column",
-                gap: "0.25rem",
-                padding: "0.6rem 1rem",
+                gap: "0.15rem",
+                padding: "0.5rem 0.9rem",
                 backgroundColor: "rgba(247,247,247,0.8)",
                 borderRadius: "4px",
                 borderLeft: "3px solid #E7004C",
@@ -163,8 +209,8 @@ export function Slide03Typography() {
                   position: "relative",
                   zIndex: 1,
                   color: hovered === i ? "#fff" : "#222324",
-                  fontSize: "clamp(0.88rem, 1.15vw, 0.98rem)",
-                  lineHeight: 1.4,
+                  fontSize: "clamp(0.84rem, 1.05vw, 0.92rem)",
+                  lineHeight: 1.3,
                   flex: 1,
                   transition: "color 0.2s ease",
                 }}
@@ -176,8 +222,8 @@ export function Slide03Typography() {
                   position: "relative",
                   zIndex: 1,
                   color: hovered === i ? "rgba(255,255,255,0.85)" : "rgba(34,35,36,0.5)",
-                  fontSize: "clamp(0.72rem, 0.95vw, 0.82rem)",
-                  lineHeight: 1.35,
+                  fontSize: "clamp(0.7rem, 0.9vw, 0.78rem)",
+                  lineHeight: 1.25,
                   transition: "color 0.2s ease",
                 }}
               >

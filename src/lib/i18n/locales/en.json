@@ -11,16 +11,15 @@
     "labels": [
       "cover",
       "manifesto",
-      "voice",
       "what happens",
-      "21st edition",
-      "why here",
       "2026",
-      "proof",
-      "people",
-      "quote",
       "impact",
-      "for partners",
+      "people",
+      "education",
+      "nationwide",
+      "ecosystem",
+      "partnership",
+      "together",
       "contact"
     ]
   },
@@ -54,6 +53,7 @@
     "p2": "The festival brings together teenagers, artists and the local community. For a few days, the city gathers around culture.",
     "eyebrow1": "what happens every year",
     "eyebrow2": "where can your brand be?",
+    "ngoLabel": "NGOs from across the country bring the square alive, with the local community",
     "program": [
       { "activity": "young-theatre workshops + adjacent arts", "opportunity": "branding in educational spaces · custom kits" },
       { "activity": "young-theatre performances", "opportunity": "association with cultural content" },
@@ -65,20 +65,20 @@
   },
   "slide04": {
     "year": "2026",
-    "p1": "In 2026, the square becomes the heart of the festival.",
-    "p2": "An open place for exchanging ideas, information and cultural experiences.",
-    "p3": "A shared space for teenagers, children and adults, around performances, screenings and conversations. The festival becomes the city and invites the community to take part.",
+    "p1": "In 2026, Piața Ideo Ideis becomes the heart of the festival: a hub open to organisations from across the country.",
+    "p2": "A space for exchange between NGOs, artists and the local community — ideas, projects and experiences shared.",
+    "p3": "The festival becomes the town and invites the whole community to take part, alongside organisations active nationwide.",
     "calloutTitle": "2026 means:",
-    "calloutText": "+20% media reach vs. 2025 · the largest open-air community hub south of Bucharest",
+    "calloutText": "+20% media reach vs. 2025 · the largest open-air community & civic hub south of Bucharest",
     "eyebrow": "what we build together",
     "rows": [
-      "more <hl>integration</hl> of the Alexandria community into the festival's activities",
-      "a better <hl>experience</hl> for participants and audience: a healthy pace, broad access",
-      "greater national <hl>visibility</hl> and collaborations with clear impact"
+      "a national <hl>hub</hl> where NGOs from across the country meet the community",
+      "broad <hl>participation</hl>: teenagers, families and the whole town",
+      "national <hl>visibility</hl> and real cultural and civic impact"
     ]
   },
   "slide05": {
-    "lead": "6,000+ teenagers trained, 200,000 spectators, 16M+ media reach — a project with cultural impact and national visibility.",
+    "lead": "6,000+ teenagers trained, 200,000 spectators, 16M+ media reach: a project with cultural impact and national visibility.",
     "eyebrow": "impact · in numbers",
     "stats": [
       { "prefix": "more than ", "label": "teenagers have grown up with Ideo Ideis", "detail": "participants from across the country" },

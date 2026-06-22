@@ -181,6 +181,14 @@
   transform: translateX(-50%);
 }
 
+/* Dense list columns (slide 3, Piața) are vertically centred on tall screens,
+   which looks balanced. In scaled mode the 540px design is short, so centring
+   pushes the top eyebrow up under the fixed header — top-anchor it instead so it
+   always sits below the header (any overflow falls off the bottom, not the top). */
+:root[data-slide-fit="scaled"] .deck-col-list {
+  justify-content: flex-start;
+}
+
 /* Micro label / eyebrow */
 .micro-label {
   font-size: 0.65rem;

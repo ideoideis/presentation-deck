@@ -11,16 +11,15 @@
     "labels": [
       "cover",
       "manifest",
-      "stimme",
       "was passiert",
-      "21. ausgabe",
-      "warum hier",
       "2026",
-      "beleg",
-      "menschen",
-      "zitat",
       "wirkung",
-      "für partner",
+      "menschen",
+      "bildung",
+      "im land",
+      "ökosystem",
+      "partnerschaft",
+      "gemeinsam",
       "kontakt"
     ]
   },
@@ -54,6 +53,7 @@
     "p2": "Das Festival bringt Jugendliche, Künstler und die lokale Gemeinschaft zusammen. Für ein paar Tage versammelt sich die Stadt rund um die Kultur.",
     "eyebrow1": "was jedes jahr passiert",
     "eyebrow2": "wo kann deine marke sein?",
+    "ngoLabel": "NGOs aus dem ganzen Land beleben den Platz, mit der lokalen Gemeinschaft",
     "program": [
       { "activity": "Workshops des jungen Theaters + angrenzende Künste", "opportunity": "Branding in Bildungsräumen · individuelle Kits" },
       { "activity": "Aufführungen des jungen Theaters", "opportunity": "Verbindung mit kulturellem Content" },
@@ -65,20 +65,20 @@
   },
   "slide04": {
     "year": "2026",
-    "p1": "2026 wird der Platz zum Herzstück des Festivals.",
-    "p2": "Ein offener Ort für den Austausch von Ideen, Informationen und kulturellen Erfahrungen.",
-    "p3": "Ein gemeinsamer Raum für Jugendliche, Kinder und Erwachsene, rund um Aufführungen, Vorführungen und Gespräche. Das Festival wird zur Stadt und lädt die Gemeinschaft zum Mitmachen ein.",
+    "p1": "2026 wird Piața Ideo Ideis zum Herzen des Festivals: ein Hub, offen für Organisationen aus dem ganzen Land.",
+    "p2": "Ein Raum für Austausch zwischen NGOs, Künstlern und der lokalen Gemeinschaft — geteilte Ideen, Projekte und Erfahrungen.",
+    "p3": "Das Festival wird zur Stadt und lädt die ganze Gemeinschaft zum Mitmachen ein, gemeinsam mit landesweit aktiven Organisationen.",
     "calloutTitle": "2026 bedeutet:",
-    "calloutText": "+20% Medienreichweite gegenüber 2025 · der größte Open-Air-Gemeinschaftshub südlich von Bukarest",
+    "calloutText": "+20% Medienreichweite gegenüber 2025 · der größte Open-Air-Hub für Gemeinschaft & Zivilgesellschaft südlich von Bukarest",
     "eyebrow": "was wir gemeinsam aufbauen",
     "rows": [
-      "mehr <hl>Integration</hl> der Gemeinschaft von Alexandria in die Aktivitäten des Festivals",
-      "eine bessere <hl>Erfahrung</hl> für Teilnehmer und Publikum: gesundes Tempo, breiter Zugang",
-      "größere nationale <hl>Sichtbarkeit</hl> und Kooperationen mit klarer Wirkung"
+      "ein landesweiter <hl>Hub</hl>, wo NGOs aus dem ganzen Land auf die Gemeinschaft treffen",
+      "breite <hl>Teilnahme</hl>: Jugendliche, Familien und die ganze Stadt",
+      "nationale <hl>Sichtbarkeit</hl> und echte kulturelle und zivilgesellschaftliche Wirkung"
     ]
   },
   "slide05": {
-    "lead": "6.000+ ausgebildete Jugendliche, 200.000 Zuschauer, 16 Mio.+ Medienreichweite — ein Projekt mit kultureller Wirkung und nationaler Sichtbarkeit.",
+    "lead": "6.000+ ausgebildete Jugendliche, 200.000 Zuschauer, 16 Mio.+ Medienreichweite: ein Projekt mit kultureller Wirkung und nationaler Sichtbarkeit.",
     "eyebrow": "wirkung · in zahlen",
     "stats": [
       { "prefix": "mehr als ", "label": "Jugendliche sind mit Ideo Ideis aufgewachsen", "detail": "Teilnehmer aus dem ganzen Land" },
