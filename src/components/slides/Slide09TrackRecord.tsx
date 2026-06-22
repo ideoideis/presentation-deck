@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
+import { Trans, useTranslation } from "react-i18next";
 import { slideItemVariants } from "@/components/SlideSection";
 
 export function Slide09TrackRecord() {
+  const { t } = useTranslation();
   return (
     <div
       className="w-full h-full flex flex-col justify-between"
@@ -23,8 +25,7 @@ export function Slide09TrackRecord() {
             marginTop: "0.5rem",
           }}
         >
-          Ideo Ideis{" "}
-          <span style={{ color: "#E7004C" }}>continuă</span>
+          <Trans i18nKey="slide09.title" components={{ hl: <span style={{ color: "#E7004C" }} /> }} />
         </motion.h2>
 
         <motion.p
@@ -37,7 +38,7 @@ export function Slide09TrackRecord() {
             marginBottom: "1.5rem",
           }}
         >
-          Dialogul început la Alexandria merge mai departe prin podcasturi, Ideo Talks și ateliere organizate pe tot parcursul anului.
+          {t("slide09.p1")}
         </motion.p>
         <motion.p
           variants={slideItemVariants}
@@ -49,7 +50,7 @@ export function Slide09TrackRecord() {
             marginBottom: "1.5rem",
           }}
         >
-          Comunitatea rămâne activă. Procesul de creștere continuă.
+          {t("slide09.p2")}
         </motion.p>
         <motion.p
           variants={slideItemVariants}
@@ -61,7 +62,7 @@ export function Slide09TrackRecord() {
             maxWidth: "50ch",
           }}
         >
-          Ideo Ideis este un ecosistem, nu doar un eveniment.
+          {t("slide09.p3")}
         </motion.p>
       </div>
 
@@ -85,7 +86,7 @@ export function Slide09TrackRecord() {
             textTransform: "uppercase",
           }}
         >
-          20 ani · 4.000+ adolescenți · 200.000 public local cumulat
+          {t("slide09.footer")}
         </p>
       </motion.div>
     </div>

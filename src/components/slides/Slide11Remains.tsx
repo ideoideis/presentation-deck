@@ -1,14 +1,10 @@
 import { motion } from "framer-motion";
+import { Trans, useTranslation } from "react-i18next";
 import { slideItemVariants } from "@/components/SlideSection";
 
-const items = [
-  "ateliere și dialoguri tematice",
-  "activări care implică direct adolescenții",
-  "conținut editorial și digital",
-  "inițiative dedicate comunității locale",
-];
-
 export function Slide11Remains() {
+  const { t } = useTranslation();
+  const items = t("slide11.items", { returnObjects: true }) as string[];
   return (
     <div
       className="w-full h-full flex flex-col justify-between"
@@ -30,8 +26,7 @@ export function Slide11Remains() {
             marginTop: "0.5rem",
           }}
         >
-          putem crea{" "}
-          <span style={{ color: "#E7004C" }}>împreună</span>
+          <Trans i18nKey="slide11.title" components={{ hl: <span style={{ color: "#E7004C" }} /> }} />
         </motion.h2>
 
         <motion.p
@@ -44,7 +39,7 @@ export function Slide11Remains() {
             marginBottom: "1.75rem",
           }}
         >
-          Fiecare colaborare poate fi construită în jurul valorilor noastre comune.
+          {t("slide11.p1")}
         </motion.p>
 
         <div className="flex flex-col gap-0" style={{ marginBottom: "1.5rem" }}>
@@ -94,7 +89,7 @@ export function Slide11Remains() {
             maxWidth: "50ch",
           }}
         >
-          Ideo Ideis caută parteneri care cred în creștere, dialog și responsabilitate culturală.
+          {t("slide11.footer")}
         </motion.p>
       </div>
 

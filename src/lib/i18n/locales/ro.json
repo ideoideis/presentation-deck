@@ -1,0 +1,156 @@
+{
+  "header": {
+    "festivalLong": "festivalul · ediția #21 · 29.07–05.08.26 · alexandria",
+    "festivalShort": "ideo ideis · #21 · alexandria",
+    "contact": "contact"
+  },
+  "nav": {
+    "ariaSlides": "Navigare slide-uri",
+    "ariaCurrent": "Slide curent",
+    "slide": "Slide",
+    "labels": [
+      "cover",
+      "manifest",
+      "voce",
+      "ce se întâmplă",
+      "ediția #21",
+      "de ce aici",
+      "2026",
+      "proof",
+      "oameni",
+      "citat",
+      "impact",
+      "pentru partener",
+      "contact"
+    ]
+  },
+  "lang": {
+    "label": "Limbă"
+  },
+  "slide01": {
+    "title": "21 de ani de festival care modelează generații",
+    "subtitle": "festival național de teatru tânăr",
+    "location": "Alexandria · 29 iulie – 5 august 2026",
+    "scroll": "scroll"
+  },
+  "slide02": {
+    "eyebrow": "despre festival",
+    "p1": "Ideo Ideis este un festival național de teatru tânăr organizat anual la Alexandria.",
+    "p2": "Timp de o săptămână, adolescenți din toată țara participă la ateliere, spectacole și dialoguri alături de artiști și mentori.",
+    "p3": "Pe tot parcursul anului, Ideo Ideis continuă prin Ideo Talks, podcasturi, ateliere și inițiative dedicate tinerilor.",
+    "factsLabel": "în cifre",
+    "facts": [
+      "6.000+ adolescenți formați",
+      "200.000 spectatori",
+      "16M+ reach media",
+      "500+ evenimente de-a lungul anilor",
+      "proiect cu impact cultural și vizibilitate națională"
+    ],
+    "imgAlt": "Adolescenți la atelier de teatru tânăr"
+  },
+  "slide03": {
+    "lead": "În fiecare vară, Alexandria <hl>respiră alt ritm</hl>.",
+    "p1": "Oamenii ies seara în piață la proiecțiile de film. Merg la spectacolele de teatru. Se întâlnesc și rămân la dialog după reprezentații.",
+    "p2": "Festivalul aduce împreună adolescenți, artiști și comunitatea locală. Pentru câteva zile, orașul se adună în jurul culturii.",
+    "eyebrow1": "ce se întâmplă anual",
+    "eyebrow2": "unde poate fi brandul tău?",
+    "program": [
+      { "activity": "ateliere de teatru tânăr + arte alăturate", "opportunity": "branding în spații educaționale · kit-uri personalizate" },
+      { "activity": "spectacole de teatru tânăr", "opportunity": "asociere cu conținut cultural" },
+      { "activity": "spectacole invitate", "opportunity": "vizibilitate la evenimente" },
+      { "activity": "cinemateca târzie + Q&A", "opportunity": "conținut cultural · public tânăr" },
+      { "activity": "masterclass-uri și seara povestitorilor", "opportunity": "dialog cu generația activă" },
+      { "activity": "murale și activări în oraș", "opportunity": "vizibilitate outdoor · revitalizare urbană" }
+    ]
+  },
+  "slide04": {
+    "year": "2026",
+    "p1": "În 2026, piața devine centrul festivalului.",
+    "p2": "Un loc deschis de schimb de idei, informații și experiențe culturale.",
+    "p3": "Un spațiu comun pentru adolescenți, copii și adulți, în jurul spectacolelor, proiecțiilor și dialogurilor. Festivalul devine orașul și invită comunitatea să participe.",
+    "calloutTitle": "2026 înseamnă:",
+    "calloutText": "+20% reach media față de 2025 · cel mai mare hub comunitar în aer liber la sud de București",
+    "eyebrow": "ce construim împreună",
+    "rows": [
+      "mai multă <hl>integrare</hl> a comunității din Alexandria în activitățile festivalului",
+      "<hl>experiență</hl> mai bună pentru participanți și public: ritm sănătos, acces larg",
+      "<hl>vizibilitate</hl> națională sporită și colaborări cu impact clar"
+    ]
+  },
+  "slide05": {
+    "lead": "6.000+ adolescenți formați, 200.000 spectatori, 16M+ reach media — un proiect cu impact cultural și vizibilitate națională.",
+    "eyebrow": "impact · în cifre",
+    "stats": [
+      { "prefix": "mai bine de ", "label": "adolescenți au crescut alături de Ideo Ideis", "detail": "participanți din toată țara" },
+      { "prefix": "", "label": "evenimente de-a lungul anilor", "detail": "spectacole, proiecții, ateliere, concerte" },
+      { "prefix": "", "label": "trupe din țară", "detail": "trupe înscrise / ediție" },
+      { "prefix": "", "label": "public local", "detail": "spectatori · Alexandria · cumulat" },
+      { "prefix": "~", "label": "reach național", "detail": "vizibilitate · canale media culturale" }
+    ]
+  },
+  "slide06": {
+    "title": "oameni",
+    "p1": "artiști, mentori, traineri și invitați care lucrează direct cu adolescenții - doar câțiva dintre oamenii care au trecut prin Ideo Ideis.",
+    "playLabel": "Redă video",
+    "stopLabel": "Oprește video",
+    "roles": ["co-fondator", "mentor", "mentor", "invitată masterclass", "invitată", "participant"]
+  },
+  "slide07": {
+    "title": "ce învață <hl>adolescenții</hl>",
+    "p1": "La IDEO, teatrul este instrumentul de clarificare a valorilor, responsabilitate, exprimare și asumare.",
+    "p2": "Adolescenții creează, lucrează în echipe, discută teme actuale și urcă pe scenă.",
+    "p3": "Este unul dintre puținele festivaluri din România construit special pentru această vârstă.",
+    "modules": [
+      { "label": "empatie & comunicare", "subtitle": "prin exercițiu, nu prin teorie", "text": "Atelierele de teatru și noile media îi pun pe adolescenți în situații reale: să asculte, să colaboreze, să negocieze. Competențe pe care nicio materie școlară nu le predă sistematic." },
+      { "label": "gândire critică", "subtitle": "întrebări reale, contexte reale", "text": "Spectacolele și dialogurile cu artiști relevanți provoacă adolescenții să analizeze, să argumenteze și să-și formeze opinii proprii, nu să reproducă răspunsuri." },
+      { "label": "responsabilitate & implicare", "subtitle": "caractere formate, nu premiate", "text": "Prin cadrul oferit, Ideo Ideis modelează caractere: ajută tinerii să-și clarifice valorile, să înțeleagă ce înseamnă să fii parte dintr-o comunitate și să-și asume rolul în ea." },
+      { "label": "integrare comunitară", "subtitle": "orașul ca scenă", "text": "În 2026 extindem programul pentru a include întreaga comunitate din Alexandria, familii, profesori, public larg, nu doar participanții selectați." }
+    ]
+  },
+  "slide08": {
+    "eyebrow": "impact",
+    "titleLine1": "în",
+    "titleLine2": "toată țara",
+    "p1": "Adolescenții care vin la Ideo Ideis duc festivalul mai departe, în orașele lor.",
+    "p2": "Valorile și experiențele trăite la Alexandria se transformă în inițiative, trupe, proiecte și dialog în comunitățile lor.",
+    "p3": "Ideo Ideis începe la Alexandria și continuă în toată țara.",
+    "location": "alexandria · teleorman · românia",
+    "imgAlt": "Public outdoor la alexandria"
+  },
+  "slide09": {
+    "title": "Ideo Ideis <hl>continuă</hl>",
+    "p1": "Dialogul început la Alexandria merge mai departe prin podcasturi, Ideo Talks și ateliere organizate pe tot parcursul anului.",
+    "p2": "Comunitatea rămâne activă. Procesul de creștere continuă.",
+    "p3": "Ideo Ideis este un ecosistem, nu doar un eveniment.",
+    "footer": "20 ani · 4.000+ adolescenți · 200.000 public local cumulat"
+  },
+  "slide10": {
+    "eyebrow": "parteneriat",
+    "heading": "A susține Ideo Ideis înseamnă a susține dezvoltarea unei generații și vitalitatea culturală a unei comunități.",
+    "p1": "Brandurile partenere devin parte din acest proces susținând un program național cu credibilitate și asociindu-se cu o generație activă, educată și implicată.",
+    "associereLabel": "Înseamnă asociere cu:",
+    "associere": ["educație alternativă", "dialog între generații", "cultură contemporană", "impact social real"],
+    "footer": "Parteneriatul devine contribuție la un proces viu, nu doar prezență de brand.",
+    "imgAlt": "Participanți Ideo Ideis pe scenă"
+  },
+  "slide11": {
+    "title": "putem crea <hl>împreună</hl>",
+    "p1": "Fiecare colaborare poate fi construită în jurul valorilor noastre comune.",
+    "items": ["ateliere și dialoguri tematice", "activări care implică direct adolescenții", "conținut editorial și digital", "inițiative dedicate comunității locale"],
+    "footer": "Ideo Ideis caută parteneri care cred în creștere, dialog și responsabilitate culturală."
+  },
+  "slide12": {
+    "title": "Ediția 21 începe acum.",
+    "p1": "Vă invităm să deveniți parte dintr-un proiect care construiește, an de an, o generație mai atentă, mai creativă și mai conectată la lume.",
+    "p2": "ne vedem la vară la Alexandria.",
+    "p3": "Pe parcursul anului ne vedem la București sau în oricare dintre orașele unde organizăm evenimente.",
+    "ctaContact": "contactează-ne →",
+    "ctaPdf": "descarcă această prezentare pdf",
+    "ctaOnline": "vezi prezentarea online →",
+    "contactEyebrow": "contact direct",
+    "contactName": "Antoneta Gales",
+    "followLabel": "urmărește-ne",
+    "org": "Asociația T.E.T. Alexandria",
+    "orgType": "(ONG)"
+  }
+}

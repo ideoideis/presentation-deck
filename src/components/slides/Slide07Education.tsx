@@ -1,35 +1,17 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Trans, useTranslation } from "react-i18next";
 import { slideItemVariants } from "@/components/SlideSection";
 
-const modules = [
-  {
-    label: "empatie & comunicare",
-    subtitle: "prin exercițiu, nu prin teorie",
-    text: "Atelierele de teatru și noile media îi pun pe adolescenți în situații reale: să asculte, să colaboreze, să negocieze. Competențe pe care nicio materie școlară nu le predă sistematic.",
-    index: "01",
-  },
-  {
-    label: "gândire critică",
-    subtitle: "întrebări reale, contexte reale",
-    text: "Spectacolele și dialogurile cu artiști relevanți provoacă adolescenții să analizeze, să argumenteze și să-și formeze opinii proprii, nu să reproducă răspunsuri.",
-    index: "02",
-  },
-  {
-    label: "responsabilitate & implicare",
-    subtitle: "caractere formate, nu premiate",
-    text: "Prin cadrul oferit, Ideo Ideis modelează caractere: ajută tinerii să-și clarifice valorile, să înțeleagă ce înseamnă să fii parte dintr-o comunitate și să-și asume rolul în ea.",
-    index: "03",
-  },
-  {
-    label: "integrare comunitară",
-    subtitle: "orașul ca scenă",
-    text: "În 2026 extindem programul pentru a include întreaga comunitate din Alexandria, familii, profesori, public larg, nu doar participanții selectați.",
-    index: "04",
-  },
-];
-
 export function Slide07Education() {
+  const { t } = useTranslation();
+  const modules = (
+    t("slide07.modules", { returnObjects: true }) as {
+      label: string;
+      subtitle: string;
+      text: string;
+    }[]
+  ).map((mod, i) => ({ ...mod, index: String(i + 1).padStart(2, "0") }));
   const [active, setActive] = useState<number | null>(null);
 
   return (
@@ -53,8 +35,7 @@ export function Slide07Education() {
           marginTop: "clamp(1.5rem, 3.5vw, 3.5rem)",
         }}
       >
-        ce învață{" "}
-        <span style={{ color: "#E7004C" }}>adolescenții</span>
+        <Trans i18nKey="slide07.title" components={{ hl: <span style={{ color: "#E7004C" }} /> }} />
       </motion.h2>
 
       <div
@@ -73,7 +54,7 @@ export function Slide07Education() {
             marginBottom: "1rem",
           }}
         >
-          La IDEO, teatrul este instrumentul de clarificare a valorilor, responsabilitate, exprimare și asumare.
+          {t("slide07.p1")}
         </motion.p>
         <motion.p
           variants={slideItemVariants}
@@ -84,7 +65,7 @@ export function Slide07Education() {
             marginBottom: "1rem",
           }}
         >
-          Adolescenții creează, lucrează în echipe, discută teme actuale și urcă pe scenă.
+          {t("slide07.p2")}
         </motion.p>
         <motion.p
           variants={slideItemVariants}
@@ -94,7 +75,7 @@ export function Slide07Education() {
             lineHeight: 1.75,
           }}
         >
-          Este unul dintre puținele festivaluri din România construit special pentru această vârstă.
+          {t("slide07.p3")}
         </motion.p>
       </div>
 

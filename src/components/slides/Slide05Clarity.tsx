@@ -1,24 +1,26 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import { slideItemVariants } from "@/components/SlideSection";
 import { useCountUp } from "@/hooks/useCountUp";
 
-const stats = [
-  { value: 6000, prefix: "mai bine de ", label: "adolescenți au crescut alături de Ideo Ideis", detail: "participanți din toată țara", note: "" },
-  { value: 500, prefix: "", label: "evenimente de-a lungul anilor", detail: "spectacole, proiecții, ateliere, concerte", note: "" },
-  { value: 160, prefix: "", label: "trupe din țară", detail: "trupe înscrise / ediție", note: "" },
-  { value: 200000, prefix: "", label: "public local", detail: "spectatori · Alexandria · cumulat", note: "" },
-  { value: 16000000, prefix: "~", label: "reach național", detail: "vizibilitate · canale media culturale", note: "" },
-];
+type Stat = { value: number; prefix: string; label: string; detail: string; note?: string };
 
-function StatItem({ stat, compact }: { stat: typeof stats[0]; compact?: boolean }) {
+// Language-neutral values — only prefix/label/detail are translated.
+const STAT_VALUES = [6000, 500, 160, 200000, 16000000];
+
+const NUMBER_LOCALES: Record<string, string> = { ro: "ro-RO", en: "en-US", de: "de-DE" };
+
+function StatItem({ stat, compact }: { stat: Stat; compact?: boolean }) {
+  const { i18n } = useTranslation();
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: false, margin: "-10%" });
   const count = useCountUp(stat.value, 1400, inView);
 
+  const lang = (i18n.resolvedLanguage ?? i18n.language ?? "ro").split("-")[0];
   const formatted =
     stat.value >= 1000
-      ? count.toLocaleString("ro-RO")
+      ? count.toLocaleString(NUMBER_LOCALES[lang] ?? "ro-RO")
       : count.toString();
 
   return (
@@ -88,6 +90,13 @@ function StatItem({ stat, compact }: { stat: typeof stats[0]; compact?: boolean 
 }
 
 export function Slide05Clarity() {
+  const { t } = useTranslation();
+  const statTexts = t("slide05.stats", { returnObjects: true }) as {
+    prefix: string;
+    label: string;
+    detail: string;
+  }[];
+  const stats: Stat[] = STAT_VALUES.map((value, i) => ({ value, ...statTexts[i] }));
   return (
     <div
       className="w-full h-full flex flex-col overflow-hidden"
@@ -108,7 +117,7 @@ export function Slide05Clarity() {
           marginBottom: "0.5rem",
         }}
       >
-        6.000+ adolescenți formați, 200.000 spectatori, 16M+ reach media — un proiect cu impact cultural și vizibilitate națională.
+        {t("slide05.lead")}
       </motion.p>
 
       {/* Stats — 3 cols desktop, 2 cols mobile for deck readability */}
@@ -145,7 +154,7 @@ export function Slide05Clarity() {
           flexShrink: 0,
         }}
       >
-        impact · în cifre
+        {t("slide05.eyebrow")}
       </motion.p>
     </div>
   );

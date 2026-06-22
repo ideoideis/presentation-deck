@@ -16,6 +16,8 @@ import { Slide11Remains } from "@/components/slides/Slide11Remains";
 import { Slide12CTA } from "@/components/slides/Slide12CTA";
 
 const DESIGN_W = 960;
+const DESIGN_H = 540;
+const DESIGN_RATIO = DESIGN_W / DESIGN_H; // 16:9
 const TOTAL_SLIDES = 12;
 
 const slides = [
@@ -35,12 +37,21 @@ const slides = [
 
 export default function Index() {
   useLayoutEffect(() => {
+    const root = document.documentElement;
     const update = () => {
       const w = window.innerWidth;
-      if (w < DESIGN_W) {
-        document.documentElement.style.setProperty("--slide-scale", String(w / DESIGN_W));
+      const h = window.innerHeight;
+      // Use the fluid desktop layout only when a full-width 16:9 slide already
+      // fits the viewport height. Otherwise (narrow screens, or short/wide
+      // windows where the slide would be taller than the viewport and slip under
+      // the fixed header) render the design scaled to fit the smaller dimension.
+      if (w >= DESIGN_W && w / h <= DESIGN_RATIO) {
+        root.style.removeProperty("--slide-scale");
+        root.removeAttribute("data-slide-fit");
       } else {
-        document.documentElement.style.removeProperty("--slide-scale");
+        const scale = Math.min(w / DESIGN_W, h / DESIGN_H);
+        root.style.setProperty("--slide-scale", String(scale));
+        root.setAttribute("data-slide-fit", "scaled");
       }
     };
     update();

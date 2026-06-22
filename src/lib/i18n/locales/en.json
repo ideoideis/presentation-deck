@@ -1,0 +1,156 @@
+{
+  "header": {
+    "festivalLong": "the festival · 21st edition · 29.07–05.08.26 · alexandria",
+    "festivalShort": "ideo ideis · #21 · alexandria",
+    "contact": "contact"
+  },
+  "nav": {
+    "ariaSlides": "Slide navigation",
+    "ariaCurrent": "Current slide",
+    "slide": "Slide",
+    "labels": [
+      "cover",
+      "manifesto",
+      "voice",
+      "what happens",
+      "21st edition",
+      "why here",
+      "2026",
+      "proof",
+      "people",
+      "quote",
+      "impact",
+      "for partners",
+      "contact"
+    ]
+  },
+  "lang": {
+    "label": "Language"
+  },
+  "slide01": {
+    "title": "21 years of a festival that shapes generations",
+    "subtitle": "national festival of young theatre",
+    "location": "Alexandria · 29 July – 5 August 2026",
+    "scroll": "scroll"
+  },
+  "slide02": {
+    "eyebrow": "about the festival",
+    "p1": "Ideo Ideis is a national young-theatre festival held every year in Alexandria.",
+    "p2": "For one week, teenagers from across the country take part in workshops, performances and conversations alongside artists and mentors.",
+    "p3": "Throughout the year, Ideo Ideis continues through Ideo Talks, podcasts, workshops and initiatives dedicated to young people.",
+    "factsLabel": "in numbers",
+    "facts": [
+      "6,000+ teenagers trained",
+      "200,000 spectators",
+      "16M+ media reach",
+      "500+ events over the years",
+      "a project with cultural impact and national visibility"
+    ],
+    "imgAlt": "Teenagers at a young-theatre workshop"
+  },
+  "slide03": {
+    "lead": "Every summer, Alexandria <hl>breathes to a different rhythm</hl>.",
+    "p1": "In the evening, people fill the square for the film screenings. They go to the theatre performances. They meet and stay for the conversations afterwards.",
+    "p2": "The festival brings together teenagers, artists and the local community. For a few days, the city gathers around culture.",
+    "eyebrow1": "what happens every year",
+    "eyebrow2": "where can your brand be?",
+    "program": [
+      { "activity": "young-theatre workshops + adjacent arts", "opportunity": "branding in educational spaces · custom kits" },
+      { "activity": "young-theatre performances", "opportunity": "association with cultural content" },
+      { "activity": "guest performances", "opportunity": "visibility at events" },
+      { "activity": "late-night cinematheque + Q&A", "opportunity": "cultural content · young audience" },
+      { "activity": "masterclasses and the storytellers' night", "opportunity": "dialogue with the active generation" },
+      { "activity": "murals and activations across the city", "opportunity": "outdoor visibility · urban revitalization" }
+    ]
+  },
+  "slide04": {
+    "year": "2026",
+    "p1": "In 2026, the square becomes the heart of the festival.",
+    "p2": "An open place for exchanging ideas, information and cultural experiences.",
+    "p3": "A shared space for teenagers, children and adults, around performances, screenings and conversations. The festival becomes the city and invites the community to take part.",
+    "calloutTitle": "2026 means:",
+    "calloutText": "+20% media reach vs. 2025 · the largest open-air community hub south of Bucharest",
+    "eyebrow": "what we build together",
+    "rows": [
+      "more <hl>integration</hl> of the Alexandria community into the festival's activities",
+      "a better <hl>experience</hl> for participants and audience: a healthy pace, broad access",
+      "greater national <hl>visibility</hl> and collaborations with clear impact"
+    ]
+  },
+  "slide05": {
+    "lead": "6,000+ teenagers trained, 200,000 spectators, 16M+ media reach — a project with cultural impact and national visibility.",
+    "eyebrow": "impact · in numbers",
+    "stats": [
+      { "prefix": "more than ", "label": "teenagers have grown up with Ideo Ideis", "detail": "participants from across the country" },
+      { "prefix": "", "label": "events over the years", "detail": "performances, screenings, workshops, concerts" },
+      { "prefix": "", "label": "theatre groups nationwide", "detail": "groups enrolled / edition" },
+      { "prefix": "", "label": "local audience", "detail": "spectators · Alexandria · cumulative" },
+      { "prefix": "~", "label": "national reach", "detail": "visibility · cultural media channels" }
+    ]
+  },
+  "slide06": {
+    "title": "people",
+    "p1": "artists, mentors, trainers and guests who work directly with the teenagers - just a few of the people who have come through Ideo Ideis.",
+    "playLabel": "Play video",
+    "stopLabel": "Stop video",
+    "roles": ["co-founder", "mentor", "mentor", "masterclass guest", "guest", "participant"]
+  },
+  "slide07": {
+    "title": "what <hl>teenagers</hl> learn",
+    "p1": "At IDEO, theatre is the tool for clarifying values, responsibility, expression and ownership.",
+    "p2": "Teenagers create, work in teams, discuss current topics and step on stage.",
+    "p3": "It is one of the few festivals in Romania built especially for this age.",
+    "modules": [
+      { "label": "empathy & communication", "subtitle": "through practice, not theory", "text": "Theatre and new-media workshops put teenagers in real situations: to listen, to collaborate, to negotiate. Skills that no school subject teaches systematically." },
+      { "label": "critical thinking", "subtitle": "real questions, real contexts", "text": "Performances and dialogues with relevant artists challenge teenagers to analyse, to argue and to form their own opinions, rather than reproduce answers." },
+      { "label": "responsibility & involvement", "subtitle": "characters shaped, not rewarded", "text": "Through the framework it offers, Ideo Ideis shapes character: it helps young people clarify their values, understand what it means to be part of a community and take on their role in it." },
+      { "label": "community integration", "subtitle": "the city as a stage", "text": "In 2026 we are expanding the programme to include the entire Alexandria community, families, teachers, the wider public, not just the selected participants." }
+    ]
+  },
+  "slide08": {
+    "eyebrow": "impact",
+    "titleLine1": "across the",
+    "titleLine2": "whole country",
+    "p1": "The teenagers who come to Ideo Ideis carry the festival further, into their own towns.",
+    "p2": "The values and experiences lived in Alexandria turn into initiatives, theatre groups, projects and dialogue in their communities.",
+    "p3": "Ideo Ideis starts in Alexandria and continues across the whole country.",
+    "location": "alexandria · teleorman · romania",
+    "imgAlt": "Outdoor audience in Alexandria"
+  },
+  "slide09": {
+    "title": "Ideo Ideis <hl>continues</hl>",
+    "p1": "The dialogue that began in Alexandria goes further through podcasts, Ideo Talks and workshops held throughout the year.",
+    "p2": "The community stays active. The process of growth continues.",
+    "p3": "Ideo Ideis is an ecosystem, not just an event.",
+    "footer": "20 years · 4,000+ teenagers · 200,000 cumulative local audience"
+  },
+  "slide10": {
+    "eyebrow": "partnership",
+    "heading": "Supporting Ideo Ideis means supporting the development of a generation and the cultural vitality of a community.",
+    "p1": "Partner brands become part of this process by backing a national programme with credibility and associating themselves with an active, educated and engaged generation.",
+    "associereLabel": "It means associating with:",
+    "associere": ["alternative education", "dialogue between generations", "contemporary culture", "real social impact"],
+    "footer": "Partnership becomes a contribution to a living process, not just brand presence.",
+    "imgAlt": "Ideo Ideis participants on stage"
+  },
+  "slide11": {
+    "title": "we can create <hl>together</hl>",
+    "p1": "Every collaboration can be built around our shared values.",
+    "items": ["themed workshops and dialogues", "activations that directly involve teenagers", "editorial and digital content", "initiatives dedicated to the local community"],
+    "footer": "Ideo Ideis is looking for partners who believe in growth, dialogue and cultural responsibility."
+  },
+  "slide12": {
+    "title": "The 21st edition starts now.",
+    "p1": "We invite you to become part of a project that builds, year after year, a generation that is more attentive, more creative and more connected to the world.",
+    "p2": "see you this summer in Alexandria.",
+    "p3": "Throughout the year we meet in Bucharest or in any of the cities where we run events.",
+    "ctaContact": "get in touch →",
+    "ctaPdf": "download this presentation pdf",
+    "ctaOnline": "view the presentation online →",
+    "contactEyebrow": "direct contact",
+    "contactName": "Antoneta Gales",
+    "followLabel": "follow us",
+    "org": "T.E.T. Alexandria Association",
+    "orgType": "(NGO)"
+  }
+}

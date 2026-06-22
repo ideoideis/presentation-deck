@@ -1,16 +1,18 @@
 import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Play, Square } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { slideItemVariants } from "@/components/SlideSection";
 import { asset } from "@/lib/utils";
 
+// Names and photos are language-neutral; roles come from the locale by index.
 const people = [
-  { src: asset("/images/portraits/p1.jpg"), name: "Alex Ion", role: "co-fondator" },
-  { src: asset("/images/portraits/p2.jpg"), name: "Tudor Chirilă", role: "mentor" },
-  { src: asset("/images/portraits/p3.jpg"), name: "Pavel Bartoș", role: "mentor" },
-  { src: asset("/images/portraits/p4.jpg"), name: "Andreea Esca", role: "invitată masterclass" },
-  { src: asset("/images/portraits/p5.jpg"), name: "Maia Morgenstern", role: "invitată" },
-  { src: asset("/images/portraits/p6.jpg"), name: "Ștefan Iancu", role: "participant" },
+  { src: asset("/images/portraits/p1.jpg"), name: "Alex Ion" },
+  { src: asset("/images/portraits/p2.jpg"), name: "Tudor Chirilă" },
+  { src: asset("/images/portraits/p3.jpg"), name: "Pavel Bartoș" },
+  { src: asset("/images/portraits/p4.jpg"), name: "Andreea Esca" },
+  { src: asset("/images/portraits/p5.jpg"), name: "Maia Morgenstern" },
+  { src: asset("/images/portraits/p6.jpg"), name: "Ștefan Iancu" },
 ];
 
 const VIDEO_SRC = asset("/videos/prieteni-ideo-ideis-teaser.mp4");
@@ -18,6 +20,8 @@ const VIDEO_SRC = asset("/videos/prieteni-ideo-ideis-teaser.mp4");
 const PULSE_DELAY_MS = 4000;
 
 export function Slide06People() {
+  const { t } = useTranslation();
+  const roles = t("slide06.roles", { returnObjects: true }) as string[];
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const [hasEverClickedPlay, setHasEverClickedPlay] = useState(false);
   const [pulseActive, setPulseActive] = useState(false);
@@ -64,7 +68,7 @@ export function Slide06People() {
                 lineHeight: 0.92,
               }}
             >
-              oameni
+              {t("slide06.title")}
             </motion.h2>
             <motion.button
               type="button"
@@ -83,7 +87,7 @@ export function Slide06People() {
                   ? { repeat: Infinity, duration: 0.9, ease: "easeInOut" }
                   : { duration: 0.2 }
               }
-              aria-label={isVideoPlaying ? "Stop video" : "Play video"}
+              aria-label={isVideoPlaying ? t("slide06.stopLabel") : t("slide06.playLabel")}
               style={{
                 display: "flex",
                 alignItems: "center",
@@ -127,7 +131,7 @@ export function Slide06People() {
               maxWidth: "30ch",
             }}
           >
-            artiști, mentori, traineri și invitați care lucrează direct cu adolescenții - doar câțiva dintre oamenii care au trecut prin Ideo Ideis.
+            {t("slide06.p1")}
           </motion.p>
         </div>
 
@@ -152,7 +156,7 @@ export function Slide06People() {
               >
                 <img
                   src={p.src}
-                  alt={`${p.name} — ${p.role}`}
+                  alt={`${p.name} — ${roles[i]}`}
                   className="w-full h-full object-cover"
                   style={{ filter: "grayscale(100%) contrast(1.1)" }}
                 />
@@ -170,7 +174,7 @@ export function Slide06People() {
                     {p.name}
                   </p>
                   <p style={{ color: "rgba(255,255,255,0.5)", fontSize: "0.55rem", letterSpacing: "0.1em", textTransform: "uppercase" }}>
-                    {p.role}
+                    {roles[i]}
                   </p>
                 </div>
               </motion.div>

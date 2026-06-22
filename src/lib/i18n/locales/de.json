@@ -1,0 +1,156 @@
+{
+  "header": {
+    "festivalLong": "das festival · 21. ausgabe · 29.07–05.08.26 · alexandria",
+    "festivalShort": "ideo ideis · #21 · alexandria",
+    "contact": "kontakt"
+  },
+  "nav": {
+    "ariaSlides": "Folien-Navigation",
+    "ariaCurrent": "Aktuelle Folie",
+    "slide": "Folie",
+    "labels": [
+      "cover",
+      "manifest",
+      "stimme",
+      "was passiert",
+      "21. ausgabe",
+      "warum hier",
+      "2026",
+      "beleg",
+      "menschen",
+      "zitat",
+      "wirkung",
+      "für partner",
+      "kontakt"
+    ]
+  },
+  "lang": {
+    "label": "Sprache"
+  },
+  "slide01": {
+    "title": "21 Jahre Festival, das Generationen prägt",
+    "subtitle": "nationales festival des jungen theaters",
+    "location": "Alexandria · 29. Juli – 5. August 2026",
+    "scroll": "scrollen"
+  },
+  "slide02": {
+    "eyebrow": "über das festival",
+    "p1": "Ideo Ideis ist ein nationales Festival des jungen Theaters, das jedes Jahr in Alexandria stattfindet.",
+    "p2": "Eine Woche lang nehmen Jugendliche aus dem ganzen Land an Workshops, Aufführungen und Gesprächen mit Künstlern und Mentoren teil.",
+    "p3": "Das ganze Jahr über geht Ideo Ideis weiter – mit Ideo Talks, Podcasts, Workshops und Initiativen für junge Menschen.",
+    "factsLabel": "in zahlen",
+    "facts": [
+      "6.000+ ausgebildete Jugendliche",
+      "200.000 Zuschauer",
+      "16 Mio.+ Medienreichweite",
+      "500+ Veranstaltungen über die Jahre",
+      "ein Projekt mit kultureller Wirkung und nationaler Sichtbarkeit"
+    ],
+    "imgAlt": "Jugendliche bei einem Workshop des jungen Theaters"
+  },
+  "slide03": {
+    "lead": "Jeden Sommer atmet Alexandria <hl>in einem anderen Rhythmus</hl>.",
+    "p1": "Abends strömen die Menschen auf den Platz zu den Filmvorführungen. Sie besuchen die Theateraufführungen. Sie treffen sich und bleiben für die Gespräche danach.",
+    "p2": "Das Festival bringt Jugendliche, Künstler und die lokale Gemeinschaft zusammen. Für ein paar Tage versammelt sich die Stadt rund um die Kultur.",
+    "eyebrow1": "was jedes jahr passiert",
+    "eyebrow2": "wo kann deine marke sein?",
+    "program": [
+      { "activity": "Workshops des jungen Theaters + angrenzende Künste", "opportunity": "Branding in Bildungsräumen · individuelle Kits" },
+      { "activity": "Aufführungen des jungen Theaters", "opportunity": "Verbindung mit kulturellem Content" },
+      { "activity": "Gastaufführungen", "opportunity": "Sichtbarkeit bei Veranstaltungen" },
+      { "activity": "Spätvorstellung im Kino + Q&A", "opportunity": "kultureller Content · junges Publikum" },
+      { "activity": "Masterclasses und Abend der Geschichtenerzähler", "opportunity": "Dialog mit der aktiven Generation" },
+      { "activity": "Wandbilder und Aktionen in der Stadt", "opportunity": "Outdoor-Sichtbarkeit · Stadtbelebung" }
+    ]
+  },
+  "slide04": {
+    "year": "2026",
+    "p1": "2026 wird der Platz zum Herzstück des Festivals.",
+    "p2": "Ein offener Ort für den Austausch von Ideen, Informationen und kulturellen Erfahrungen.",
+    "p3": "Ein gemeinsamer Raum für Jugendliche, Kinder und Erwachsene, rund um Aufführungen, Vorführungen und Gespräche. Das Festival wird zur Stadt und lädt die Gemeinschaft zum Mitmachen ein.",
+    "calloutTitle": "2026 bedeutet:",
+    "calloutText": "+20% Medienreichweite gegenüber 2025 · der größte Open-Air-Gemeinschaftshub südlich von Bukarest",
+    "eyebrow": "was wir gemeinsam aufbauen",
+    "rows": [
+      "mehr <hl>Integration</hl> der Gemeinschaft von Alexandria in die Aktivitäten des Festivals",
+      "eine bessere <hl>Erfahrung</hl> für Teilnehmer und Publikum: gesundes Tempo, breiter Zugang",
+      "größere nationale <hl>Sichtbarkeit</hl> und Kooperationen mit klarer Wirkung"
+    ]
+  },
+  "slide05": {
+    "lead": "6.000+ ausgebildete Jugendliche, 200.000 Zuschauer, 16 Mio.+ Medienreichweite — ein Projekt mit kultureller Wirkung und nationaler Sichtbarkeit.",
+    "eyebrow": "wirkung · in zahlen",
+    "stats": [
+      { "prefix": "mehr als ", "label": "Jugendliche sind mit Ideo Ideis aufgewachsen", "detail": "Teilnehmer aus dem ganzen Land" },
+      { "prefix": "", "label": "Veranstaltungen über die Jahre", "detail": "Aufführungen, Vorführungen, Workshops, Konzerte" },
+      { "prefix": "", "label": "Theatergruppen im ganzen Land", "detail": "angemeldete Gruppen / Ausgabe" },
+      { "prefix": "", "label": "lokales Publikum", "detail": "Zuschauer · Alexandria · kumuliert" },
+      { "prefix": "~", "label": "nationale Reichweite", "detail": "Sichtbarkeit · kulturelle Medienkanäle" }
+    ]
+  },
+  "slide06": {
+    "title": "menschen",
+    "p1": "Künstler, Mentoren, Trainer und Gäste, die direkt mit den Jugendlichen arbeiten - nur einige der Menschen, die durch Ideo Ideis gegangen sind.",
+    "playLabel": "Video abspielen",
+    "stopLabel": "Video stoppen",
+    "roles": ["Mitbegründer", "Mentor", "Mentor", "Masterclass-Gast", "Gast", "Teilnehmer"]
+  },
+  "slide07": {
+    "title": "was <hl>Jugendliche</hl> lernen",
+    "p1": "Bei IDEO ist Theater das Werkzeug, um Werte, Verantwortung, Ausdruck und Selbstbestimmung zu klären.",
+    "p2": "Jugendliche gestalten, arbeiten im Team, diskutieren aktuelle Themen und stehen auf der Bühne.",
+    "p3": "Es ist eines der wenigen Festivals in Rumänien, das eigens für dieses Alter geschaffen wurde.",
+    "modules": [
+      { "label": "Empathie & Kommunikation", "subtitle": "durch Übung, nicht durch Theorie", "text": "Theater- und Neue-Medien-Workshops versetzen Jugendliche in reale Situationen: zuhören, zusammenarbeiten, verhandeln. Kompetenzen, die kein Schulfach systematisch vermittelt." },
+      { "label": "kritisches Denken", "subtitle": "echte Fragen, echte Kontexte", "text": "Aufführungen und Gespräche mit relevanten Künstlern fordern Jugendliche heraus, zu analysieren, zu argumentieren und sich eine eigene Meinung zu bilden, statt Antworten zu wiederholen." },
+      { "label": "Verantwortung & Engagement", "subtitle": "Charaktere geformt, nicht prämiert", "text": "Durch den gebotenen Rahmen formt Ideo Ideis Charaktere: Es hilft jungen Menschen, ihre Werte zu klären, zu verstehen, was es bedeutet, Teil einer Gemeinschaft zu sein, und ihre Rolle darin zu übernehmen." },
+      { "label": "Integration in die Gemeinschaft", "subtitle": "die Stadt als Bühne", "text": "2026 erweitern wir das Programm, um die gesamte Gemeinschaft von Alexandria einzubeziehen, Familien, Lehrer, ein breites Publikum, nicht nur die ausgewählten Teilnehmer." }
+    ]
+  },
+  "slide08": {
+    "eyebrow": "wirkung",
+    "titleLine1": "im ganzen",
+    "titleLine2": "land",
+    "p1": "Die Jugendlichen, die zu Ideo Ideis kommen, tragen das Festival weiter, in ihre eigenen Städte.",
+    "p2": "Die in Alexandria gelebten Werte und Erfahrungen werden zu Initiativen, Theatergruppen, Projekten und Dialog in ihren Gemeinschaften.",
+    "p3": "Ideo Ideis beginnt in Alexandria und geht im ganzen Land weiter.",
+    "location": "alexandria · teleorman · rumänien",
+    "imgAlt": "Open-Air-Publikum in Alexandria"
+  },
+  "slide09": {
+    "title": "Ideo Ideis <hl>geht weiter</hl>",
+    "p1": "Der in Alexandria begonnene Dialog geht weiter, durch Podcasts, Ideo Talks und Workshops, die das ganze Jahr über stattfinden.",
+    "p2": "Die Gemeinschaft bleibt aktiv. Der Prozess des Wachstums geht weiter.",
+    "p3": "Ideo Ideis ist ein Ökosystem, nicht nur eine Veranstaltung.",
+    "footer": "20 Jahre · 4.000+ Jugendliche · 200.000 kumuliertes lokales Publikum"
+  },
+  "slide10": {
+    "eyebrow": "partnerschaft",
+    "heading": "Ideo Ideis zu unterstützen heißt, die Entwicklung einer Generation und die kulturelle Vitalität einer Gemeinschaft zu unterstützen.",
+    "p1": "Partnermarken werden Teil dieses Prozesses, indem sie ein nationales Programm mit Glaubwürdigkeit fördern und sich mit einer aktiven, gebildeten und engagierten Generation verbinden.",
+    "associereLabel": "Es bedeutet Verbindung mit:",
+    "associere": ["alternative Bildung", "Dialog zwischen Generationen", "zeitgenössische Kultur", "echte gesellschaftliche Wirkung"],
+    "footer": "Partnerschaft wird zum Beitrag an einem lebendigen Prozess, nicht nur zur Markenpräsenz.",
+    "imgAlt": "Ideo-Ideis-Teilnehmer auf der Bühne"
+  },
+  "slide11": {
+    "title": "wir können <hl>gemeinsam</hl> gestalten",
+    "p1": "Jede Zusammenarbeit kann rund um unsere gemeinsamen Werte gestaltet werden.",
+    "items": ["thematische Workshops und Gespräche", "Aktionen, die Jugendliche direkt einbeziehen", "redaktioneller und digitaler Content", "Initiativen für die lokale Gemeinschaft"],
+    "footer": "Ideo Ideis sucht Partner, die an Wachstum, Dialog und kulturelle Verantwortung glauben."
+  },
+  "slide12": {
+    "title": "Die 21. Ausgabe beginnt jetzt.",
+    "p1": "Wir laden Sie ein, Teil eines Projekts zu werden, das Jahr für Jahr eine aufmerksamere, kreativere und stärker mit der Welt verbundene Generation aufbaut.",
+    "p2": "wir sehen uns diesen Sommer in Alexandria.",
+    "p3": "Das ganze Jahr über sehen wir uns in Bukarest oder in einer der Städte, in denen wir Veranstaltungen organisieren.",
+    "ctaContact": "kontaktiere uns →",
+    "ctaPdf": "diese präsentation als pdf herunterladen",
+    "ctaOnline": "die präsentation online ansehen →",
+    "contactEyebrow": "direkter kontakt",
+    "contactName": "Antoneta Gales",
+    "followLabel": "folge uns",
+    "org": "Verein T.E.T. Alexandria",
+    "orgType": "(NGO)"
+  }
+}

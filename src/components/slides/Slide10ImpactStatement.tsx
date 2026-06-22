@@ -1,21 +1,17 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import { slideItemVariants } from "@/components/SlideSection";
 import { asset } from "@/lib/utils";
 
-const ASSOCIERE_ITEMS = [
-  "educație alternativă",
-  "dialog între generații",
-  "cultură contemporană",
-  "impact social real",
-];
-
 export function Slide10ImpactStatement() {
+  const { t } = useTranslation();
+  const associereItems = t("slide10.associere", { returnObjects: true }) as string[];
   return (
     <div className="w-full h-full relative overflow-hidden">
       {/* Full-bleed photo — visible, dominant */}
       <img
         src={asset("/images/hero-bw.jpg")}
-        alt="Participanți Ideo Ideis pe scenă"
+        alt={t("slide10.imgAlt")}
         className="absolute inset-0 w-full h-full object-cover"
         style={{ filter: "grayscale(100%) contrast(1.05)" }}
       />
@@ -40,7 +36,7 @@ export function Slide10ImpactStatement() {
             marginBottom: "1rem",
           }}
         >
-          parteneriat
+          {t("slide10.eyebrow")}
         </motion.span>
 
         <motion.h2
@@ -54,7 +50,7 @@ export function Slide10ImpactStatement() {
             marginBottom: "1rem",
           }}
         >
-          A susține Ideo Ideis înseamnă a susține dezvoltarea unei generații și vitalitatea culturală a unei comunități.
+          {t("slide10.heading")}
         </motion.h2>
 
         <motion.p
@@ -66,7 +62,7 @@ export function Slide10ImpactStatement() {
             marginBottom: "1.25rem",
           }}
         >
-          Brandurile partenere devin parte din acest proces susținând un program național cu credibilitate și asociindu-se cu o generație activă, educată și implicată.
+          {t("slide10.p1")}
         </motion.p>
 
         <motion.p
@@ -79,10 +75,10 @@ export function Slide10ImpactStatement() {
             marginBottom: "0.5rem",
           }}
         >
-          Înseamnă asociere cu:
+          {t("slide10.associereLabel")}
         </motion.p>
         <div style={{ display: "flex", flexWrap: "wrap", gap: "0.4rem", marginBottom: "1rem" }}>
-          {ASSOCIERE_ITEMS.map((item, i) => (
+          {associereItems.map((item, i) => (
             <motion.span
               key={i}
               variants={slideItemVariants}
@@ -117,7 +113,7 @@ export function Slide10ImpactStatement() {
             borderTop: "1px solid rgba(255,255,255,0.3)",
           }}
         >
-          Parteneriatul devine contribuție la un proces viu, nu doar prezență de brand.
+          {t("slide10.footer")}
         </motion.p>
       </div>
     </div>

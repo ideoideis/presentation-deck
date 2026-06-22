@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import { slideItemVariants } from "@/components/SlideSection";
 import { asset } from "@/lib/utils";
 
 export function Slide08WhyHere() {
+  const { t } = useTranslation();
   return (
     <div
       className="w-full h-full flex flex-row"
@@ -12,7 +14,7 @@ export function Slide08WhyHere() {
       <div className="flex-1 relative overflow-hidden">
         <img
           src={asset("/images/crowd-bw.jpg")}
-          alt="Public outdoor la alexandria"
+          alt={t("slide08.imgAlt")}
           className="w-full h-full object-cover"
           style={{ filter: "grayscale(100%) contrast(1.2)", opacity: 0.75 }}
         />
@@ -45,7 +47,7 @@ export function Slide08WhyHere() {
               marginBottom: "1.5rem",
             }}
           >
-            impact
+            {t("slide08.eyebrow")}
           </motion.span>
 
           <motion.h2
@@ -59,9 +61,9 @@ export function Slide08WhyHere() {
               marginBottom: "2rem",
             }}
           >
-            în
+            {t("slide08.titleLine1")}
             <br />
-            <span style={{ color: "#E7004C" }}>toată țara</span>
+            <span style={{ color: "#E7004C" }}>{t("slide08.titleLine2")}</span>
           </motion.h2>
 
           <motion.p
@@ -73,7 +75,7 @@ export function Slide08WhyHere() {
               maxWidth: "38ch",
             }}
           >
-            Adolescenții care vin la Ideo Ideis duc festivalul mai departe, în orașele lor.
+            {t("slide08.p1")}
           </motion.p>
           <motion.p
             variants={slideItemVariants}
@@ -85,7 +87,7 @@ export function Slide08WhyHere() {
               marginTop: "1rem",
             }}
           >
-            Valorile și experiențele trăite la Alexandria se transformă în inițiative, trupe, proiecte și dialog în comunitățile lor.
+            {t("slide08.p2")}
           </motion.p>
           <motion.p
             variants={slideItemVariants}
@@ -97,7 +99,7 @@ export function Slide08WhyHere() {
               marginTop: "1rem",
             }}
           >
-            Ideo Ideis începe la Alexandria și continuă în toată țara.
+            {t("slide08.p3")}
           </motion.p>
         </div>
 
@@ -115,7 +117,7 @@ export function Slide08WhyHere() {
             e.currentTarget.style.color = "rgba(34,35,36,0.4)";
           }}
         >
-          alexandria · teleorman · românia
+          {t("slide08.location")}
         </motion.a>
       </div>
     </div>

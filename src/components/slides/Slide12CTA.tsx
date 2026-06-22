@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Facebook, Instagram, Youtube, Linkedin } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { slideItemVariants } from "@/components/SlideSection";
 import { asset } from "@/lib/utils";
 
@@ -23,6 +24,7 @@ const SOCIAL_LINKS = [
 ];
 
 export function Slide12CTA() {
+  const { t } = useTranslation();
   return (
     <div
       className="w-full h-full flex flex-col justify-between"
@@ -46,7 +48,7 @@ export function Slide12CTA() {
                 marginBottom: "1.5rem",
               }}
             >
-              Ediția 21 începe acum.
+              {t("slide12.title")}
             </motion.h2>
 
             <motion.p
@@ -58,7 +60,7 @@ export function Slide12CTA() {
                 maxWidth: "42ch",
               }}
             >
-              Vă invităm să deveniți parte dintr-un proiect care construiește, an de an, o generație mai atentă, mai creativă și mai conectată la lume.
+              {t("slide12.p1")}
             </motion.p>
             <motion.p
               variants={slideItemVariants}
@@ -70,7 +72,7 @@ export function Slide12CTA() {
                 marginTop: "1rem",
               }}
             >
-              ne vedem la vară la Alexandria.
+              {t("slide12.p2")}
             </motion.p>
             <motion.p
               variants={slideItemVariants}
@@ -82,7 +84,7 @@ export function Slide12CTA() {
                 marginTop: "0.5rem",
               }}
             >
-              Pe parcursul anului ne vedem la București sau în oricare dintre orașele unde organizăm evenimente.
+              {t("slide12.p3")}
             </motion.p>
           </div>
 
@@ -110,7 +112,7 @@ export function Slide12CTA() {
               onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.88")}
               onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
             >
-              contactează-ne →
+              {t("slide12.ctaContact")}
             </a>
             <a
               href={isPrint ? "https://ideoideis.github.io/presentation-deck/" : asset("deck-ideo-ideis-2026.pdf")}
@@ -140,7 +142,7 @@ export function Slide12CTA() {
                 e.currentTarget.style.color = "rgba(255,255,255,0.75)";
               }}
             >
-              {isPrint ? "vezi prezentarea online →" : "descarcă această prezentare pdf"}
+              {isPrint ? t("slide12.ctaOnline") : t("slide12.ctaPdf")}
             </a>
           </motion.div>
         </div>
@@ -160,7 +162,7 @@ export function Slide12CTA() {
               marginBottom: "1.5rem",
             }}
           >
-            contact direct
+            {t("slide12.contactEyebrow")}
           </motion.p>
 
           <motion.p
@@ -173,7 +175,7 @@ export function Slide12CTA() {
               marginBottom: "1rem",
             }}
           >
-            Antoneta Gales
+            {t("slide12.contactName")}
           </motion.p>
 
           <motion.a
@@ -230,7 +232,7 @@ export function Slide12CTA() {
                 marginBottom: "0.85rem",
               }}
             >
-              urmărește-ne
+              {t("slide12.followLabel")}
             </p>
             <div style={{ display: "flex", gap: "1.1rem", alignItems: "center" }}>
               {SOCIAL_LINKS.map(({ href, label, Icon }) => (
@@ -261,8 +263,8 @@ export function Slide12CTA() {
               marginTop: "1.75rem",
             }}
           >
-            Asociația T.E.T. Alexandria{" "}
-            <span style={{ fontWeight: 500, color: "rgba(255,255,255,0.65)" }}>(ONG)</span>
+            {t("slide12.org")}{" "}
+            <span style={{ fontWeight: 500, color: "rgba(255,255,255,0.65)" }}>{t("slide12.orgType")}</span>
           </motion.p>
         </div>
       </div>

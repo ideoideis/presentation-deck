@@ -1,16 +1,11 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import { slideItemVariants } from "@/components/SlideSection";
 import { asset } from "@/lib/utils";
 
-const facts = [
-  "6.000+ adolescenți formați",
-  "200.000 spectatori",
-  "16M+ reach media",
-  "500+ evenimente de-a lungul anilor",
-  "proiect cu impact cultural și vizibilitate națională",
-];
-
 export function Slide02Statement() {
+  const { t } = useTranslation();
+  const facts = t("slide02.facts", { returnObjects: true }) as string[];
   return (
     <div
       className="w-full h-full relative flex"
@@ -20,7 +15,7 @@ export function Slide02Statement() {
       <div className="absolute inset-0">
         <img
           src={asset("/images/workshop-bw.jpg")}
-          alt="Adolescenți la atelier de teatru tânăr"
+          alt={t("slide02.imgAlt")}
           className="w-full h-full object-cover"
           style={{ filter: "grayscale(100%) contrast(1.15)", opacity: 0.32 }}
         />
@@ -57,7 +52,7 @@ export function Slide02Statement() {
                   lineHeight: 1,
                 }}
               >
-                despre festival
+                {t("slide02.eyebrow")}
               </span>
             </motion.div>
 
@@ -71,7 +66,7 @@ export function Slide02Statement() {
                 lineHeight: 1.7,
               }}
             >
-              Ideo Ideis este un festival național de teatru tânăr organizat anual la Alexandria.
+              {t("slide02.p1")}
             </motion.p>
 
             <motion.p
@@ -84,7 +79,7 @@ export function Slide02Statement() {
                 lineHeight: 1.7,
               }}
             >
-              Timp de o săptămână, adolescenți din toată țara participă la ateliere, spectacole și dialoguri alături de artiști și mentori.
+              {t("slide02.p2")}
             </motion.p>
 
             <motion.p
@@ -97,7 +92,7 @@ export function Slide02Statement() {
                 lineHeight: 1.7,
               }}
             >
-              Pe tot parcursul anului, Ideo Ideis continuă prin Ideo Talks, podcasturi, ateliere și inițiative dedicate tinerilor.
+              {t("slide02.p3")}
             </motion.p>
           </div>
         </div>
@@ -122,7 +117,7 @@ export function Slide02Statement() {
               marginBottom: "1.5rem",
             }}
           >
-            în cifre
+            {t("slide02.factsLabel")}
           </motion.p>
 
           <div className="flex flex-col gap-5">

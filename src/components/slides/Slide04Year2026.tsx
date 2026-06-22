@@ -1,13 +1,10 @@
 import { motion } from "framer-motion";
+import { Trans, useTranslation } from "react-i18next";
 import { slideItemVariants } from "@/components/SlideSection";
 
-const rows = [
-  { text: "mai multă integrare a comunității din Alexandria în activitățile festivalului", accent: "integrare" },
-  { text: "experiență mai bună pentru participanți și public: ritm sănătos, acces larg", accent: "experiență" },
-  { text: "vizibilitate națională sporită și colaborări cu impact clar", accent: "vizibilitate" },
-];
-
 export function Slide04Year2026() {
+  const { t } = useTranslation();
+  const rows = t("slide04.rows", { returnObjects: true }) as string[];
   return (
     <div
       className="w-full h-full flex flex-col justify-between"
@@ -41,7 +38,7 @@ export function Slide04Year2026() {
               marginBottom: "1rem",
             }}
           >
-            În 2026, piața devine centrul festivalului.
+            {t("slide04.p1")}
           </motion.p>
           <motion.p
             variants={slideItemVariants}
@@ -52,7 +49,7 @@ export function Slide04Year2026() {
               marginBottom: "1rem",
             }}
           >
-            Un loc deschis de schimb de idei, informații și experiențe culturale.
+            {t("slide04.p2")}
           </motion.p>
           <motion.p
             variants={slideItemVariants}
@@ -62,7 +59,7 @@ export function Slide04Year2026() {
               lineHeight: 1.65,
             }}
           >
-            Un spațiu comun pentru adolescenți, copii și adulți, în jurul spectacolelor, proiecțiilor și dialogurilor. Festivalul devine orașul și invită comunitatea să participe.
+            {t("slide04.p3")}
           </motion.p>
           <motion.div
             variants={slideItemVariants}
@@ -75,10 +72,10 @@ export function Slide04Year2026() {
             }}
           >
             <p style={{ color: "#fff", fontSize: "clamp(0.85rem, 1.1vw, 0.95rem)", fontWeight: 600, marginBottom: "0.35rem" }}>
-              2026 înseamnă:
+              {t("slide04.calloutTitle")}
             </p>
             <p style={{ color: "rgba(255,255,255,0.9)", fontSize: "clamp(0.82rem, 1vw, 0.9rem)", lineHeight: 1.5 }}>
-              +20% reach media față de 2025 · cel mai mare hub comunitar în aer liber la sud de București
+              {t("slide04.calloutText")}
             </p>
           </motion.div>
         </div>
@@ -95,10 +92,10 @@ export function Slide04Year2026() {
               marginBottom: "1.25rem",
             }}
           >
-            ce construim împreună
+            {t("slide04.eyebrow")}
           </motion.p>
           <div className="flex flex-col gap-0">
-            {rows.map((row, i) => (
+            {rows.map((_row, i) => (
               <motion.div
                 key={i}
                 variants={slideItemVariants}
@@ -128,16 +125,10 @@ export function Slide04Year2026() {
                     lineHeight: 1.3,
                   }}
                 >
-                  {row.text.split(row.accent).map((part, j, arr) => (
-                    j < arr.length - 1 ? (
-                      <span key={j}>
-                        {part}
-                        <span style={{ color: "#fff", fontWeight: 600 }}>{row.accent}</span>
-                      </span>
-                    ) : (
-                      <span key={j}>{part}</span>
-                    )
-                  ))}
+                  <Trans
+                    i18nKey={`slide04.rows.${i}`}
+                    components={{ hl: <span style={{ color: "#fff", fontWeight: 600 }} /> }}
+                  />
                 </p>
               </motion.div>
             ))}

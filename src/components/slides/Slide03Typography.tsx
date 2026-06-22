@@ -1,17 +1,14 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { Trans, useTranslation } from "react-i18next";
 import { slideItemVariants } from "@/components/SlideSection";
 
-const PROGRAM_ITEMS: { activity: string; opportunity: string }[] = [
-  { activity: "ateliere de teatru tânăr + arte alăturate", opportunity: "branding în spații educaționale · kit-uri personalizate" },
-  { activity: "spectacole de teatru tânăr", opportunity: "asociere cu conținut cultural" },
-  { activity: "spectacole invitate", opportunity: "vizibilitate la evenimente" },
-  { activity: "cinemateca târzie + Q&A", opportunity: "conținut cultural · public tânăr" },
-  { activity: "masterclass-uri și seara povestitorilor", opportunity: "dialog cu generația activă" },
-  { activity: "murale și activări în oraș", opportunity: "vizibilitate outdoor · revitalizare urbană" },
-];
-
 export function Slide03Typography() {
+  const { t } = useTranslation();
+  const programItems = t("slide03.program", { returnObjects: true }) as {
+    activity: string;
+    opportunity: string;
+  }[];
   const [hovered, setHovered] = useState<number | null>(null);
 
   return (
@@ -49,7 +46,7 @@ export function Slide03Typography() {
               maxWidth: "28ch",
             }}
           >
-            În fiecare vară, Alexandria <span style={{ color: "#E7004C" }}>respiră alt ritm</span>.
+            <Trans i18nKey="slide03.lead" components={{ hl: <span style={{ color: "#E7004C" }} /> }} />
           </p>
         </motion.div>
 
@@ -71,7 +68,7 @@ export function Slide03Typography() {
               lineHeight: 1.65,
             }}
           >
-            Oamenii ies seara în piață la proiecțiile de film. Merg la spectacolele de teatru. Se întâlnesc și rămân la dialog după reprezentații.
+            {t("slide03.p1")}
           </p>
           <p
             style={{
@@ -81,7 +78,7 @@ export function Slide03Typography() {
               marginTop: "1rem",
             }}
           >
-            Festivalul aduce împreună adolescenți, artiști și comunitatea locală. Pentru câteva zile, orașul se adună în jurul culturii.
+            {t("slide03.p2")}
           </p>
         </motion.div>
       </div>
@@ -110,7 +107,7 @@ export function Slide03Typography() {
             marginBottom: "0.35rem",
           }}
         >
-          ce se întâmplă anual
+          {t("slide03.eyebrow1")}
         </p>
         <p
           style={{
@@ -120,10 +117,10 @@ export function Slide03Typography() {
             marginBottom: "1.25rem",
           }}
         >
-          unde poate fi brandul tău?
+          {t("slide03.eyebrow2")}
         </p>
         <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
-          {PROGRAM_ITEMS.map((item, i) => (
+          {programItems.map((item, i) => (
             <div
               key={i}
               onMouseEnter={() => setHovered(i)}

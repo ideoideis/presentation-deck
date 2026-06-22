@@ -111,6 +111,8 @@
   scroll-behavior: smooth;
   overscroll-behavior-y: contain;
   -webkit-overflow-scrolling: touch;
+  /* Shows in the letterbox gutters when a slide is scaled to fit a short window */
+  background-color: #0d0d0e;
   /* Safe area for notched phones */
   padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
@@ -128,13 +130,20 @@
 }
 
 /*
- * On narrow viewports the slide container is still 16:9 but physically very
- * short (e.g. 375×211 on a phone).  Instead of letting content reflow to that
- * tiny box we render it at the *design* resolution (960×540) and CSS-scale it
- * to fit, producing a miniature but complete version of the desktop slide.
+ * "Fit" rendering: instead of reflowing content into a box of the wrong size we
+ * render every slide at the *design* resolution (960×540) and CSS-scale it to
+ * fit, producing a complete, proportional version of the desktop slide.
  *
- * --slide-scale is set by JS (useSlideScale hook) because CSS calc() cannot
- * produce a unitless number from viewport units for scale().
+ * It kicks in in two cases (both set `data-slide-fit="scaled"` + `--slide-scale`
+ * from JS in Index.tsx):
+ *   - narrow viewports (e.g. a phone), where width is the limiting dimension;
+ *   - short/wide windows, where a full-width 16:9 slide would be taller than the
+ *     viewport and its top would slide under the fixed header.
+ * When the 16:9 slide already fits the viewport (the common desktop case) no
+ * scaling is applied and the fluid layout is used, exactly as before.
+ *
+ * The `max-width: 959px` query mirrors the JS so narrow screens scale on the
+ * very first paint, before the effect runs (avoids a flash of oversized text).
  */
 .slide-content-inner {
   width: 100%;
@@ -148,6 +157,28 @@
     height: 540px;
     transform: scale(var(--slide-scale, 0.5));
   }
+}
+
+:root[data-slide-fit="scaled"] .slide-content-inner {
+  width: 960px;
+  height: 540px;
+  transform: scale(var(--slide-scale, 0.5));
+}
+
+/* Scaled slide is exactly as wide as its scaled content; centre it so any
+   leftover horizontal space becomes symmetric letterbox gutters. */
+:root[data-slide-fit="scaled"] .snap-slide {
+  width: calc(960px * var(--slide-scale, 1));
+  margin-inline: auto;
+}
+
+/* Keep the fixed header aligned to the (possibly letterboxed) slide instead of
+   spanning the full window — otherwise its text floats over the dark gutters. */
+:root[data-slide-fit="scaled"] header {
+  left: 50%;
+  right: auto;
+  width: calc(960px * var(--slide-scale, 1));
+  transform: translateX(-50%);
 }
 
 /* Micro label / eyebrow */

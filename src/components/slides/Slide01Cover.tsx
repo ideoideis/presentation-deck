@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import { slideItemVariants } from "@/components/SlideSection";
 import { asset } from "@/lib/utils";
 
 export function Slide01Cover() {
+  const { t } = useTranslation();
   return (
     <div
       className="w-full h-full flex flex-col justify-between relative overflow-hidden"
@@ -41,7 +43,7 @@ export function Slide01Cover() {
             maxWidth: "32ch",
           }}
         >
-          21 de ani de festival care modelează generații
+          {t("slide01.title")}
         </motion.h1>
 
         <motion.p
@@ -55,7 +57,7 @@ export function Slide01Cover() {
             marginTop: "1.5rem",
           }}
         >
-          festival național de teatru tânăr
+          {t("slide01.subtitle")}
         </motion.p>
 
         <motion.div
@@ -81,7 +83,7 @@ export function Slide01Cover() {
               letterSpacing: "0.04em",
             }}
           >
-            Alexandria · 29 iulie – 5 august 2026
+            {t("slide01.location")}
           </span>
         </motion.div>
       </div>
@@ -98,7 +100,7 @@ export function Slide01Cover() {
           textTransform: "uppercase",
         }}
       >
-        scroll
+        {t("slide01.scroll")}
         <span
           style={{
             display: "block",
